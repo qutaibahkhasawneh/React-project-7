@@ -153,7 +153,24 @@ function Footer() {
           </div>
         </div>
       </footer>
+      <div class="footer-bottom-area">
+        <div class="container">
+          <div class="copy-right">
+            <p>
+              Copyright @2022
+              Ston. All Rights Reserved By
+              <a href="https://envytheme.com/" target="blank">EnvyTheme</a>
+            </p>
+          </div>
+        </div>
+      </div>
+     
+      <div class="go-top">
+        <i class="bx bx-chevrons-up"></i><i class="bx bx-chevrons-up"></i>
+      </div>
+      <div class="Toastify"></div>
     </div>
+    
   )
 }
 
