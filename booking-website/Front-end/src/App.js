@@ -8,6 +8,7 @@ import Aboutus from './components/About-us';
 import { Contact } from "./components/Contact";
 import { Testimonials } from "./components/Testimonials";
 import { Team } from "./components/Team";
+import Index from "./components/Index" 
 import Profile from "./components/profile/Profile";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
@@ -17,6 +18,10 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
+
+      {/* this is Home */}
+      <Route path='/' element={<Index />}/>
+
         {/* Appointment us page */}
         <Route path="/appointment" element={<Appointment />} />
 
