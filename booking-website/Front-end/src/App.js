@@ -8,6 +8,9 @@ import Aboutus from './components/About-us';
 import { Contact } from "./components/Contact";
 import { Testimonials } from "./components/Testimonials";
 import { Team } from "./components/Team";
+import Profile from "./components/profile/Profile";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
 
 function App() {
   return (
@@ -26,6 +29,12 @@ function App() {
         <Route path="/Team" element={<Team />} />
         {/* about us page */}
         <Route path="about" element={<Aboutus />} />
+        {/* profile  page */}
+        <Route path="profile" element={<Profile />} />
+        {/* Login  page */}
+        <Route path="login" element={<Login />} />
+        {/* Signup  page */}
+        <Route path="Signup" element={<Signup />} />
       </Routes>
       <Footer />
     </BrowserRouter>
