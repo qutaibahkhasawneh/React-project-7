@@ -13,6 +13,7 @@ import Profile from "./components/profile/Profile";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -40,6 +41,9 @@ function App() {
         <Route path="login" element={<Login />} />
         {/* Signup  page */}
         <Route path="Signup" element={<Signup />} />
+
+        {/* service-datails  page */}
+<Route path='service-datails' element={<ServiceDetails/>} />
       </Routes>
       <Footer />
     </BrowserRouter>
