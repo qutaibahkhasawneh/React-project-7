@@ -1,151 +1,13 @@
-<!DOCTYPE html>
-<html lang="zxx">
-  <!-- Mirrored from ston-react.envytheme.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Jul 2022 13:24:04 GMT -->
-  <!-- Added by HTTrack --><meta
-    http-equiv="content-type"
-    content="text/html;charset=utf-8"
-  /><!-- /Added by HTTrack -->
-  <head>
-    <link rel="icon" type="image/png" href="img/favicon.png" />
-    <meta charset="utf-8" />
-    <title>
-      Ston - React Disinfection &amp; Sanitization Services Template
-    </title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta
-      name="description"
-      content="Ston - React Disinfection &amp; Sanitization Services Template"
-    />
-    <meta
-      name="og:title"
-      property="og:title"
-      content="Ston - React Disinfection &amp; Sanitization Services Template"
-    />
-    <meta
-      name="twitter:card"
-      content="Ston - React Disinfection &amp; Sanitization Services Template"
-    />
-    <link rel="canonical" href="index.html" />
-    <meta name="next-head-count" content="7" />
-    <link
-      rel="preload"
-      href="_next/static/css/f4baf235c28810ee5204.css"
-      as="style"
-    />
-    <link rel="stylesheet" href="_next/static/css/f4baf235c28810ee5204.css" />
-    <link
-      rel="preload"
-      href="_next/static/chunks/main-391fb08a2a28f15d77c2.js"
-      as="script"
-    />
-    <link
-      rel="preload"
-      href="_next/static/chunks/webpack-9a031c5a5ba261c557c6.js"
-      as="script"
-    />
-    <link
-      rel="preload"
-      href="_next/static/chunks/framework.1ae6aab54c557c2f6555.js"
-      as="script"
-    />
-    <link
-      rel="preload"
-      href="_next/static/chunks/ceed8f9fb2eafe1b5ecf00064f598df03765af0e.e68a13ffc3e01fed6aa6.js"
-      as="script"
-    />
-    <link
-      rel="preload"
-      href="_next/static/chunks/00c969a4184709a22e39d4fcc0a4090cdc141bb5.6b75cbe5ab8e1e3d1b3b.js"
-      as="script"
-    />
-    <link
-      rel="preload"
-      href="_next/static/chunks/68fbdcd950265ffa17253f91878a7d5c60967de5.eb268d69551bc6ee7e4a.js"
-      as="script"
-    />
-    <link
-      rel="preload"
-      href="_next/static/chunks/pages/_app-0bfa3d2a32b75b7bfb1f.js"
-      as="script"
-    />
-    <link
-      rel="preload"
-      href="_next/static/chunks/ecf3aedbcd96348c0dab17dd7eeaa4971b9cbdd0.77f5a603be36fe8d6baf.js"
-      as="script"
-    />
-    <link
-      rel="preload"
-      href="_next/static/chunks/781822e7e0179731817e947d56805a5faa1a279f.7647b6f1d13b2e5700da.js"
-      as="script"
-    />
-    <link
-      rel="preload"
-      href="_next/static/chunks/9455103532f629d0ffe35e811081a4d5ada80893.a672b83dfd4427705b54.js"
-      as="script"
-    />
-    <link
-      rel="preload"
-      href="_next/static/chunks/abf4ca28ee7b54cbaf7231821719ba8c7d4e5d01.c48ad3970aecc8099607.js"
-      as="script"
-    />
-    <link
-      rel="preload"
-      href="_next/static/chunks/pages/index-9a8cf7078a4bb03fe56b.js"
-      as="script"
-    />
-  </head>
-  <body>
-    
-      <!-- <div class="hero-slider-area">
-        <div class="shape">
-          <img src="img/home-slider/home-slider-shape1.png" alt="Image" />
-        </div>
-      </div>
-      <div class="feature-area pb-100">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-9">
-              <div class="feature-wrap">
-                <div class="row">
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="single-feature">
-                      <i class="flaticon-satisfaction"></i>
-                      <h3>Satisfaction</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur</p>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="single-feature">
-                      <i class="flaticon-cleaning"></i>
-                      <h3>Expert Cleaner</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur</p>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-sm-6 offset-sm-3 offset-lg-0">
-                    <div class="single-feature">
-                      <i class="flaticon-support"></i>
-                      <h3>24/7 Support</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="hot-line">
-                <span>Hot Line</span>
-                <h3><i class="bx bx-phone-call"></i> Contact Us Today!</h3>
-                <a href="tel:+61-821-456">+61-821-456</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
+import React from 'react'
 
-      <!-- hero index2 -->
+function Index() {
+  return (
+    <div>
+
+      
+    
+ 
+      {/* <!-- hero index2 --> */}
       <div className="main-banner-area jarallax">
         <div className="d-table">
           <div className="d-table-cell">
@@ -196,7 +58,7 @@
       </div>
 
 
-      <!-- end hero -->
+      {/* <!-- end hero --> */}
       <div class="about-area pb-100">
         <div class="container">
           <div class="row align-items-center">
@@ -518,9 +380,9 @@
                       >
                     </h3>
                     <ul>
-                      <li>$<!-- -->18</li>
+                      <li>$18</li>
                       <li>
-                        <del>$<!-- -->20</del>
+                        <del>20</del>
                       </li>
                     </ul>
                   </div>
@@ -543,9 +405,9 @@
                       >
                     </h3>
                     <ul>
-                      <li>$<!-- -->23</li>
+                      <li>23</li>
                       <li>
-                        <del>$<!-- -->25</del>
+                        <del>$25</del>
                       </li>
                     </ul>
                   </div>
@@ -568,9 +430,9 @@
                       >
                     </h3>
                     <ul>
-                      <li>$<!-- -->28</li>
+                      <li>28</li>
                       <li>
-                        <del>$<!-- -->30</del>
+                        <del>30</del>
                       </li>
                     </ul>
                   </div>
@@ -753,102 +615,9 @@
         </div>
       </div>
      
-      <div class="footer-bottom-area">
-        <div class="container">
-          <div class="copy-right">
-            <p>
-              Copyright @<!-- -->2020<!-- -->
-              Ston. All Rights Reserved By
-              <a href="https://envytheme.com/" target="blank">EnvyTheme</a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="loader-wrapper">
-        <div class="loader"></div>
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
-      </div>
-      <div class="go-top">
-        <i class="bx bx-chevrons-up"></i><i class="bx bx-chevrons-up"></i>
-      </div>
-      <div class="Toastify"></div>
+
     </div>
-    <script
-      data-cfasync="false"
-      src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-    ></script>
-    <script id="__NEXT_DATA__" type="application/json">
-      {
-        "props": { "pageProps": {} },
-        "page": "/",
-        "query": {},
-        "buildId": "kdWHX0bOghJh2GHwSyWTo",
-        "nextExport": true,
-        "autoExport": true,
-        "isFallback": false
-      }
-    </script>
-    <script
-      nomodule=""
-      src="_next/static/chunks/polyfills-b4ad15c9c82024d041e6.js"
-    ></script>
-    <script
-      src="_next/static/chunks/main-391fb08a2a28f15d77c2.js"
-      async=""
-    ></script>
-    <script
-      src="_next/static/chunks/webpack-9a031c5a5ba261c557c6.js"
-      async=""
-    ></script>
-    <script
-      src="_next/static/chunks/framework.1ae6aab54c557c2f6555.js"
-      async=""
-    ></script>
-    <script
-      src="_next/static/chunks/ceed8f9fb2eafe1b5ecf00064f598df03765af0e.e68a13ffc3e01fed6aa6.js"
-      async=""
-    ></script>
-    <script
-      src="_next/static/chunks/00c969a4184709a22e39d4fcc0a4090cdc141bb5.6b75cbe5ab8e1e3d1b3b.js"
-      async=""
-    ></script>
-    <script
-      src="_next/static/chunks/68fbdcd950265ffa17253f91878a7d5c60967de5.eb268d69551bc6ee7e4a.js"
-      async=""
-    ></script>
-    <script
-      src="_next/static/chunks/pages/_app-0bfa3d2a32b75b7bfb1f.js"
-      async=""
-    ></script>
-    <script
-      src="_next/static/chunks/ecf3aedbcd96348c0dab17dd7eeaa4971b9cbdd0.77f5a603be36fe8d6baf.js"
-      async=""
-    ></script>
-    <script
-      src="_next/static/chunks/781822e7e0179731817e947d56805a5faa1a279f.7647b6f1d13b2e5700da.js"
-      async=""
-    ></script>
-    <script
-      src="_next/static/chunks/9455103532f629d0ffe35e811081a4d5ada80893.a672b83dfd4427705b54.js"
-      async=""
-    ></script>
-    <script
-      src="_next/static/chunks/abf4ca28ee7b54cbaf7231821719ba8c7d4e5d01.c48ad3970aecc8099607.js"
-      async=""
-    ></script>
-    <script
-      src="_next/static/chunks/pages/index-9a8cf7078a4bb03fe56b.js"
-      async=""
-    ></script>
-    <script
-      src="_next/static/kdWHX0bOghJh2GHwSyWTo/_buildManifest.js"
-      async=""
-    ></script>
-    <script
-      src="_next/static/kdWHX0bOghJh2GHwSyWTo/_ssgManifest.js"
-      async=""
-    ></script>
-  </body>
-  <!-- Mirrored from ston-react.envytheme.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Jul 2022 13:24:25 GMT -->
-</html>
+  )
+}
+
+export default Index
