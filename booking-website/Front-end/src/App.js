@@ -13,6 +13,7 @@ import Profile from "./components/profile/Profile";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import ServiceDetails from './components/service-details';
+import EditProfile from './components/profile/EditProfile';
 
 function App() {
   return (
@@ -36,13 +37,15 @@ function App() {
         {/* about us page */}
         <Route path="about" element={<Aboutus />} />
         {/* profile  page */}
-        <Route path="profile" element={<Profile />} />
+        <Route path="/profile" element={<Profile />} />
         {/* Login  page */}
         <Route path="login" element={<Login />} />
         {/* Signup  page */}
         <Route path="Signup" element={<Signup />} />
         {/* service-datails  page */}
        <Route path='service' element={<ServiceDetails/>} />
+       {/* Edit Profile */}
+       <Route path='/edit' element={<EditProfile/>} />
       </Routes>
       <Footer />
     </BrowserRouter>

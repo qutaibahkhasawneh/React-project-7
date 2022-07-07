@@ -1,8 +1,19 @@
-import React from 'react';
-
+import React,{useEffect,useState} from 'react';
+// import {Link}from 'react-router-dom';
 function Navbar() {
+  // const[users,setUsers]=useState([]);
+  // useEffect(()=>{
+  //   const data=async()=>{
+  //        const response=await fetch(`http://localhost:8000/api/users/${id}`)
+  //        const dbData=await response.json() 
+  //        setUsers(dbData);
+  //        console.log(dbData);
+  //   }
+  //   data()
+  // },[])
   return (
     <div>
+      
        <div id="__next">
       <header className="header-area fixed-top">
         <div className="top-header-area">
@@ -21,6 +32,7 @@ function Navbar() {
                       ></a
                     >
                   </li>
+                 
                   <li>
                     <a href="tel:+61-821-456"
                       ><i className="bx bx-phone-call"></i>Call Us: +61-821-456</a
@@ -247,9 +259,15 @@ function Navbar() {
                         ><i className="bx bx-cart"></i><span>0</span></a
                       >
                     </div>
+                    {/* {users.map((user)=>{
                     <div className="get-quote">
-                      <a className="default-btn" href="index.html#">Get A Quote</a>
+                     <h1>hello</h1>
+                        <button class="btn btn-secondary">
+                    <Link   to={{pathname:"/profile/"+user.id}}  >profile</Link>
+                    </button>
+                     
                     </div>
+                     })} */}
                   </div>
                 </div>
                 <div className="mobile-cart-icon">
