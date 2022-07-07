@@ -35,7 +35,7 @@ function App() {
         {/* Team us page */}
         <Route path="/Team" element={<Team />} />
         {/* about us page */}
-        <Route path="about" element={<Aboutus />} />
+        <Route path="/about" element={<Aboutus />} />
         {/* profile  page */}
         <Route path="/profile" element={<Profile />} />
         {/* Login  page */}

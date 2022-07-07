@@ -28,22 +28,21 @@ function Navbar() {
                       <span
                         className="__cf_email__"
                         data-cfemail="97fff2fbfbf8d7e4e3f8f9b9f4f8fa"
-                        >[email&#160;protected]</span
+                        >goClean@gmail.com</span
                       ></a
                     >
                   </li>
                  
                   <li>
                     <a href="tel:+61-821-456"
-                      ><i className="bx bx-phone-call"></i>Call Us: +61-821-456</a
-                    >
+                      ><i className="bx bx-phone-call"></i>Call Us: 0778985432</a>
                   </li>
                 </ul>
               </div>
               <div className="col-lg-6 col-sm-6">
                 <ul className="header-content-right">
                   <li>Opening Hour: 9:00 am - 9:00 pm</li>
-                  <li><a href="sign-in.html">Sign In</a></li>
+                  <li><a href="/Signup">Sign In</a></li>
                 </ul>
               </div>
             </div>
@@ -53,7 +52,7 @@ function Navbar() {
           <div className="main-nav">
             <nav className="navbar navbar-expand-lg">
               <div className="container">
-                <a className="navbar-brand" href="index.html"
+                <a className="navbar-brand" href="/"
                   ><img src="img/logo.png" alt="logo" /></a
                 ><button
                   className="navbar-toggler navbar-toggler-right collapsed"
@@ -74,48 +73,35 @@ function Navbar() {
                 >
                   <ul className="navbar-nav m-auto">
                     <li className="nav-item">
-                      <a className="nav-link" href="index.html#"
-                        >Home <i className="bx bx-chevron-down"></i
-                      ></a>
-                      <ul className="dropdown-menu">
-                        <li className="nav-item">
-                          <a className="nav-link active" href="index.html"
-                            >Home One</a
-                          >
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link" href="index2.html">Home Two</a>
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link" href="index3.html">Home Three</a>
-                        </li>
-                      </ul>
+                      <a className="nav-link" href="/"
+                        >Home </a>
+                      
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="about-us.html">About</a>
+                      <a className="nav-link" href="/about">About</a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="index.html#"
+                      <a className="nav-link" href="/"
                         >Pages <i className="bx bx-chevron-down"></i
                       ></a>
                       <ul className="dropdown-menu">
                         <li className="nav-item">
-                          <a className="nav-link" href="team.html">Team</a>
+                          <a className="nav-link" href="/Team">Team</a>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                           <a className="nav-link" href="pricing.html">Pricing</a>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
-                          <a className="nav-link" href="testimonials.html"
+                          <a className="nav-link" href="/Testimonials"
                             >Testimonials</a
                           >
                         </li>
-                        <li className="nav-item">
-                          <a className="nav-link" href="index.html#"
+                        {/* <li className="nav-item"> */}
+                          {/* <a className="nav-link" href="index.html#"
                             >Projects <i className="bx bx-chevron-down"></i
-                          ></a>
-                          <ul className="dropdown-menu">
-                            <li className="nav-item">
+                          ></a> */}
+                         {/* <ul className="dropdown-menu">  */}
+                            {/* <li className="nav-item">
                               <a className="nav-link" href="projects.html"
                                 >Projects</a
                               >
@@ -126,14 +112,14 @@ function Navbar() {
                               >
                             </li>
                           </ul>
-                        </li>
+                        </li>  */}
                         <li className="nav-item">
-                          <a className="nav-link" href="appointment.html"
+                          <a className="nav-link" href="/appointment"
                             >Appointment</a
                           >
                         </li>
-                        <li className="nav-item">
-                          <a className="nav-link" href="index.html#"
+                        {/* <li className="nav-item">
+                          <a className="nav-link" href=""
                             >User <i className="bx bx-chevron-down"></i
                           ></a>
                           <ul className="dropdown-menu">
@@ -153,53 +139,45 @@ function Navbar() {
                               >
                             </li>
                           </ul>
-                        </li>
-                        <li className="nav-item">
+                        </li> */}
+                        {/* <li className="nav-item">
                           <a className="nav-link" href="faq.html">FAQ</a>
-                        </li>
-                        <li className="nav-item">
+                        </li> */}
+                        {/* <li className="nav-item">
                           <a className="nav-link" href="coming-soon.html"
                             >Coming Soon</a
                           >
-                        </li>
-                        <li className="nav-item">
+                        </li> */}
+                        {/* <li className="nav-item">
                           <a className="nav-link" href="terms-conditions.html"
                             >Terms &amp; Conditions</a
                           >
-                        </li>
-                        <li className="nav-item">
+                        </li> */}
+                        {/* <li className="nav-item">
                           <a className="nav-link" href="privacy-policy.html"
                             >Privacy Policy</a
                           >
-                        </li>
-                        <li className="nav-item">
+                        </li> */}
+                        {/* <li className="nav-item">
                           <a className="nav-link" href="404.html">404 Error Page</a>
-                        </li>
+                        </li> */}
                       </ul>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="index.html#"
+                      <a className="nav-link" href="/"
                         >Services <i className="bx bx-chevron-down"></i
                       ></a>
+                      {}
                       <ul className="dropdown-menu">
+                       
                         <li className="nav-item">
-                          <a className="nav-link" href="services-style-one.html"
-                            >Services Style One</a
-                          >
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link" href="services-style-two.html"
-                            >Services Style Two</a
-                          >
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link" href="service-details.html"
-                            >Services Details</a
+                          <a className="nav-link" href="/service"
+                            >Coaches</a
                           >
                         </li>
                       </ul>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                       <a className="nav-link" href="index.html#"
                         >Shop <i className="bx bx-chevron-down"></i
                       ></a>
@@ -221,8 +199,8 @@ function Navbar() {
                           >
                         </li>
                       </ul>
-                    </li>
-                    <li className="nav-item">
+                    </li> */}
+                    {/* <li className="nav-item">
                       <a className="nav-link" href="index.html#"
                         >Blog <i className="bx bx-chevron-down"></i
                       ></a>
@@ -248,17 +226,21 @@ function Navbar() {
                           >
                         </li>
                       </ul>
-                    </li>
+                    </li> */}
                     <li className="nav-item">
-                      <a className="nav-link" href="contact.html">Contact</a>
+                      <a className="nav-link" href="/contact">Contact</a>
                     </li>
                   </ul>
-                  <div className="others-option">
+                  <a className="nav-link" href="/profile" style={{color:"white"}}><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+</svg></a>
+                  {/* <div className="others-option">
                     <div className="cart-icon">
                       <a className="" href="cart.html"
                         ><i className="bx bx-cart"></i><span>0</span></a
                       >
-                    </div>
+                    </div> */}
                     {/* {users.map((user)=>{
                     <div className="get-quote">
                      <h1>hello</h1>
@@ -268,7 +250,7 @@ function Navbar() {
                      
                     </div>
                      })} */}
-                  </div>
+                  {/* </div> */}
                 </div>
                 <div className="mobile-cart-icon">
                   <div className="cart-icon">

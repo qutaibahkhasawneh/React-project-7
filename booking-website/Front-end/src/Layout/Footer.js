@@ -9,40 +9,37 @@ function Footer() {
             <div className="col-lg-3 col-md-6">
               <div className="single-widget">
                 <div className="foot-logo">
-                  <a href="index.html"
+                  <a href="/"
                     ><img src="img/logo.png" alt="Image"
                   /></a>
                 </div>
                 <p>
-                  Lorem ipsum dolor, sit amet earum consectetur adipisicing
-                  elit. Cupiditate rerum quidem fugiat sapiente! Iusto quae
-                  perspiciatis, repudiandae ipsam minus et ex, aliquid dolor
-                  molestias.
+                  goClean is a website that helps in providing all cleaning services we provide with perfect quality .
                 </p>
                 <div className="social-area">
                   <ul>
                     <li>
-                      <a href="#" target="_blank"
+                      <a href="www.facebook.com" target="_blank"
                         ><i className="bx bxl-facebook"></i
                       ></a>
                     </li>
                     <li>
-                      <a href="#" target="_blank"
+                      <a href="www.twitter.com" target="_blank"
                         ><i className="bx bxl-twitter"></i
                       ></a>
                     </li>
                     <li>
-                      <a href="#" target="_blank"
+                      <a href="www.linkedin.com" target="_blank"
                         ><i className="bx bxl-linkedin"></i
                       ></a>
                     </li>
                     <li>
-                      <a href="#" target="_blank"
+                      <a href="www.youtube.com" target="_blank"
                         ><i className="bx bxl-youtube"></i
                       ></a>
                     </li>
                     <li>
-                      <a href="#" target="_blank"
+                      <a href="www.instagram.com" target="_blank"
                         ><i className="bx bxl-instagram"></i
                       ></a>
                     </li>
@@ -55,7 +52,7 @@ function Footer() {
                 <h3>Our Services</h3>
                 <ul>
                   <li>
-                    <a href="index.html#"
+                    <a href=""
                       ><i className="bx bx-chevrons-right"></i>Main Service</a
                     >
                   </li>
@@ -92,33 +89,33 @@ function Footer() {
                 <h3>Quick Links</h3>
                 <ul>
                   <li>
-                    <a href="about-us.html"
+                    <a href="/about"
                       ><i className="bx bx-chevrons-right"></i>About</a
                     >
                   </li>
                   <li>
-                    <a href="services-style-one.html"
+                    <a href=""
                       ><i className="bx bx-chevrons-right"></i>Services</a
                     >
                   </li>
                   <li>
-                    <a href="pricing.html"
-                      ><i className="bx bx-chevrons-right"></i>Prices</a
+                    <a href="/Team"
+                      ><i className="bx bx-chevrons-right"></i>Team</a
                     >
                   </li>
                   <li>
-                    <a href="testimonials.html"
+                    <a href="/testimonials"
                       ><i className="bx bx-chevrons-right"></i>Testimonials</a
                     >
                   </li>
                   <li>
-                    <a href="blog-grid.html"
-                      ><i className="bx bx-chevrons-right"></i>Blog</a
+                    <a href="/appointment"
+                      ><i className="bx bx-chevrons-right"></i>Appointment</a
                     >
                   </li>
                   <li>
-                    <a href="projects.html"
-                      ><i className="bx bx-chevrons-right"></i>Projects</a
+                    <a href="/profile"
+                      ><i className="bx bx-chevrons-right"></i>Profile</a
                     >
                   </li>
                 </ul>
@@ -130,7 +127,7 @@ function Footer() {
                 <ul>
                   <li>
                     <i className="bx bx-phone-call"></i><span>Hotline:</span>Phone:
-                    <a href="tel:+61-821-456">+61-821-456</a>
+                    <a href="tel:+61-821-456">0778985432</a>
                   </li>
                   <li>
                     <i className="bx bx-envelope"></i><span>Email:</span
@@ -139,13 +136,13 @@ function Footer() {
                       ><span
                         className="__cf_email__"
                         data-cfemail="9df5f8f1f1f2ddeee9f2f3b3fef2f0"
-                        >[email&#160;protected]</span
+                        >goClean@gmail.com</span
                       ></a
                     >
                   </li>
                   <li>
                     <i className="bx bx-location-plus"></i><span>Address:</span>123,
-                    Western Road, Melbourne Australia
+                    Amman,Jordan
                   </li>
                 </ul>
               </div>
@@ -159,7 +156,7 @@ function Footer() {
             <p>
               Copyright @2022
               Ston. All Rights Reserved By
-              <a href="https://envytheme.com/" target="blank">EnvyTheme</a>
+              <a href="https://envytheme.com/" target="blank">goClean</a>
             </p>
           </div>
         </div>
