@@ -129,7 +129,7 @@ function Index() {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt dolor sit amet, consectetur.
                   </p>
-                  <a class="read-more" href="service-details.html"
+                  <a class="read-more" href={"service/"}
                     >Read More <i class="bx bx-plus"></i></a
                   ><span class="flaticon-couch"></span>
                 </div>

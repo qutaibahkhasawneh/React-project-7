@@ -43,7 +43,7 @@ function App() {
         {/* Signup  page */}
         <Route path="Signup" element={<Signup />} />
         {/* service-datails  page */}
-       <Route path='service' element={<ServiceDetails/>} />
+       <Route path='service/:id' element={<ServiceDetails/>} />
       </Routes>
       <Footer />
     </BrowserRouter>
