@@ -1,12 +1,19 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react';
 
 function Index() {
+
+  const[category,setCategory]=useState([]);
+  useEffect(()=>{
+    const getcategory= async()=>{
+      const res =await fetch('http://127.0.0.1:8000/api/categories');
+      const getdata= await res.json();
+      setCategory(getdata);
+      console.log(getdata);                         
+    }
+    getcategory();
+  },[]);
   return (
     <div>
-
-      
-    
- 
       {/* <!-- hero index2 --> */}
       <div className="main-banner-area jarallax">
         <div className="d-table">
@@ -117,110 +124,34 @@ function Index() {
               nobis tempore ullam suscipit tenetur mollitia corporis veritatis.
             </p>
           </div>
-          <div class="row">
-            <div class="col-lg-4 col-sm-6">
-              <div class="single-services">
-                <a href="service-details.html"
-                  ><img src="img/services/service1.jpg" alt="Image"
-                /></a>
-                <div class="services-content">
-                  <h3>House Cleaning</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt dolor sit amet, consectetur.
-                  </p>
-                  <a class="read-more" href="service-details.html"
-                    >Read More <i class="bx bx-plus"></i></a
-                  ><span class="flaticon-couch"></span>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              <div class="single-services">
-                <a href="service-details.html"
-                  ><img src="img/services/service2.jpg" alt="Image"
-                /></a>
-                <div class="services-content">
-                  <h3>Window Cleaning</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt dolor sit amet, consectetur.
-                  </p>
-                  <a class="read-more" href="service-details.html"
-                    >Read More <i class="bx bx-plus"></i></a
-                  ><span class="flaticon-windows"></span>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              <div class="single-services">
-                <a href="service-details.html"
-                  ><img src="img/services/service3.jpg" alt="Image"
-                /></a>
-                <div class="services-content">
-                  <h3>Apartment Cleaning</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt dolor sit amet, consectetur.
-                  </p>
-                  <a class="read-more" href="service-details.html"
-                    >Read More <i class="bx bx-plus"></i></a
-                  ><span class="flaticon-house"></span>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              <div class="single-services">
-                <a href="service-details.html"
-                  ><img src="img/services/service4.jpg" alt="Image"
-                /></a>
-                <div class="services-content">
-                  <h3>Industry Cleaning</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt dolor sit amet, consectetur.
-                  </p>
-                  <a class="read-more" href="service-details.html"
-                    >Read More <i class="bx bx-plus"></i></a
-                  ><span class="flaticon-factory"></span>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              <div class="single-services">
-                <a href="service-details.html"
-                  ><img src="img/services/service5.jpg" alt="Image"
-                /></a>
-                <div class="services-content">
-                  <h3>Hospital &amp; Health Care</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt dolor sit amet, consectetur.
-                  </p>
-                  <a class="read-more" href="service-details.html"
-                    >Read More <i class="bx bx-plus"></i></a
-                  ><span class="flaticon-hospital"></span>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              <div class="single-services">
-                <a href="service-details.html"
-                  ><img src="img/services/service6.jpg" alt="Image"
-                /></a>
-                <div class="services-content">
-                  <h3>Bathroom Cleaning</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt dolor sit amet, consectetur.
-                  </p>
-                  <a class="read-more" href="service-details.html"
-                    >Read More <i class="bx bx-plus"></i></a
-                  ><span class="flaticon-toilet"></span>
-                </div>
-              </div>
-            </div>
+
+            {/* start categories */}
+
+            <div class="row">
+            {
+              category.map((getcategory)=>(
+                
+                <div class="col-lg-4 col-sm-6">
+                  <div class="single-services" style={{minHeight:400}}>
+                    <a href="service-details.html"
+                      ><img src={getcategory.image} alt="Image" style={{width:350 , height:200}}/></a>
+                    <div class="services-content">
+                      <h3>{getcategory.categoryName}</h3>
+                      <p>
+                        {getcategory.description}
+                      </p>
+                      <a class="read-more" href="service-details.html"
+                        >See details <i class="bx bx-plus"></i></a
+                      ><span class="flaticon-couch"></span>
+                    </div>
+                  </div>
+                    </div>
+              
+            )
+          )}
           </div>
+         
+          {/* end of categories */}
         </div>
       </div>
       <div class="prevent-area pb-70">
