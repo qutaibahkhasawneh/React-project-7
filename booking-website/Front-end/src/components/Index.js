@@ -9,7 +9,7 @@ function Index() {
     const getcategory= async()=>{
       const res =await fetch('http://127.0.0.1:8000/api/categories');
       const getdata= await res.json();
-      setCategory(getdata);
+      setCategory(getdata.categories);
       console.log(getdata);                         
     }
     getcategory();
@@ -62,7 +62,7 @@ function Index() {
               at<a href="tel:+61-821-456">+61-821-456</a>
             </h3>
             <div className="shape">
-              <img src="img/shape/shape1.png" alt="Image" />
+              <img src="img/shape/shape1.png" alt="" />
             </div>
           </div>
         </div>
@@ -133,7 +133,7 @@ function Index() {
 
             <div class="row">
             {
-              category.map((getcategory)=>(
+             category.length>0 && category.map((getcategory)=>(
                 
                 <div class="col-lg-4 col-sm-6">
                   <div class="single-services" style={{minHeight:400}}>

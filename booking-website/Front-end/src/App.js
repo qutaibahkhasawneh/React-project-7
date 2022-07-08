@@ -23,7 +23,7 @@ function App() {
       <Routes>
 
       {/* this is Home */}
-      <Route path='/' element={<Index />}/>
+      <Route path='/' element={<Index id={1} />}/>
 
         {/* Appointment us page */}
         <Route path="/appointment" element={<Appointment />} />
@@ -45,7 +45,7 @@ function App() {
         <Route path="Signup" element={<Signup />} />
         {/* service-datails  page */}
        <Route path='service/:id' element={<ServiceDetails/>} />
-       <Route path='service' element={<ServiceDetails/>} />
+       {/* <Route path='service' element={<ServiceDetails/>} /> */}
        {/* Edit Profile */}
        <Route path='/edit' element={<EditProfile/>} />
       </Routes>

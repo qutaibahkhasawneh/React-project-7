@@ -9,16 +9,19 @@ export default function ServiceDetails() {
   console.log(data);
   console.log(id)
 
+   const fetchData = async()=>{
+   const resp = await fetch(`http://127.0.0.1:8000/api/category/${id}`)
+      const respdata = await resp.json()
+      setData(respdata)
+  }
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/api/category/${id}`)
-      .then((response) => response.json())
-      .then((data) =>console.log(data));
+    fetchData()
   }, []);
   console.log(data)
   return (
     <div>
       
-        <h1>{data.description}</h1>
+        {/* <h1>{data.description}</h1> */}
       
       <div class="page-title-area bg-23">
         <div class="container">
@@ -40,7 +43,7 @@ export default function ServiceDetails() {
             <div class="col-lg-4">
               <div class="services-sidebar">
                 <div class="services-img">
-                  <img src="img/services/service1.jpg" alt="Image" />
+                  <img src={data.image}  />
                 </div>
                 <div class="availability">
                   <h3>
@@ -48,7 +51,7 @@ export default function ServiceDetails() {
                   </h3>
                   <ul>
                     <li>
-                      Monday - Friday<span>9.00 - 20.00</span>
+                      Monday - Thursday<span>9.00 - 20.00</span>
                     </li>
                     <li>
                       Saturday<span>10.00 - 16.00</span>
@@ -76,12 +79,12 @@ export default function ServiceDetails() {
                   <div class="row borders">
                     <div class="col-lg-3 pl-0">
                       <div class="left-title">
-                        <h3>Category</h3>
+                        {/* <h3>Category</h3> */}
                       </div>
                     </div>
                     <div class="col-lg-9">
                       <div class="right-title">
-                        <ul>
+                        {/* <ul>
                           <li>
                             <i class="bx bxs-hand-right"></i>House Cleaning
                           </li>
@@ -101,19 +104,19 @@ export default function ServiceDetails() {
                           <li>
                             <i class="bx bxs-hand-right"></i>Bathroom Cleaning
                           </li>
-                        </ul>
+                        </ul> */}
                       </div>
                     </div>
                   </div>
-                  <div class="row borders">
+                  <div >
                     <div class="col-lg-3 pl-0">
                       <div class="left-title">
-                        <h3>Specialty</h3>
+                        {/* <h3>Specialty</h3> */}
                       </div>
                     </div>
                     <div class="col-lg-9">
                       <div class="right-title">
-                        <ul>
+                        {/* <ul>
                           <li>
                             <i class="bx bxs-hand-right"></i>5 Room Cleaning
                           </li>
@@ -123,7 +126,7 @@ export default function ServiceDetails() {
                           <li>
                             <i class="bx bxs-hand-right"></i>Window Cleaning
                           </li>
-                        </ul>
+                        </ul> */}
                       </div>
                     </div>
                   </div>
@@ -138,7 +141,7 @@ export default function ServiceDetails() {
                         <ul>
                           <li>
                             <i class="bx bxs-hand-right"></i>25 years of
-                            Experience in Medicine
+                            Experienced
                           </li>
                         </ul>
                       </div>
@@ -154,8 +157,7 @@ export default function ServiceDetails() {
                       <div class="right-title">
                         <ul>
                           <li>
-                            <i class="bx bxs-hand-right"></i>123, Western Road,
-                            Melbourne Australia
+                            <i class="bx bxs-hand-right"></i>123, Jordan Amman
                           </li>
                         </ul>
                       </div>
@@ -193,7 +195,7 @@ export default function ServiceDetails() {
                               class="__cf_email__"
                               data-cfemail="89e1ece5e5e6c9fafde6e7a7eae6e4"
                             >
-                              [email&#160;protected]
+                              [ston@uu.com]
                             </a>
                           </li>
                         </ul>
