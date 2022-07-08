@@ -106,7 +106,7 @@ function Index() {
 
             <div class="row">
             {
-              category.map((getcategory)=>(
+            category.map((getcategory)=>(
                 
                 <div class="col-lg-4 col-sm-6">
                   <div class="single-services" style={{minHeight:400}}>
