@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import {useParams} from 'react-router';
+import Swal from "sweetalert";
 
 import axios from 'axios';
 function Profile() {
@@ -30,9 +31,22 @@ axios.put(`http://127.0.0.1:8000/api/users/1`, users)
 .then(()=>setUpdate(!update))
 console.log(users)
 if(!update){
-window.alert('Your profile has been uploaded successfuly')
-}
+ window.alert('Your profile has been uploaded successfuly')
 
+  
+}
+// .then((res) => {
+//   if (res.data.status === 200){
+//   Swal.fire({
+//                   position: 'top-end',
+//                   icon: 'success',
+//                   title: `${res.data.message}`,
+//                   showConfirmButton: false,
+//                   timer: 1500
+//               })
+    
+
+//   }})
 }
 
   //submit
