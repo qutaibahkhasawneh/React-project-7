@@ -29,7 +29,9 @@ function Index() {
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Nihil architecto laborum eaque! Deserunt maxime, minus
                       quas molestiae reiciendis esse natus nisi iure.
+                    
                     </p>
+                  
                     <div className="banner-btn">
                       <a className="default-btn" href="contact.html">Contact Us</a
                       ><a className="default-btn active" href="about-us.html"
