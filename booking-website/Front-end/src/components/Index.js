@@ -52,7 +52,7 @@ function Index() {
               at +962778093278
             </h3>
             <div className="shape">
-              <img src="img/shape/shape1.png" alt="Image" />
+              <img src="img/shape/shape1.png" alt="" />
             </div>
           </div>
         </div>
@@ -106,8 +106,7 @@ function Index() {
 
             <div class="row">
             {
-              category.length > 0 &&
-              category.map((getcategory)=>(
+            category.length>0 &&  category.map((getcategory)=>{
                 
                 <div class="col-lg-4 col-sm-6">
                   <div class="single-services" style={{minHeight:400}}>
@@ -123,7 +122,7 @@ function Index() {
                   </div>
                     </div>
               
-            )
+            }
           )}
           </div>
          

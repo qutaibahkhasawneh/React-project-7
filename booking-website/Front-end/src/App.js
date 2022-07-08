@@ -13,7 +13,7 @@ import Profile from "./components/profile/Profile";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import ServiceDetails from './components/service-details';
-import EditProfile from './components/profile/EditProfile';
+// import EditProfile from './components/profile/EditProfile';
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
       <Routes>
 
       {/* this is Home */}
-      <Route path='/' element={<Index />}/>
+      <Route path='/' element={<Index id={1} />}/>
 
         {/* Appointment us page */}
         <Route path="/appointment" element={<Appointment />} />
@@ -38,16 +38,16 @@ function App() {
         {/* about us page */}
         <Route path="/about" element={<Aboutus />} />
         {/* profile  page */}
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<Profile id={1} />} />
         {/* Login  page */}
         <Route path="login" element={<Login />} />
         {/* Signup  page */}
         <Route path="Signup" element={<Signup />} />
         {/* service-datails  page */}
        <Route path='service/:id' element={<ServiceDetails/>} />
-       <Route path='service' element={<ServiceDetails/>} />
+       {/* <Route path='service' element={<ServiceDetails/>} /> */}
        {/* Edit Profile */}
-       <Route path='/edit' element={<EditProfile/>} />
+       {/* <Route path='/edit/:id' element={<EditProfile/>} /> */}
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -1,4 +1,5 @@
 import React,{useEffect,useState} from 'react';
+import { Link } from 'react-router-dom';
 // import {Link}from 'react-router-dom';
 function Navbar() {
   // const[users,setUsers]=useState([]);
@@ -53,9 +54,9 @@ function Navbar() {
           <div className="main-nav">
             <nav className="navbar navbar-expand-lg">
               <div className="container">
-                <a className="navbar-brand" href="/"
-                  ><img src="img/logo.png" alt="logo" height={"90px"} width={"150px"} /></a
-                ><button
+                <Link className="navbar-brand" to="service/1"
+                  ><img src="img/logo.png" alt="logo" height={"90px"} width={"150px"} /></Link>
+                  <button
                   className="navbar-toggler navbar-toggler-right collapsed"
                   type="button"
                   data-toggle="collapse"
