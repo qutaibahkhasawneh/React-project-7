@@ -1,4 +1,69 @@
+import React,{useState,useEffect} from 'react';
+import axios from "axios";
+import Swal from "sweetalert";
+
+
 export function Contact() {
+
+  const [name,setName]=useState('');
+  const [email,setEmail]=useState('');
+  const [phone,setPhone]=useState('');
+  const [subject,setSubject]=useState('');
+  const [message,setMessage]=useState('');
+  const [response,setResponse]=useState({});
+
+  const handleInputname=(e)=>{
+    setName(e.target.value);
+  }
+
+  const handleInputemail=(e)=>{
+    setEmail(e.target.value);
+  }
+  const handleInputphone=(e)=>{
+    setPhone(e.target.value);
+  }
+  const handleInputsubject=(e)=>{
+    setSubject(e.target.value);
+  }
+  const handleInputmessage=(e)=>{
+    setMessage(e.target.value);
+  }
+const handleSubmit=(e)=>{
+  e.preventDefault();
+  if (name && email && message)
+{
+  Swal.fire({
+    position:'top-centered',
+    icon:'success',
+    title:'Happy you contacted us',
+  })
+
+
+  const contact ={name:name , 
+                  email:email,
+                  phone:phone,
+                  subject:subject,
+                  message:message
+                }
+  
+                axios({
+                  method:'post',
+                  url:'http://127.0.0.1:8000/api/contacts',
+                  headers:{Accept:'application/json'},
+                  data:Contact
+                })
+                .then((res)=>{
+                  setResponse(res)
+                  console.log(res)
+                })
+
+                setName('');
+                setEmail('');
+                setPhone('');
+                setSubject('');
+                setMessage('');
+              }
+            }
     return (
          <div>
      <div class="page-title-area bg-19">
@@ -19,7 +84,7 @@ export function Contact() {
               <div class="contact-wrap">
                 <div class="contact-form">
                   <div class="section-title">
-                    <h2>Drop Us A Message For Any Query</h2>
+                    <h2>Drop Us A Message For Us</h2>
                   </div>
                   <form id="contactForm">
                     <div class="row">
@@ -32,6 +97,8 @@ export function Contact() {
                             class="form-control"
                             required=""
                             placeholder="Your Name"
+                            onChange={handleInputname}
+                            value={name}
                           />
                         </div>
                       </div>
@@ -44,6 +111,8 @@ export function Contact() {
                             class="form-control"
                             required=""
                             placeholder="Your Email"
+                            onChange={handleInputemail}
+                            value={email}
                           />
                         </div>
                       </div>
@@ -56,6 +125,8 @@ export function Contact() {
                             required=""
                             class="form-control"
                             placeholder="Your Phone"
+                            onChange={handleInputphone}
+                            value={phone}
                           />
                         </div>
                       </div>
@@ -68,6 +139,8 @@ export function Contact() {
                             class="form-control"
                             required=""
                             placeholder="Your Subject"
+                            onChange={handleInputsubject}
+                            value={subject}
                           />
                         </div>
                       </div>
@@ -81,11 +154,13 @@ export function Contact() {
                             rows="5"
                             required=""
                             placeholder="Your Message"
+                            onChange={handleInputmessage}
+                            value={message}
                           ></textarea>
                         </div>
                       </div>
                       <div class="col-lg-12 col-md-12">
-                        <button type="submit" class="default-btn page-btn">
+                        <button type="submit" class="default-btn page-btn" onClick={handleSubmit}>
                           Send Message
                         </button>
                       </div>
@@ -100,13 +175,13 @@ export function Contact() {
                 <ul>
                   <li>
                     <i class="bx bx-location-plus"></i>Location:<span
-                      >123, Western Road, Melbourne Australia</span
+                      >123,Amman ,Jordan</span
                     >
                   </li>
                   <li>
                     <i class="bx bx-phone-call"></i>Call Us:<a
                       href="tel:+61-821-456"
-                      >+61-821-456</a
+                      >+962 778093278</a
                     ><a href="tel:+61-987-786">+61-987-786</a>
                   </li>
                   <li>
@@ -115,14 +190,7 @@ export function Contact() {
                       ><span
                         class="__cf_email__"
                         data-cfemail="3058555c5c5f7043445f5e1e535f5d"
-                        >[email&#160;protected]</span
-                      ></a
-                    ><a
-                      href="cdn-cgi/l/email-protection.html#d7beb9b1b897a4a3b8b9f9b4b8ba"
-                      ><span
-                        class="__cf_email__"
-                        data-cfemail="aac3c4ccc5ead9dec5c484c9c5c7"
-                        >[email&#160;protected]</span
+                        >[goclean@gmail.com]</span
                       ></a
                     >
                   </li>

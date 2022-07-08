@@ -16,6 +16,7 @@ function Navbar() {
     <div>
       
        <div id="__next">
+      
       <header className="header-area fixed-top">
         <div className="top-header-area">
           <div className="container">
@@ -43,7 +44,7 @@ function Navbar() {
               <div className="col-lg-6 col-sm-6">
                 <ul className="header-content-right">
                   <li>Opening Hour: 9:00 am - 9:00 pm</li>
-                  <li><a href="/Signup">Sign In</a></li>
+                  <li><a href="/Signup" style={{fontWeight:'bolder'}}>Sign In</a></li>
                 </ul>
               </div>
             </div>
@@ -265,7 +266,8 @@ function Navbar() {
           </div>
         </div>
       </header>
-</div>
+      </div>
+
 
 {/* Hero-slider */}
 {/* <div className="main-banner-area jarallax">
