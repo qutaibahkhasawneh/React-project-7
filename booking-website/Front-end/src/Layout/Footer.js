@@ -14,7 +14,7 @@ function Footer() {
                   /></a>
                 </div>
                 <p>
-                At ‘Cston’ Service, we give a spotless and sound workplace through a blend of profoundly prepared staff and extraordinary client benefit understanding.
+                At ‘Go Clean’ Service, we give a spotless and sound workplace through a blend of profoundly prepared staff and extraordinary client benefit understanding.
                 </p>
                 <div className="social-area">
                   <ul>
@@ -52,7 +52,7 @@ function Footer() {
                 <h3>Our Services</h3>
                 <ul>
                   <li>
-                    <a href="index.html#"
+                    <a href="/categories"
                       ><i class="bx bx-chevrons-right"></i>Window Cleaning</a
                     >
                   </li>
@@ -84,8 +84,13 @@ function Footer() {
                 <h3>Quick Links</h3>
                 <ul>
                 <li>
-                    <a href="about-us.html"
+                    <a href="/"
                       ><i class="bx bx-chevrons-right"></i>Home</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/profile"
+                      ><i class="bx bx-chevrons-right"></i>Profile</a
                     >
                   </li>
                   <li>
@@ -94,7 +99,7 @@ function Footer() {
                     >
                   </li>
                   <li>
-                    <a href="about-us.html"
+                    <a href="/contact"
                       ><i class="bx bx-chevrons-right"></i>Contact</a
                     >
                   </li>

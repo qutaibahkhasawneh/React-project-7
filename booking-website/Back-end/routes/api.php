@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\servicesController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
-
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -25,4 +25,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/users/{id}',[UserController::class,'update']);
 Route::get('/categories',[CategoryController::class, 'index']);
 Route::get('/category/{id}',[CategoryController::class, 'show']);
+Route::get('/contacts',[ContactController::class, 'store']);
+
 

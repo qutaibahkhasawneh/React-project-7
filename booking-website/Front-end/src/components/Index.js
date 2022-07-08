@@ -173,14 +173,14 @@ function Index() {
               <div class="col-lg-4 col-sm-6">
                 <div class="single-product">
                   <div class="product-img">
-                    <img src="img\services\service5.jpg" alt="Image" />
+                    <img src="img\services\service3.jpg" alt="Image" />
                   </div>
                 </div>
               </div>
               <div class="col-lg-4 col-sm-6">
                 <div class="single-product">
                   <div class="product-img">
-                    <img src="img\services\service6.jpg" alt="" />
+                    <img src="img\services\service2.jpg" alt="" />
                   </div>
                  
                 </div>
@@ -188,7 +188,7 @@ function Index() {
               <div class="col-lg-4 col-sm-6">
                 <div class="single-product">
                   <div class="product-img">
-                    <img src="img\services\service4.jpg" alt="Image" />
+                    <img src="img\services\service1.jpg" alt="Image" />
                   </div>
                  
                 </div>

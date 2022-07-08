@@ -43,7 +43,7 @@ function Navbar() {
               <div className="col-lg-6 col-sm-6">
                 <ul className="header-content-right">
                   <li>Opening Hour: 9:00 am - 9:00 pm</li>
-                  <li><a href="/Signup">Sign In</a></li>
+                  <li><a href="/Signup" style={{fontWeight:'bolder'}}>Sign In</a></li>
                 </ul>
               </div>
             </div>
