@@ -17,13 +17,13 @@ class UserController extends Controller
 
 
     //select user data/id
-   public function update($id){
+   public function edit($id){
   return User::find($id);
 //    return $user = $user->toJson();
 
    } 
 
-   public function edit(Request $request,$id)
+   public function update(Request $request,$id)
    {
        $user=User::find($id);
        $user->update([
@@ -33,6 +33,7 @@ class UserController extends Controller
        'password'=>$request->input('password'),
    ]);
    $user->save();
+   return $user;
 }
 }
 

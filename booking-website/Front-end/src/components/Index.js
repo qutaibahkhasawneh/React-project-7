@@ -1,4 +1,6 @@
 import React,{useEffect,useState} from 'react';
+import { Link } from 'react-router-dom';
+
 
 function Index() {
 
@@ -131,25 +133,25 @@ function Index() {
 
             <div class="row">
             {
-              category.map((getcategory)=>(
+            category.length>0 &&  category.map((getcategory)=>{
                 
                 <div class="col-lg-4 col-sm-6">
                   <div class="single-services" style={{minHeight:400}}>
-                    <a href="service-details.html"
-                      ><img src={getcategory.image} alt="Image" style={{width:350 , height:200}}/></a>
+                    <Link to={{pathname:'service/'+getcategory.id}}
+                      ><img src={getcategory.image} alt="Image" style={{width:350 , height:200}}/></Link>
                     <div class="services-content">
                       <h3>{getcategory.categoryName}</h3>
                       <p>
                         {getcategory.description}
                       </p>
-                      <a class="read-more" href="service-details.html"
-                        >See details <i class="bx bx-plus"></i></a
-                      ><span class="flaticon-couch"></span>
+                      <Link class="read-more" to={'service/'+getcategory.id}
+                        >See details <i class="bx bx-plus"></i></Link>
+                        <span class="flaticon-couch"></span>
                     </div>
                   </div>
                     </div>
               
-            )
+            }
           )}
           </div>
          

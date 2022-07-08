@@ -1,14 +1,14 @@
 import React,{useState,useEffect} from 'react'
 import {useParams} from 'react-router';
-import { Link } from 'react-router-dom';
 
+import axios from 'axios';
 function Profile() {
 
-const[users,setUsers]=useState([]);
-const[userName,setName]=useState([]);
-const[email,setEmail]=useState([]);
-const[phone,setPhone]=useState([]);
-const[password,setPassword]=useState([]);
+const[users,setUsers]=useState({
+  userName:'',email:'',phone:'',password:''
+});
+
+const[update,setUpdate]=useState(false)
 
 const {id}=useParams();
 console.log(id)
@@ -21,9 +21,16 @@ useEffect(()=>{
       
   }
   data()
-},[])
+},[update])
  
+const updateHandeler=(e)=>{
+e.preventDefault();
+axios.put(`http://127.0.0.1:8000/api/users/1`, users)
+.then((res)=>setUsers(res.data))
+.then(()=>setUpdate(!update))
+console.log(users)
 
+}
 
   //submit
 
@@ -69,7 +76,7 @@ useEffect(()=>{
                   <i className="fa fa-home text-center mr-1"></i>
                   Account
                 </a>
-                <a
+                {/* <a
                   className="nav-link"
                   id="password-tab"
                   data-toggle="pill"
@@ -79,7 +86,7 @@ useEffect(()=>{
                   aria-selected="false" >
                   <i className="fa fa-key text-center mr-1"></i>
                   Password
-                </a>
+                </a> */}
                 <a
                   className="nav-link"
                   id="security-tab"
@@ -115,6 +122,7 @@ useEffect(()=>{
                 </a>
               </div>
             </div>
+            
             <div className="tab-content p-4 p-md-5" id="v-pills-tabContent">
               <div
                 className="tab-pane fade show active"
@@ -122,55 +130,74 @@ useEffect(()=>{
                 role="tabpanel"
                 aria-labelledby="account-tab" >
                 <h3 className="mb-4">Account Settings</h3>
-               
+               <form onSubmit={updateHandeler}>
                 <div className="row">
-                {/* {users.map((user)=>{ */}
+               
                   <div className="col-md-6">
                     <div className="form-group">
                       <label>User Name</label>
                       <input type="text" className="form-control" name='userName'
                       value={users.userName} 
-                      onChange={(e)=>setName(e.target.value)} />
+                      onChange={(e)=>setUsers({...users,userName:e.target.value})} />
                     </div>
                   </div>
-              {/* })}  */}
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <label>Password</label>
-                      <input type="password" className="form-control" name='password'
-                       value={users.password} 
-                       onChange={(e)=>setPassword(e.target.value)} />
-                </div>
-                  </div> 
                   <div className="col-md-6">
                     <div className="form-group">
                       <label>Email</label>
                       <input
-                        type="phone"
-                        className="form-control" name='phone'
-                        value={users.phone} 
-                        onChange={(e)=>setPhone(e.target.value)} />
+                        type="email"
+                        className="form-control" name='email'
+                        value={users.email} 
+                        onChange={(e)=>setUsers({...users,email:e.target.value})} />
+
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="form-group">
                       <label>Phone number</label>
                       <input
-                        type="email"
-                        className="form-control" name='email'
-                        value={users.email} 
-                        onChange={(e)=>setEmail(e.target.value)} />
+                        type="phone"
+                        className="form-control" name='phone'
+                        value={users.phone} 
+                        onChange={(e)=>setUsers({...users,phone:e.target.value})} />
+
                     </div>
                   </div>
-              
+                  <div className="col-md-6">
+                    </div>
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <label>Reset Password</label>
+                      <input type="password" className="form-control" name='password'
+                       value={users.password} 
+                      onChange={(e)=>setUsers({...users,password:e.target.value})} />
+                     
+                </div>
+                  </div> 
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <label>Confirm Password</label>
+                      <input type="password" className="form-control" name='password'
+                       value={users.password} 
+                      onChange={(e)=>setUsers({...users,password:e.target.value})} />
+                     
+                </div>
+                  </div> 
+               
+               
+                       
                 </div>
                 <div>
-                  <button className="btn btn-primary" > <Link to={{pathname:`/edit/${users.id}`}}>Update</Link></button>
+                  <button className="btn btn-primary" type='submit' > Update</button>
                   {/* <button className="btn btn-primary" type='submit' >update</button> */}
 
                   <button className="btn btn-light">Cancel</button>
                 </div>
+                </form>
+               
+               
               </div>
+              
               <div
                 className="tab-pane fade"
                 id="password"
