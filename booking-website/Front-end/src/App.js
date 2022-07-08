@@ -13,7 +13,7 @@ import Profile from "./components/profile/Profile";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import ServiceDetails from './components/service-details';
-import EditProfile from './components/profile/EditProfile';
+// import EditProfile from './components/profile/EditProfile';
 
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
         {/* about us page */}
         <Route path="/about" element={<Aboutus />} />
         {/* profile  page */}
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<Profile id={1} />} />
         {/* Login  page */}
         <Route path="login" element={<Login />} />
         {/* Signup  page */}
@@ -47,7 +47,7 @@ function App() {
        <Route path='service/:id' element={<ServiceDetails/>} />
        {/* <Route path='service' element={<ServiceDetails/>} /> */}
        {/* Edit Profile */}
-       <Route path='/edit' element={<EditProfile/>} />
+       {/* <Route path='/edit/:id' element={<EditProfile/>} /> */}
       </Routes>
       <Footer />
     </BrowserRouter>
