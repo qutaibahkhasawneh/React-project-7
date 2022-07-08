@@ -13,5 +13,7 @@ class User extends Model
         'email',
         'password',
     ];
+    protected $table="users";
+
     use HasFactory;
 }

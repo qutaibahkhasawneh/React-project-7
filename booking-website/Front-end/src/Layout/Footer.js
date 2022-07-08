@@ -3,149 +3,133 @@ import React from 'react'
 function Footer() {
   return (
     <div>
-       <footer class="footer-top-area f-bg pt-100 pb-70 jarallax">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6">
-              <div class="single-widget">
-                <div class="foot-logo">
-                  <a href="index.html"
+       <footer className="footer-top-area f-bg pt-100 pb-70 jarallax">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-3 col-md-6">
+              <div className="single-widget">
+                <div className="foot-logo">
+                  <a href="/"
                     ><img src="img/logo.png" alt="Image"
                   /></a>
                 </div>
                 <p>
-                  Lorem ipsum dolor, sit amet earum consectetur adipisicing
-                  elit. Cupiditate rerum quidem fugiat sapiente! Iusto quae
-                  perspiciatis, repudiandae ipsam minus et ex, aliquid dolor
-                  molestias.
+                At ‘Go Clean’ Service, we give a spotless and sound workplace through a blend of profoundly prepared staff and extraordinary client benefit understanding.
                 </p>
-                <div class="social-area">
+                <div className="social-area">
                   <ul>
                     <li>
-                      <a href="#" target="_blank"
-                        ><i class="bx bxl-facebook"></i
+                      <a href="www.facebook.com" target="_blank"
+                        ><i className="bx bxl-facebook"></i
                       ></a>
                     </li>
                     <li>
-                      <a href="#" target="_blank"
-                        ><i class="bx bxl-twitter"></i
+                      <a href="www.twitter.com" target="_blank"
+                        ><i className="bx bxl-twitter"></i
                       ></a>
                     </li>
                     <li>
-                      <a href="#" target="_blank"
-                        ><i class="bx bxl-linkedin"></i
+                      <a href="www.linkedin.com" target="_blank"
+                        ><i className="bx bxl-linkedin"></i
                       ></a>
                     </li>
                     <li>
-                      <a href="#" target="_blank"
-                        ><i class="bx bxl-youtube"></i
+                      <a href="www.youtube.com" target="_blank"
+                        ><i className="bx bxl-youtube"></i
                       ></a>
                     </li>
                     <li>
-                      <a href="#" target="_blank"
-                        ><i class="bx bxl-instagram"></i
+                      <a href="www.instagram.com" target="_blank"
+                        ><i className="bx bxl-instagram"></i
                       ></a>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="single-widget">
+            <div className="col-lg-3 col-md-6">
+              <div className="single-widget">
                 <h3>Our Services</h3>
                 <ul>
                   <li>
-                    <a href="index.html#"
-                      ><i class="bx bx-chevrons-right"></i>Main Service</a
-                    >
-                  </li>
-                  <li>
-                    <a href="index.html#"
+                    <a href="/categories"
                       ><i class="bx bx-chevrons-right"></i>Window Cleaning</a
                     >
                   </li>
                   <li>
                     <a href="index.html#"
-                      ><i class="bx bx-chevrons-right"></i>Domestic Cleaning</a
+                      ><i class="bx bx-chevrons-right"></i>Carpet Cleaning</a
                     >
                   </li>
                   <li>
                     <a href="index.html#"
-                      ><i class="bx bx-chevrons-right"></i>Disinfection</a
+                      ><i class="bx bx-chevrons-right"></i>Sofa Cleaning</a
                     >
                   </li>
                   <li>
                     <a href="index.html#"
-                      ><i class="bx bx-chevrons-right"></i>Office Cleaning</a
+                      ><i class="bx bx-chevrons-right"></i>Garden Cleaning</a
                     >
                   </li>
                   <li>
                     <a href="index.html#"
-                      ><i class="bx bx-chevrons-right"></i>House Cleaning</a
+                      ><i class="bx bx-chevrons-right"></i>Commercial Cleaning</a
                     >
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="single-widget">
+            <div className="col-lg-3 col-md-6">
+              <div className="single-widget">
                 <h3>Quick Links</h3>
                 <ul>
-                  <li>
-                    <a href="about-us.html"
-                      ><i class="bx bx-chevrons-right"></i>About</a
+                <li>
+                    <a href="/"
+                      ><i class="bx bx-chevrons-right"></i>Home</a
                     >
                   </li>
                   <li>
-                    <a href="services-style-one.html"
-                      ><i class="bx bx-chevrons-right"></i>Services</a
+                    <a href="/profile"
+                      ><i class="bx bx-chevrons-right"></i>Profile</a
                     >
                   </li>
                   <li>
-                    <a href="pricing.html"
-                      ><i class="bx bx-chevrons-right"></i>Prices</a
+                    <a href="/about"
+                      ><i className="bx bx-chevrons-right"></i>About</a
                     >
                   </li>
                   <li>
-                    <a href="testimonials.html"
-                      ><i class="bx bx-chevrons-right"></i>Testimonials</a
+                    <a href="/contact"
+                      ><i class="bx bx-chevrons-right"></i>Contact</a
                     >
                   </li>
-                  <li>
-                    <a href="blog-grid.html"
-                      ><i class="bx bx-chevrons-right"></i>Blog</a
-                    >
-                  </li>
-                  <li>
-                    <a href="projects.html"
-                      ><i class="bx bx-chevrons-right"></i>Projects</a
-                    >
-                  </li>
+
+                  
                 </ul>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="single-widget contact">
+            <div className="col-lg-3 col-md-6">
+              <div className="single-widget contact">
                 <h3>Get In Touch</h3>
                 <ul>
                   <li>
-                    <i class="bx bx-phone-call"></i><span>Hotline:</span>Phone:
-                    <a href="tel:+61-821-456">+61-821-456</a>
+                    <i className="bx bx-phone-call"></i><span>Hotline:</span>Phone:
+                    <a href="tel:+61-821-456">0778985432</a>
                   </li>
                   <li>
-                    <i class="bx bx-envelope"></i><span>Email:</span
+                    <i className="bx bx-envelope"></i><span>Email:</span
                     ><a
                       href="cdn-cgi/l/email-protection.html#244c4148484b6457515641505d0a474b49"
                       ><span
-                        class="__cf_email__"
+                        className="__cf_email__"
                         data-cfemail="9df5f8f1f1f2ddeee9f2f3b3fef2f0"
-                        >[email&#160;protected]</span
+                        >goClean@gmail.com</span
                       ></a
                     >
                   </li>
                   <li>
-                    <i class="bx bx-location-plus"></i><span>Address:</span>123,
-                    Western Road, Melbourne Australia
+                    <i className="bx bx-location-plus"></i><span>Address:</span>123,
+                    Amman,Jordan
                   </li>
                 </ul>
               </div>
@@ -153,22 +137,22 @@ function Footer() {
           </div>
         </div>
       </footer>
-      <div class="footer-bottom-area">
-        <div class="container">
-          <div class="copy-right">
+      <div className="footer-bottom-area">
+        <div className="container">
+          <div className="copy-right">
             <p>
               Copyright @2022
               Ston. All Rights Reserved By
-              <a href="https://envytheme.com/" target="blank">EnvyTheme</a>
+              <a href="https://envytheme.com/" target="blank">goClean</a>
             </p>
           </div>
         </div>
       </div>
      
-      <div class="go-top">
-        <i class="bx bx-chevrons-up"></i><i class="bx bx-chevrons-up"></i>
+      <div className="go-top">
+        <i className="bx bx-chevrons-up"></i><i className="bx bx-chevrons-up"></i>
       </div>
-      <div class="Toastify"></div>
+      <div className="Toastify"></div>
     </div>
     
   )

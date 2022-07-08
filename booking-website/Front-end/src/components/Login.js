@@ -46,7 +46,7 @@ const Login = () => {
             console.log(res);
             if(loggeduser.status == '200' ){
                 localStorage.setItem('user',JSON.stringify(loggeduser.logged_user));
-                window.location.href = 'http://localhost:3001'
+                window.location.href = 'http://localhost:3002/'
                 setSuccess(true);
             }
         })
@@ -121,7 +121,7 @@ const Login = () => {
                                     <div class="col-12"><button class="default-btn btn-two" type="submit" onClick={handleSubmit}>Sign
                                             In</button></div>
                                     <div class="col-12">
-                                        <p class="account-desc">Not a member? <a href="sign-up.html">Sign Up</a></p>
+                                        <p class="account-desc">Not a member? <a href="/signup">Sign Up</a></p>
                                     </div>
                                 </div>
                             </form>

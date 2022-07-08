@@ -18,9 +18,10 @@ function Signup() {
                 "Accept":'application/json'
             },
             body:JSON.stringify(item),
+            
        
         })
-
+        window.location.href = 'http://localhost:3002/login'
         result = await result.json()
         console.warn("result", result)
         }
@@ -81,7 +82,7 @@ function Signup() {
                                         <button onClick={sign}>signup</button>
                                     </div>
                                     <div className="col-12">
-                                        <p className="account-desc">Already have an account? <a href="sign-in.html">Sign
+                                        <p className="account-desc">Already have an account? <a href="/login">Sign
                                                 In</a></p>
                                     </div>
                                 </div>

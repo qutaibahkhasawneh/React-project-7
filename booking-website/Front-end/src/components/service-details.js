@@ -1,373 +1,232 @@
-// <!-- <!DOCTYPE html>
-// <html lang="zxx"> -->
-// <!-- Mirrored from ston-react.envytheme.com/service-details by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Jul 2022 13:25:24 GMT -->
-// <!-- Added by HTTrack -->
-// <!-- <meta http-equiv="content-type" content="text/html;charset=utf-8" />/Added by HTTrack -->
-
-// <!-- <head>
-//     <link rel="icon" type="image/png" href="img/favicon.png" />
-//     <meta charSet="utf-8" />
-//     <title>Ston - React Disinfection &amp; Sanitization Services Template</title>
-//     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-//     <meta name="description" content="Ston - React Disinfection &amp; Sanitization Services Template" />
-//     <meta name="og:title" property="og:title"
-//         content="Ston - React Disinfection &amp; Sanitization Services Template" />
-//     <meta name="twitter:card" content="Ston - React Disinfection &amp; Sanitization Services Template" />
-//     <link rel="canonical" href="index.html" />
-//     <meta name="next-head-count" content="7" />
-//     <link rel="preload" href="_next/static/css/f4baf235c28810ee5204.css" as="style" />
-//     <link rel="stylesheet" href="_next/static/css/f4baf235c28810ee5204.css" />
-//     <link rel="preload" href="_next/static/chunks/main-391fb08a2a28f15d77c2.js" as="script" />
-//     <link rel="preload" href="_next/static/chunks/webpack-9a031c5a5ba261c557c6.js" as="script" />
-//     <link rel="preload" href="_next/static/chunks/framework.1ae6aab54c557c2f6555.js" as="script" />
-//     <link rel="preload" href="_next/static/chunks/ceed8f9fb2eafe1b5ecf00064f598df03765af0e.e68a13ffc3e01fed6aa6.js"
-//         as="script" />
-//     <link rel="preload" href="_next/static/chunks/00c969a4184709a22e39d4fcc0a4090cdc141bb5.6b75cbe5ab8e1e3d1b3b.js"
-//         as="script" />
-//     <link rel="preload" href="_next/static/chunks/68fbdcd950265ffa17253f91878a7d5c60967de5.eb268d69551bc6ee7e4a.js"
-//         as="script" />
-//     <link rel="preload" href="_next/static/chunks/pages/_app-0bfa3d2a32b75b7bfb1f.js" as="script" />
-//     <link rel="preload" href="_next/static/chunks/ecf3aedbcd96348c0dab17dd7eeaa4971b9cbdd0.77f5a603be36fe8d6baf.js"
-//         as="script" />
-//     <link rel="preload" href="_next/static/chunks/9455103532f629d0ffe35e811081a4d5ada80893.a672b83dfd4427705b54.js"
-//         as="script" />
-//     <link rel="preload" href="_next/static/chunks/pages/service-details-a7f9764aec25ecccbe8f.js" as="script" />
-// </head>
-
-// <body> -->
-
-import React from "react"
-
-
+import React, { useState } from "react";
+import { NavLink, useParams } from "react-router-dom";
+import { useEffect } from "react";
+import useFetch from "../Hooks/useFetch";
 
 export default function ServiceDetails() {
+  const { id } = useParams();
+  const [data, setData] = useState({});
+  console.log(data);
+  console.log(id)
+
+   const fetchData = async()=>{
+   const resp = await fetch(`http://127.0.0.1:8000/api/category/${id}`)
+      const respdata = await resp.json()
+      setData(respdata)
+  }
+  useEffect(() => {
+    fetchData()
+  }, []);
+  console.log(data)
   return (
     <div>
-
-
-<div class="page-title-area bg-23">
-            <div class="container">
-                <div class="page-title-content">
-                    <h2>Services Details</h2>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li class="active">Services Details</li>
-                    </ul>
-                </div>
-            </div>
-        </div> 
-
-
-        <div class="services-details-area pt-100 pb-70">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="services-sidebar">
-                            <div class="services-img"><img src="img/services/service1.jpg" alt="Image" />
-                                <ul>
-                                    <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxl-pinterest-alt"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxl-instagram"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxl-youtube"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="availability">
-                                <h3><i class="bx bx-time"></i>Availability</h3>
-                                <ul>
-                                    <li>Monday - Friday<span>9.00 - 20.00</span></li>
-                                    <li>Saturday<span>10.00 - 16.00</span></li>
-                                    <li>Sunday<span>9.30 - 18.00</span></li>
-                                    <li>Friday<span>Closed</span></li>
-                                </ul><a class="default-btn mt-4" href="appointment.html">Request An Appointment</a>
-                            </div>
-                            <div class="client-area services-feedback"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="services-detailss">
-                            <div class="services-history">
-                                <h2>House Cleaning</h2><span>Commercial Disinfection Services</span>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, totam! Dicta rerum
-                                    deserunt itaque. Incidunt in quo architecto eveniet rem facere, necessitatibus,
-                                    dolorem voluptas deleniti iure fuga magni velit molestiae ipsum dolor sit amet
-                                    consectetur adipisicing elit. Repellat, totam adipisicing.</p>
-                                <div class="row borders">
-                                    <div class="col-lg-3 pl-0">
-                                        <div class="left-title">
-                                            <h3>Category</h3>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-9">
-                                        <div class="right-title">
-                                            <ul>
-                                                <li><i class="bx bxs-hand-right"></i>House Cleaning</li>
-                                                <li><i class="bx bxs-hand-right"></i>Window Cleaning</li>
-                                                <li><i class="bx bxs-hand-right"></i>Apartment Cleaning</li>
-                                                <li><i class="bx bxs-hand-right"></i>Industry Cleaning</li>
-                                                <li><i class="bx bxs-hand-right"></i>Hospital &amp; Health Care</li>
-                                                <li><i class="bx bxs-hand-right"></i>Bathroom Cleaning</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row borders">
-                                    <div class="col-lg-3 pl-0">
-                                        <div class="left-title">
-                                            <h3>Specialty</h3>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-9">
-                                        <div class="right-title">
-                                            <ul>
-                                                <li><i class="bx bxs-hand-right"></i>5 Room Cleaning</li>
-                                                <li><i class="bx bxs-hand-right"></i>2 Bathroom Cleaning</li>
-                                                <li><i class="bx bxs-hand-right"></i>Window Cleaning</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row borders">
-                                    <div class="col-lg-3 pl-0">
-                                        <div class="left-title">
-                                            <h3>Experience</h3>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-9">
-                                        <div class="right-title">
-                                            <ul>
-                                                <li><i class="bx bxs-hand-right"></i>25 years of Experience in Medicine
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row borders">
-                                    <div class="col-lg-3 pl-0">
-                                        <div class="left-title">
-                                            <h3>Address</h3>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-9">
-                                        <div class="right-title">
-                                            <ul>
-                                                <li><i class="bx bxs-hand-right"></i>123, Western Road, Melbourne
-                                                    Australia</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row borders">
-                                    <div class="col-lg-3 pl-0">
-                                        <div class="left-title">
-                                            <h3>Phone</h3>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-9">
-                                        <div class="right-title">
-                                            <ul>
-                                                <li><i class="bx bxs-hand-right"></i>+61-821-456</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row borders">
-                                    <div class="col-lg-3 pl-0">
-                                        <div class="left-title">
-                                            <h3>Email</h3>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-9">
-                                        <div class="right-title">
-                                            <ul>
-                                                <li><i class="bx bxs-hand-right"></i><a
-                                                        href="cdn-cgi/l/email-protection.html" class="__cf_email__"
-                                                        data-cfemail="89e1ece5e5e6c9fafde6e7a7eae6e4">[email&#160;protected]</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row borders">
-                                    <div class="col-lg-3 pl-0">
-                                        <div class="left-title">
-                                            <h3>Website</h3>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-9">
-                                        <div class="right-title">
-                                            <ul>
-                                                <li><i class="bx bxs-hand-right"></i><a
-                                                        href="service-details.html#">www.ston.com</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-    {/* ----------------------comment-aria---------------------- */}
-         
-
-
-    </div>
-
-
-
-    
-
-    
-
-  )
-}
-
-    //  <div id="__next">
-    //     <header class="header-area fixed-top">
-    //         <div class="top-header-area">
-    //             <div class="container">
-    //                 <div class="row align-items-center">
-    //                     <div class="col-lg-6 col-sm-6">
-    //                         <ul class="header-content-left">
-    //                             <li><a href="cdn-cgi/l/email-protection.html#b9d1dcd5d5d6f9cacdd6d797dad6d4"><i
-    //                                         class="bx bx-envelope"></i>Email: <span class="__cf_email__"
-    //                                         data-cfemail="87efe2ebebe8c7f4f3e8e9a9e4e8ea">[email&#160;protected]</span></a>
-    //                             </li>
-    //                             <li><a href="tel:+61-821-456"><i class="bx bx-phone-call"></i>Call Us: +61-821-456</a>
-    //                             </li>
-    //                         </ul>
-    //                     </div>
-    //                     <div class="col-lg-6 col-sm-6">
-    //                         <ul class="header-content-right">
-    //                             <li>Opening Hour: 9:00 am - 9:00 pm</li>
-    //                             <li><a href="sign-in.html">Sign In</a></li>
-    //                         </ul>
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //         <div id="navbar" class="navbar-area">
-    //             <div class="main-nav">
-    //                 <nav class="navbar navbar-expand-lg">
-    //                     <div class="container"><a class="navbar-brand" href="index.html"><img src="img/logo.png"
-    //                                 alt="logo" /></a><button class="navbar-toggler navbar-toggler-right collapsed"
-    //                             type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-    //                             aria-controls="navbarSupportedContent" aria-expanded="false"
-    //                             aria-label="Toggle navigation"><span class="icon-bar top-bar"></span><span
-    //                                 class="icon-bar middle-bar"></span><span
-    //                                 class="icon-bar bottom-bar"></span></button>
-    //                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    //                             <ul class="navbar-nav m-auto">
-    //                                 <li class="nav-item"><a class="nav-link" href="service-details.html#">Home <i
-    //                                             class="bx bx-chevron-down"></i></a>
-    //                                     <ul class="dropdown-menu">
-    //                                         <li class="nav-item"><a class="nav-link" href="index.html">Home One</a></li>
-    //                                         <li class="nav-item"><a class="nav-link" href="index2.html">Home Two</a>
-    //                                         </li>
-    //                                         <li class="nav-item"><a class="nav-link" href="index3.html">Home Three</a>
-    //                                         </li>
-    //                                     </ul>
-    //                                 </li>
-    //                                 <li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
-    //                                 <li class="nav-item"><a class="nav-link" href="service-details.html#">Pages <i
-    //                                             class="bx bx-chevron-down"></i></a>
-    //                                     <ul class="dropdown-menu">
-    //                                         <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
-    //                                         <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a>
-    //                                         </li>
-    //                                         <li class="nav-item"><a class="nav-link"
-    //                                                 href="testimonials.html">Testimonials</a></li>
-    //                                         <li class="nav-item"><a class="nav-link"
-    //                                                 href="service-details.html#">Projects <i
-    //                                                     class="bx bx-chevron-down"></i></a>
-    //                                             <ul class="dropdown-menu">
-    //                                                 <li class="nav-item"><a class="nav-link"
-    //                                                         href="projects.html">Projects</a></li>
-    //                                                 <li class="nav-item"><a class="nav-link"
-    //                                                         href="project-details.html">Project Details</a></li>
-    //                                             </ul>
-    //                                         </li>
-    //                                         <li class="nav-item"><a class="nav-link"
-    //                                                 href="appointment.html">Appointment</a></li>
-    //                                         <li class="nav-item"><a class="nav-link" href="service-details.html#">User
-    //                                                 <i class="bx bx-chevron-down"></i></a>
-    //                                             <ul class="dropdown-menu">
-    //                                                 <li class="nav-item"><a class="nav-link" href="sign-up.html">Sign
-    //                                                         Up</a></li>
-    //                                                 <li class="nav-item"><a class="nav-link" href="sign-in.html">Sign
-    //                                                         In</a></li>
-    //                                                 <li class="nav-item"><a class="nav-link"
-    //                                                         href="recover-password.html">Recover Password</a></li>
-    //                                             </ul>
-    //                                         </li>
-    //                                         <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-    //                                         <li class="nav-item"><a class="nav-link" href="coming-soon.html">Coming
-    //                                                 Soon</a></li>
-    //                                         <li class="nav-item"><a class="nav-link" href="terms-conditions.html">Terms
-    //                                                 &amp; Conditions</a></li>
-    //                                         <li class="nav-item"><a class="nav-link" href="privacy-policy.html">Privacy
-    //                                                 Policy</a></li>
-    //                                         <li class="nav-item"><a class="nav-link" href="404.html">404 Error Page</a>
-    //                                         </li>
-    //                                     </ul>
-    //                                 </li>
-    //                                 <li class="nav-item"><a class="nav-link" href="service-details.html#">Services <i
-    //                                             class="bx bx-chevron-down"></i></a>
-    //                                     <ul class="dropdown-menu">
-    //                                         <li class="nav-item"><a class="nav-link"
-    //                                                 href="services-style-one.html">Services Style One</a></li>
-    //                                         <li class="nav-item"><a class="nav-link"
-    //                                                 href="services-style-two.html">Services Style Two</a></li>
-    //                                         <li class="nav-item"><a class="nav-link active"
-    //                                                 href="service-details.html">Services Details</a></li>
-    //                                     </ul>
-    //                                 </li>
-    //                                 <li class="nav-item"><a class="nav-link" href="service-details.html#">Shop <i
-    //                                             class="bx bx-chevron-down"></i></a>
-    //                                     <ul class="dropdown-menu">
-    //                                         <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
-    //                                         <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
-    //                                         <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout</a>
-    //                                         </li>
-    //                                         <li class="nav-item"><a class="nav-link"
-    //                                                 href="product/5f0cc6063ab06e21b560184b.html">Product Details</a>
-    //                                         </li>
-    //                                     </ul>
-    //                                 </li>
-    //                                 <li class="nav-item"><a class="nav-link" href="service-details.html#">Blog <i
-    //                                             class="bx bx-chevron-down"></i></a>
-    //                                     <ul class="dropdown-menu">
-    //                                         <li class="nav-item"><a class="nav-link" href="blog-grid.html">Blog Grid</a>
-    //                                         </li>
-    //                                         <li class="nav-item"><a class="nav-link" href="blog-left-sidebar.html">Blog
-    //                                                 Left Sidebar</a></li>
-    //                                         <li class="nav-item"><a class="nav-link" href="blog-right-sidebar.html">Blog
-    //                                                 Right Sidebar</a></li>
-    //                                         <li class="nav-item"><a class="nav-link" href="blog-details.html">Blog
-    //                                                 Details</a></li>
-    //                                     </ul>
-    //                                 </li>
-    //                                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-    //                             </ul>
-    //                             <div class="others-option">
-    //                                 <div class="cart-icon"><a class="" href="cart.html"><i
-    //                                             class="bx bx-cart"></i><span>0</span></a></div>
-    //                                 <div class="get-quote"><a class="default-btn" href="service-details.html#">Get A
-    //                                         Quote</a></div>
-    //                             </div>
-    //                         </div>
-    //                         <div class="mobile-cart-icon">
-    //                             <div class="cart-icon"><a class="" href="cart.html"><i
-    //                                         class="bx bx-cart"></i><span>0</span></a></div>
-    //                         </div>
-    //                     </div>
-    //                 </nav>
-    //             </div>
-    //         </div>
-    //     </header> -->
-         
       
+        {/* <h1>{data.description}</h1> */}
+      
+      <div class="page-title-area bg-23">
+        <div class="container">
+          <div class="page-title-content">
+            <h2>Services Details</h2>
+            <ul>
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li class="active">Services Details</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="services-details-area pt-100 pb-70">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="services-sidebar">
+                <div class="services-img">
+                  <img src={data.image}  />
+                </div>
+                <div class="availability">
+                  <h3>
+                    <i class="bx bx-time"></i>Availability
+                  </h3>
+                  <ul>
+                    <li>
+                      Monday - Thursday<span>9.00 - 20.00</span>
+                    </li>
+                    <li>
+                      Saturday<span>10.00 - 16.00</span>
+                    </li>
+                    <li>
+                      Sunday<span>9.30 - 18.00</span>
+                    </li>
+                    <li>
+                      Friday<span>Closed</span>
+                    </li>
+                  </ul>
+                  <a class="default-btn mt-4" href="appointment.html">
+                    Request An Appointment
+                  </a>
+                </div>
+                <div class="client-area services-feedback"></div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="services-detailss">
+                <div class="services-history">
+                  <h2>{data.serviceName}</h2>
+                  <span></span>
+                  <p>{data.description}</p>
+                  <div class="row borders">
+                    <div class="col-lg-3 pl-0">
+                      <div class="left-title">
+                        {/* <h3>Category</h3> */}
+                      </div>
+                    </div>
+                    <div class="col-lg-9">
+                      <div class="right-title">
+                        {/* <ul>
+                          <li>
+                            <i class="bx bxs-hand-right"></i>House Cleaning
+                          </li>
+                          <li>
+                            <i class="bx bxs-hand-right"></i>Window Cleaning
+                          </li>
+                          <li>
+                            <i class="bx bxs-hand-right"></i>Apartment Cleaning
+                          </li>
+                          <li>
+                            <i class="bx bxs-hand-right"></i>Industry Cleaning
+                          </li>
+                          <li>
+                            <i class="bx bxs-hand-right"></i>Hospital &amp;
+                            Health Care
+                          </li>
+                          <li>
+                            <i class="bx bxs-hand-right"></i>Bathroom Cleaning
+                          </li>
+                        </ul> */}
+                      </div>
+                    </div>
+                  </div>
+                  <div >
+                    <div class="col-lg-3 pl-0">
+                      <div class="left-title">
+                        {/* <h3>Specialty</h3> */}
+                      </div>
+                    </div>
+                    <div class="col-lg-9">
+                      <div class="right-title">
+                        {/* <ul>
+                          <li>
+                            <i class="bx bxs-hand-right"></i>5 Room Cleaning
+                          </li>
+                          <li>
+                            <i class="bx bxs-hand-right"></i>2 Bathroom Cleaning
+                          </li>
+                          <li>
+                            <i class="bx bxs-hand-right"></i>Window Cleaning
+                          </li>
+                        </ul> */}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row borders">
+                    <div class="col-lg-3 pl-0">
+                      <div class="left-title">
+                        <h3>Experience</h3>
+                      </div>
+                    </div>
+                    <div class="col-lg-9">
+                      <div class="right-title">
+                        <ul>
+                          <li>
+                            <i class="bx bxs-hand-right"></i>25 years of
+                            Experienced
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row borders">
+                    <div class="col-lg-3 pl-0">
+                      <div class="left-title">
+                        <h3>Address</h3>
+                      </div>
+                    </div>
+                    <div class="col-lg-9">
+                      <div class="right-title">
+                        <ul>
+                          <li>
+                            <i class="bx bxs-hand-right"></i>123, Jordan Amman
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row borders">
+                    <div class="col-lg-3 pl-0">
+                      <div class="left-title">
+                        <h3>Phone</h3>
+                      </div>
+                    </div>
+                    <div class="col-lg-9">
+                      <div class="right-title">
+                        <ul>
+                          <li>
+                            <i class="bx bxs-hand-right"></i>+61-821-456
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row borders">
+                    <div class="col-lg-3 pl-0">
+                      <div class="left-title">
+                        <h3>Email</h3>
+                      </div>
+                    </div>
+                    <div class="col-lg-9">
+                      <div class="right-title">
+                        <ul>
+                          <li>
+                            <i class="bx bxs-hand-right"></i>
+                            <a
+                              href="cdn-cgi/l/email-protection.html"
+                              class="__cf_email__"
+                              data-cfemail="89e1ece5e5e6c9fafde6e7a7eae6e4"
+                            >
+                              [ston@uu.com]
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row borders">
+                    <div class="col-lg-3 pl-0">
+                      <div class="left-title">
+                        <h3>Website</h3>
+                      </div>
+                    </div>
+                    <div class="col-lg-9">
+                      <div class="right-title">
+                        <ul>
+                          <li>
+                            <i class="bx bxs-hand-right"></i>
+                            <a href="service-details.html#">www.ston.com</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ----------------------comment-aria---------------------- */}
+    </div>
+  );
+}
