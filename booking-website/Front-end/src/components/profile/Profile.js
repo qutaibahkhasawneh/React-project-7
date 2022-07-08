@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import {useParams} from 'react-router';
-import Swal from "sweetalert";
+// import swal from "sweetalert";
 
 import axios from 'axios';
 function Profile() {
@@ -37,16 +37,16 @@ if(!update){
 }
 // .then((res) => {
 //   if (res.data.status === 200){
-//   Swal.fire({
+//   swal.fire({
 //                   position: 'top-end',
 //                   icon: 'success',
-//                   title: `${res.data.message}`,
+//                   title: 'your profile updated successfully!',
 //                   showConfirmButton: false,
 //                   timer: 1500
 //               })
     
 
-//   }})
+  // }})
 }
 
   //submit

@@ -13,6 +13,9 @@ class UserController extends Controller
         $users = User::all();
         return response()->json($users);
     }
+    public function show(){
+        
+    }
 
     /**
      * Store a newly created resource in storage.
