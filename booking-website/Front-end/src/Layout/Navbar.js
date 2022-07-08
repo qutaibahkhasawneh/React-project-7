@@ -1,9 +1,21 @@
-import React from 'react';
+import React,{useState} from 'react';
 
 function Navbar() {
+
+  const [color,setColor]=useState(false)
+  const changeColor =()=>{
+    if(window.scrollY >= 300){
+      setColor(true)
+    } else{
+      setColor(false)
+    }
+  }
+  window.addEventListener('scroll',changeColor);
+
   return (
     <div>
        <div id="__next">
+       <div className={color ? 'header header-bg' : 'header'}>
       <header className="header-area fixed-top">
         <div className="top-header-area">
           <div className="container">
@@ -17,13 +29,13 @@ function Navbar() {
                       <span
                         className="__cf_email__"
                         data-cfemail="97fff2fbfbf8d7e4e3f8f9b9f4f8fa"
-                        >[email&#160;protected]</span
+                        >[cton@gmail.com]</span
                       ></a
                     >
                   </li>
                   <li>
-                    <a href="tel:+61-821-456"
-                      ><i className="bx bx-phone-call"></i>Call Us: +61-821-456</a
+                    <a href="tel:+962 8093278"
+                      ><i className="bx bx-phone-call"></i>Call Us: +962 8093278</a
                     >
                   </li>
                 </ul>
@@ -31,7 +43,7 @@ function Navbar() {
               <div className="col-lg-6 col-sm-6">
                 <ul className="header-content-right">
                   <li>Opening Hour: 9:00 am - 9:00 pm</li>
-                  <li><a href="sign-in.html">Sign In</a></li>
+                  <li><a href="/signup" style={{fontWeight:'bolder', fontSize:'33'}} >Sign In</a></li>
                 </ul>
               </div>
             </div>
@@ -264,6 +276,7 @@ function Navbar() {
           </div>
         </div>
       </header>
+      </div>
 </div>
 
 {/* Hero-slider */}

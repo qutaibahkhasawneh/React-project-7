@@ -14,10 +14,7 @@ function Footer() {
                   /></a>
                 </div>
                 <p>
-                  Lorem ipsum dolor, sit amet earum consectetur adipisicing
-                  elit. Cupiditate rerum quidem fugiat sapiente! Iusto quae
-                  perspiciatis, repudiandae ipsam minus et ex, aliquid dolor
-                  molestias.
+                At ‘Cston’ Service, we give a spotless and sound workplace through a blend of profoundly prepared staff and extraordinary client benefit understanding.
                 </p>
                 <div class="social-area">
                   <ul>
@@ -56,32 +53,27 @@ function Footer() {
                 <ul>
                   <li>
                     <a href="index.html#"
-                      ><i class="bx bx-chevrons-right"></i>Main Service</a
-                    >
-                  </li>
-                  <li>
-                    <a href="index.html#"
                       ><i class="bx bx-chevrons-right"></i>Window Cleaning</a
                     >
                   </li>
                   <li>
                     <a href="index.html#"
-                      ><i class="bx bx-chevrons-right"></i>Domestic Cleaning</a
+                      ><i class="bx bx-chevrons-right"></i>Carpet Cleaning</a
                     >
                   </li>
                   <li>
                     <a href="index.html#"
-                      ><i class="bx bx-chevrons-right"></i>Disinfection</a
+                      ><i class="bx bx-chevrons-right"></i>Sofa Cleaning</a
                     >
                   </li>
                   <li>
                     <a href="index.html#"
-                      ><i class="bx bx-chevrons-right"></i>Office Cleaning</a
+                      ><i class="bx bx-chevrons-right"></i>Garden Cleaning</a
                     >
                   </li>
                   <li>
                     <a href="index.html#"
-                      ><i class="bx bx-chevrons-right"></i>House Cleaning</a
+                      ><i class="bx bx-chevrons-right"></i>Commercial Cleaning</a
                     >
                   </li>
                 </ul>
@@ -91,36 +83,23 @@ function Footer() {
               <div class="single-widget">
                 <h3>Quick Links</h3>
                 <ul>
+                <li>
+                    <a href="about-us.html"
+                      ><i class="bx bx-chevrons-right"></i>Home</a
+                    >
+                  </li>
                   <li>
                     <a href="about-us.html"
                       ><i class="bx bx-chevrons-right"></i>About</a
                     >
                   </li>
                   <li>
-                    <a href="services-style-one.html"
-                      ><i class="bx bx-chevrons-right"></i>Services</a
+                    <a href="about-us.html"
+                      ><i class="bx bx-chevrons-right"></i>Contact</a
                     >
                   </li>
-                  <li>
-                    <a href="pricing.html"
-                      ><i class="bx bx-chevrons-right"></i>Prices</a
-                    >
-                  </li>
-                  <li>
-                    <a href="testimonials.html"
-                      ><i class="bx bx-chevrons-right"></i>Testimonials</a
-                    >
-                  </li>
-                  <li>
-                    <a href="blog-grid.html"
-                      ><i class="bx bx-chevrons-right"></i>Blog</a
-                    >
-                  </li>
-                  <li>
-                    <a href="projects.html"
-                      ><i class="bx bx-chevrons-right"></i>Projects</a
-                    >
-                  </li>
+
+                  
                 </ul>
               </div>
             </div>
@@ -130,7 +109,7 @@ function Footer() {
                 <ul>
                   <li>
                     <i class="bx bx-phone-call"></i><span>Hotline:</span>Phone:
-                    <a href="tel:+61-821-456">+61-821-456</a>
+                    <a href="tel:+61-821-456">+962 8093278</a>
                   </li>
                   <li>
                     <i class="bx bx-envelope"></i><span>Email:</span
@@ -139,13 +118,13 @@ function Footer() {
                       ><span
                         class="__cf_email__"
                         data-cfemail="9df5f8f1f1f2ddeee9f2f3b3fef2f0"
-                        >[email&#160;protected]</span
+                        >[cston@gmail.com]</span
                       ></a
                     >
                   </li>
                   <li>
                     <i class="bx bx-location-plus"></i><span>Address:</span>123,
-                    Western Road, Melbourne Australia
+                    Jordan , Amman
                   </li>
                 </ul>
               </div>
@@ -159,7 +138,7 @@ function Footer() {
             <p>
               Copyright @2022
               Ston. All Rights Reserved By
-              <a href="https://envytheme.com/" target="blank">EnvyTheme</a>
+              <a href="https://envytheme.com/" target="blank">Cston</a>
             </p>
           </div>
         </div>
