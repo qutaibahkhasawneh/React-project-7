@@ -1,4 +1,6 @@
 import React,{useEffect,useState} from 'react';
+import { Link } from 'react-router-dom';
+
 
 function Index() {
 
@@ -7,8 +9,8 @@ function Index() {
     const getcategory= async()=>{
       const res =await fetch('http://127.0.0.1:8000/api/categories');
       const getdata= await res.json();
-      setCategory(getdata);
-      console.log(getdata);                         
+      setCategory(getdata.categories);
+      console.log(getdata);                 
     }
     getcategory();
   },[]);
@@ -104,6 +106,7 @@ function Index() {
 
             <div class="row">
             {
+              category.length > 0 &&
               category.map((getcategory)=>(
                 
                 <div class="col-lg-4 col-sm-6">
@@ -114,9 +117,8 @@ function Index() {
                       <p>
                         {getcategory.description}
                       </p>
-                      <a class="read-more" href={"/categories"+getcategory.id}
-                        >See details <i class="bx bx-plus"></i></a
-                      ><span class="flaticon-couch"></span>
+                      <Link class="read-more" to={'service/'+getcategory.id}
+                        >See details <i class="bx bx-plus"></i></Link>
                     </div>
                   </div>
                     </div>

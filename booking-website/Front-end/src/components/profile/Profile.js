@@ -1,165 +1,196 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
+import {useParams} from 'react-router';
+import { Link } from 'react-router-dom';
 
 function Profile() {
+
+const[users,setUsers]=useState([]);
+const[userName,setName]=useState([]);
+const[email,setEmail]=useState([]);
+const[phone,setPhone]=useState([]);
+const[password,setPassword]=useState([]);
+
+const {id}=useParams();
+console.log(id)
+useEffect(()=>{
+  const data=async()=>{
+       const response=await fetch(`http://127.0.0.1:8000/api/users/1`)
+       const dbData=await response.json();
+       setUsers(dbData);
+       console.log(dbData);
+      
+  }
+  data()
+},[])
+ 
+
+
+  //submit
+  const handleChange=()=>{
+    const newUserInfo={
+     userName,
+      phone,
+      email,
+      password
+    }
+  }
   return (
-    <div>
-      <div class="page-title-area bg-1">
-        <div class="container">
-          <div class="page-title-content">
+    <>
+      <div className="page-title-area bg-1">
+        <div className="container">
+          <div className="page-title-content">
             <h2>Profile</h2>
             <ul>
               <li>
                 <a href="index.html">Home</a>
               </li>
-              <li class="active">Profile</li>
+              <li className="active">Profile</li>
             </ul>
           </div>
         </div>
       </div>
-      <section class="py-5 my-5">
-        <div class="container">
-          <h1 class="mb-5">Account Settings</h1>
-          <div class="bg-white shadow rounded-lg d-block d-sm-flex">
-            <div class="profile-tab-nav border-right">
-              <div class="p-4">
-                <div class="img-circle text-center mb-3">
-                  <img src="img/profile/user2.jpg" alt="Image" class="shadow" />
-                </div>
-                <h4 class="text-center">Kiran Acharya</h4>
+      <section className="py-5 my-5">
+        <div className="container">
+          <h1 className="mb-5">Account Settings</h1>
+          <div className="bg-white shadow rounded-lg d-block d-sm-flex">
+            <div className="profile-tab-nav border-right">
+              <div className="p-4">
+                {/* <div className="img-circle text-center mb-3">
+                  <img src="img/profile/user2.jpg" alt="Image" className="shadow" />
+                </div> */}
+                <h4 className="text-center p-4">Kiran Acharya</h4>
               </div>
               <div
-                class="nav flex-column nav-pills"
+                className="nav flex-column nav-pills"
                 id="v-pills-tab"
                 role="tablist"
-                aria-orientation="vertical"
-              >
+                aria-orientation="vertical">
                 <a
-                  class="nav-link active"
+                  className="nav-link active"
                   id="account-tab"
                   data-toggle="pill"
                   href="#account"
                   role="tab"
                   aria-controls="account"
-                  aria-selected="true"
-                >
-                  <i class="fa fa-home text-center mr-1"></i>
+                  aria-selected="true">
+                  <i className="fa fa-home text-center mr-1"></i>
                   Account
                 </a>
                 <a
-                  class="nav-link"
+                  className="nav-link"
                   id="password-tab"
                   data-toggle="pill"
                   href="#password"
                   role="tab"
                   aria-controls="password"
-                  aria-selected="false"
-                >
-                  <i class="fa fa-key text-center mr-1"></i>
+                  aria-selected="false" >
+                  <i className="fa fa-key text-center mr-1"></i>
                   Password
                 </a>
                 <a
-                  class="nav-link"
+                  className="nav-link"
                   id="security-tab"
                   data-toggle="pill"
                   href="#security"
                   role="tab"
                   aria-controls="security"
-                  aria-selected="false"
-                >
-                  <i class="fa fa-user text-center mr-1"></i>
+                  aria-selected="false" >
+                  <i className="fa fa-user text-center mr-1"></i>
                   Security
                 </a>
                 <a
-                  class="nav-link"
+                  className="nav-link"
                   id="application-tab"
                   data-toggle="pill"
                   href="#application"
                   role="tab"
                   aria-controls="application"
-                  aria-selected="false"
-                >
-                  <i class="fa fa-tv text-center mr-1"></i>
+                  aria-selected="false" >
+                  <i className="fa fa-tv text-center mr-1"></i>
                   Application
                 </a>
                 <a
-                  class="nav-link"
+                  className="nav-link"
                   id="notification-tab"
                   data-toggle="pill"
                   href="#notification"
                   role="tab"
                   aria-controls="notification"
-                  aria-selected="false"
-                >
-                  <i class="fa fa-bell text-center mr-1"></i>
+                  aria-selected="false" >
+                  <i className="fa fa-bell text-center mr-1"></i>
                   Notification
                 </a>
               </div>
             </div>
-            <div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
+            <div className="tab-content p-4 p-md-5" id="v-pills-tabContent">
               <div
-                class="tab-pane fade show active"
+                className="tab-pane fade show active"
                 id="account"
                 role="tabpanel"
-                aria-labelledby="account-tab"
-              >
-                <h3 class="mb-4">Account Settings</h3>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>First Name</label>
-                      <input type="text" class="form-control" value="Kiran" />
+                aria-labelledby="account-tab" >
+                <h3 className="mb-4">Account Settings</h3>
+               
+                <div className="row">
+                {/* {users.map((user)=>{ */}
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <label>User Name</label>
+                      <input type="text" className="form-control" 
+                      value={users.userName} 
+                      onChange={(e)=>setName(e.target.value)} />
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Last Name</label>
-                      <input type="text" class="form-control" value="Acharya" />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
+              {/* })}  */}
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <label>Password</label>
+                      <input type="password" className="form-control"
+                       value={users.password} 
+                       onChange={(e)=>setPassword(e.target.value)} />
+                </div>
+                  </div> 
+                  <div className="col-md-6">
+                    <div className="form-group">
                       <label>Email</label>
                       <input
-                        type="text"
-                        class="form-control"
-                        value="kiranacharya287@gmail.com"
-                      />
+                        type="phone"
+                        className="form-control"
+                        value={users.phone} 
+                        onChange={(e)=>setPhone(e.target.value)} />
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
+                  <div className="col-md-6">
+                    <div className="form-group">
                       <label>Phone number</label>
                       <input
-                        type="text"
-                        class="form-control"
-                        value="+91 9876543215"
-                      />
+                        type="email"
+                        className="form-control"
+                        value={users.email} 
+                        onChange={(e)=>setEmail(e.target.value)} />
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
+                  {/* <div className="col-md-6">
+                    <div className="form-group">
                       <label>Company</label>
                       <input
                         type="text"
-                        class="form-control"
-                        value="Kiran Workspace"
-                      />
+                        className="form-control"
+                        value="Kiran Workspace" />
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
+                  </div> */}
+                  {/* <div className="col-md-6">
+                    <div className="form-group">
                       <label>Designation</label>
                       <input
                         type="text"
-                        class="form-control"
-                        value="UI Developer"
-                      />
+                        className="form-control"
+                        value="UI Developer"  />
                     </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="form-group">
+                  </div> */}
+                  {/* <div className="col-md-12">
+                    <div className="form-group">
                       <label>Bio</label>
-                      <textarea class="form-control" rows="4">
+                      <textarea className="form-control" rows="4">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Labore vero enim error similique quia numquam ullam
                         corporis officia odio repellendus aperiam consequatur
@@ -167,77 +198,76 @@ function Profile() {
                         veritatis voluptatum distinctio!
                       </textarea>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 <div>
-                  <button class="btn btn-primary">Update</button>
-                  <button class="btn btn-light">Cancel</button>
+                  {/* <button className="btn btn-primary" > <Link to={{pathname:/edit/+{id}}}>Update</Link></button> */}
+                  <button className="btn btn-primary" type='submit' onClick={handleChange}>update</button>
+
+                  <button className="btn btn-light">Cancel</button>
                 </div>
               </div>
               <div
-                class="tab-pane fade"
+                className="tab-pane fade"
                 id="password"
                 role="tabpanel"
-                aria-labelledby="password-tab"
-              >
-                <h3 class="mb-4">Password Settings</h3>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
+                aria-labelledby="password-tab" >
+                <h3 className="mb-4">Password Settings</h3>
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="form-group">
                       <label>Old password</label>
-                      <input type="password" class="form-control" />
+                      <input type="password" className="form-control" />
                     </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="form-group">
                       <label>New password</label>
-                      <input type="password" class="form-control" />
+                      <input type="password" className="form-control" />
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
+                  <div className="col-md-6">
+                    <div className="form-group">
                       <label>Confirm new password</label>
-                      <input type="password" class="form-control" />
+                      <input type="password" className="form-control" />
                     </div>
                   </div>
                 </div>
                 <div>
-                  <button class="btn btn-primary">Update</button>
-                  <button class="btn btn-light">Cancel</button>
+                  <button className="btn btn-primary">Update</button>
+                  <button className="btn btn-light">Cancel</button>
                 </div>
               </div>
-              <div
-                class="tab-pane fade"
+              {/* <div
+                className="tab-pane fade"
                 id="security"
                 role="tabpanel"
-                aria-labelledby="security-tab"
-              >
-                <h3 class="mb-4">Security Settings</h3>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
+                aria-labelledby="security-tab" >
+                <h3 className="mb-4">Security Settings</h3>
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="form-group">
                       <label>Login</label>
-                      <input type="text" class="form-control" />
+                      <input type="text" className="form-control" />
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
+                  <div className="col-md-6">
+                    <div className="form-group">
                       <label>Two-factor auth</label>
-                      <input type="text" class="form-control" />
+                      <input type="text" className="form-control" />
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <div class="form-check">
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <div className="form-check">
                         <input
-                          class="form-check-input"
+                          className="form-check-input"
                           type="checkbox"
                           value=""
-                          id="recovery"
-                        />
-                        <label class="form-check-label" for="recovery">
+                          id="recovery" />
+                        <label className="form-check-label" >
                           Recovery
                         </label>
                       </div>
@@ -245,39 +275,36 @@ function Profile() {
                   </div>
                 </div>
                 <div>
-                  <button class="btn btn-primary">Update</button>
-                  <button class="btn btn-light">Cancel</button>
+                  <button className="btn btn-primary">Update</button>
+                  <button className="btn btn-light">Cancel</button>
                 </div>
               </div>
-              <div
-                class="tab-pane fade"
+              <div */}
+                {/* className="tab-pane fade"
                 id="application"
                 role="tabpanel"
-                aria-labelledby="application-tab"
-              >
-                <h3 class="mb-4">Application Settings</h3>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <div class="form-check">
+                aria-labelledby="application-tab" >
+                <h3 className="mb-4">Application Settings</h3>
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <div className="form-check">
                         <input
-                          class="form-check-input"
+                          className="form-check-input"
                           type="checkbox"
                           value=""
-                          id="app-check"
-                        />
-                        <label class="form-check-label" for="app-check">
+                          id="app-check" />
+                        <label className="form-check-label" >
                           App check
                         </label>
                       </div>
-                      <div class="form-check">
+                      <div className="form-check">
                         <input
-                          class="form-check-input"
+                          className="form-check-input"
                           type="checkbox"
                           value=""
-                          id="defaultCheck2"
-                        />
-                        <label class="form-check-label" for="defaultCheck2">
+                          id="defaultCheck2"/>
+                        <label className="form-check-label" >
                           Lorem ipsum dolor sit.
                         </label>
                       </div>
@@ -285,69 +312,65 @@ function Profile() {
                   </div>
                 </div>
                 <div>
-                  <button class="btn btn-primary">Update</button>
-                  <button class="btn btn-light">Cancel</button>
+                  <button className="btn btn-primary">Update</button>
+                  <button className="btn btn-light">Cancel</button>
                 </div>
-              </div>
+              </div> */}
               <div
-                class="tab-pane fade"
+                className="tab-pane fade"
                 id="notification"
                 role="tabpanel"
-                aria-labelledby="notification-tab"
-              >
-                <h3 class="mb-4">Notification Settings</h3>
-                <div class="form-group">
-                  <div class="form-check">
+                aria-labelledby="notification-tab" >
+                <h3 className="mb-4">Notification Settings</h3>
+                <div className="form-group">
+                  <div className="form-check">
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="checkbox"
                       value=""
-                      id="notification1"
-                    />
-                    <label class="form-check-label" for="notification1">
+                      id="notification1" />
+                    <label className="form-check-label" >
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Dolorum accusantium accusamus, neque cupiditate quis
                     </label>
                   </div>
                 </div>
-                <div class="form-group">
-                  <div class="form-check">
+                <div className="form-group">
+                  <div className="form-check">
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="checkbox"
                       value=""
-                      id="notification2"
-                    />
-                    <label class="form-check-label" for="notification2">
+                      id="notification2" />
+                    <label className="form-check-label">
                       hic nesciunt repellat perferendis voluptatum totam porro
                       eligendi.
                     </label>
                   </div>
                 </div>
-                <div class="form-group">
-                  <div class="form-check">
+                <div className="form-group">
+                  <div className="form-check">
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="checkbox"
                       value=""
-                      id="notification3"
-                    />
-                    <label class="form-check-label" for="notification3">
+                      id="notification3" />
+                    <label className="form-check-label" >
                       commodi fugiat molestiae tempora corporis. Sed dignissimos
                       suscipit
                     </label>
                   </div>
                 </div>
                 <div>
-                  <button class="btn btn-primary">Update</button>
-                  <button class="btn btn-light">Cancel</button>
+                  <button className="btn btn-primary" type='submit' >Update</button>
+                  <button className="btn btn-light">Cancel</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-    </div>
+  </>
   );
 }
 
