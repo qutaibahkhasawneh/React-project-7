@@ -26,14 +26,7 @@ useEffect(()=>{
 
 
   //submit
-  const handleChange=()=>{
-    const newUserInfo={
-     userName,
-      phone,
-      email,
-      password
-    }
-  }
+
   return (
     <>
       <div className="page-title-area bg-1">
@@ -58,7 +51,7 @@ useEffect(()=>{
                 {/* <div className="img-circle text-center mb-3">
                   <img src="img/profile/user2.jpg" alt="Image" className="shadow" />
                 </div> */}
-                <h4 className="text-center p-4">Kiran Acharya</h4>
+                <h4 className="text-center p-4">{users.userName}</h4>
               </div>
               <div
                 className="nav flex-column nav-pills"
@@ -135,7 +128,7 @@ useEffect(()=>{
                   <div className="col-md-6">
                     <div className="form-group">
                       <label>User Name</label>
-                      <input type="text" className="form-control" 
+                      <input type="text" className="form-control" name='userName'
                       value={users.userName} 
                       onChange={(e)=>setName(e.target.value)} />
                     </div>
@@ -144,7 +137,7 @@ useEffect(()=>{
                   <div className="col-md-6">
                     <div className="form-group">
                       <label>Password</label>
-                      <input type="password" className="form-control"
+                      <input type="password" className="form-control" name='password'
                        value={users.password} 
                        onChange={(e)=>setPassword(e.target.value)} />
                 </div>
@@ -154,7 +147,7 @@ useEffect(()=>{
                       <label>Email</label>
                       <input
                         type="phone"
-                        className="form-control"
+                        className="form-control" name='phone'
                         value={users.phone} 
                         onChange={(e)=>setPhone(e.target.value)} />
                     </div>
@@ -164,7 +157,7 @@ useEffect(()=>{
                       <label>Phone number</label>
                       <input
                         type="email"
-                        className="form-control"
+                        className="form-control" name='email'
                         value={users.email} 
                         onChange={(e)=>setEmail(e.target.value)} />
                     </div>
@@ -201,8 +194,8 @@ useEffect(()=>{
                   </div> */}
                 </div>
                 <div>
-                  {/* <button className="btn btn-primary" > <Link to={{pathname:/edit/+{id}}}>Update</Link></button> */}
-                  <button className="btn btn-primary" type='submit' onClick={handleChange}>update</button>
+                  <button className="btn btn-primary" > <Link to={{pathname:`/edit/${users.id}`}}>Update</Link></button>
+                  {/* <button className="btn btn-primary" type='submit' >update</button> */}
 
                   <button className="btn btn-light">Cancel</button>
                 </div>

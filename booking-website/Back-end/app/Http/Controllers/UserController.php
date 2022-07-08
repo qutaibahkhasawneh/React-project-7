@@ -22,4 +22,18 @@ class UserController extends Controller
 //    return $user = $user->toJson();
 
    } 
+
+   public function edit(Request $request,$id)
+   {
+       $user=User::find($id);
+       $user->update([
+       'userName'=>$request->input('userName'),
+       'email'=>$request->input('email'),
+       'phone'=>$request->input('phone'),
+       'password'=>$request->input('password'),
+   ]);
+   $user->save();
 }
+}
+
+

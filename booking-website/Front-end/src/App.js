@@ -37,7 +37,7 @@ function App() {
         {/* about us page */}
         <Route path="/about" element={<Aboutus />} />
         {/* profile  page */}
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<Profile id={1} />} />
         {/* Login  page */}
         <Route path="login" element={<Login />} />
         {/* Signup  page */}
@@ -45,7 +45,7 @@ function App() {
         {/* service-datails  page */}
        <Route path='service' element={<ServiceDetails/>} />
        {/* Edit Profile */}
-       <Route path='/edit' element={<EditProfile/>} />
+       <Route path='/edit/:id' element={<EditProfile/>} />
       </Routes>
       <Footer />
     </BrowserRouter>

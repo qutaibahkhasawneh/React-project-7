@@ -1,11 +1,35 @@
 import React,{useState} from 'react'
 
 function EditProfile() {
-    const[users,setUsers]=useState([]);
-const[userName,setName]=useState([]);
-const[email,setEmail]=useState([]);
-const[phone,setPhone]=useState([]);
-const[password,setPassword]=useState([]);
+//     const[users,setUsers]=useState({
+     
+//     });
+//  const[userName,setName]=useState([]);
+//  const[email,setEmail]=useState([]);
+//  const[phone,setPhone]=useState([]);
+//  const[password,setPassword]=useState([]);
+
+// useEffect(()=>{
+//   const data=async()=>{
+//        const response=await fetch(`http://127.0.0.1:8000/api/users/1`)
+//        const dbData=await response.json();
+//        setUsers(dbData);
+//        console.log(dbData);
+      
+//   }
+//   data()
+// },[])
+// const handleChange=(e)=>{
+//   e.preventDefault();
+  // const newData={userName:users.userName,password:users.password,email:users.email,phone:users.phone}
+  
+ 
+// }
+
+// const update=(e)=>{
+//   // setUsers={userName:e.target.userName,password:e.target.password,email:e.target.email,phone:e.target.phone}
+
+// }
   return (
     <>
     <div className="page-title-area bg-1">
@@ -14,7 +38,7 @@ const[password,setPassword]=useState([]);
           <h2>Profile</h2>
           <ul>
             <li>
-              <a href="index.html">Home</a>
+              <a href="/">Home</a>
             </li>
             <li className="active">Profile</li>
           </ul>
@@ -30,7 +54,7 @@ const[password,setPassword]=useState([]);
               {/* <div className="img-circle text-center mb-3">
                 <img src="img/profile/user2.jpg" alt="Image" className="shadow" />
               </div> */}
-              <h4 className="text-center p-4">Kiran Acharya</h4>
+              <h4 className="text-center p-4">{users.userName}</h4>
             </div>
             <div
               className="nav flex-column nav-pills"
@@ -107,8 +131,8 @@ const[password,setPassword]=useState([]);
                 <div className="col-md-6">
                   <div className="form-group">
                     <label>User Name</label>
-                    <input type="text" className="form-control" 
-                    value={user.userName} 
+                    <input type="text" className="form-control" name='userName'
+                    value='22'
                      onChange={(e)=>setName(e.target.value)}
                      />
                   </div>
@@ -117,9 +141,9 @@ const[password,setPassword]=useState([]);
                 <div className="col-md-6">
                   <div className="form-group">
                     <label>Password</label>
-                    <input type="password" className="form-control"
-                     value='uu' 
-                    //  onChange={(e)=>setPassword(e.target.value)} 
+                    <input type="password" className="form-control" name='password'
+                     value='cc'
+                      onChange={(e)=>setPassword(e.target.value)} 
                      />
               </div>
                 </div> 
@@ -128,9 +152,9 @@ const[password,setPassword]=useState([]);
                     <label>Email</label>
                     <input
                       type="phone"
-                      className="form-control"
-                      value='hj'
-                    //   onChange={(e)=>setPhone(e.target.value)}
+                      className="form-control" name='phone'
+                      value='ioji'
+                      onChange={(e)=>setPhone(e.target.value)}
                        />
                   </div>
                 </div>
@@ -138,46 +162,17 @@ const[password,setPassword]=useState([]);
                   <div className="form-group">
                     <label>Phone number</label>
                     <input
-                      type="email"
+                      type="email" name='email'
                       className="form-control"
-                      value='kk' 
-                    //   onChange={(e)=>setEmail(e.target.value)}
+                      value='kk'
+                     onChange={(e)=>setEmail(e.target.value)}
                        />
                   </div>
                 </div>
-                {/* <div className="col-md-6">
-                  <div className="form-group">
-                    <label>Company</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      value="Kiran Workspace" />
-                  </div>
-                </div> */}
-                {/* <div className="col-md-6">
-                  <div className="form-group">
-                    <label>Designation</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      value="UI Developer"  />
-                  </div>
-                </div> */}
-                {/* <div className="col-md-12">
-                  <div className="form-group">
-                    <label>Bio</label>
-                    <textarea className="form-control" rows="4">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Labore vero enim error similique quia numquam ullam
-                      corporis officia odio repellendus aperiam consequatur
-                      laudantium porro voluptatibus, itaque laboriosam
-                      veritatis voluptatum distinctio!
-                    </textarea>
-                  </div>
-                </div> */}
+             
               </div>
               <div>
-                {/* <button className="btn btn-primary" > <Link to={{pathname:}}>Update</Link></button> */}
+                <button className="btn btn-primary" onClick={update}> Update</button>
                 <button className="btn btn-light">Cancel</button>
               </div>
             </div>
