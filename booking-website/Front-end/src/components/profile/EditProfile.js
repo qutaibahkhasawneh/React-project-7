@@ -1,13 +1,13 @@
 import React,{useState} from 'react'
 
 function EditProfile() {
-//     const[users,setUsers]=useState({
+    const[users,setUsers]=useState({
      
-//     });
-//  const[userName,setName]=useState([]);
-//  const[email,setEmail]=useState([]);
-//  const[phone,setPhone]=useState([]);
-//  const[password,setPassword]=useState([]);
+    });
+ const[userName,setName]=useState([]);
+ const[email,setEmail]=useState([]);
+ const[phone,setPhone]=useState([]);
+ const[password,setPassword]=useState([]);
 
 // useEffect(()=>{
 //   const data=async()=>{
@@ -54,7 +54,7 @@ function EditProfile() {
               {/* <div className="img-circle text-center mb-3">
                 <img src="img/profile/user2.jpg" alt="Image" className="shadow" />
               </div> */}
-              <h4 className="text-center p-4">{users.userName}</h4>
+              <h4 className="text-center p-4"></h4>
             </div>
             <div
               className="nav flex-column nav-pills"
@@ -72,6 +72,7 @@ function EditProfile() {
                 <i className="fa fa-home text-center mr-1"></i>
                 Account
               </a>
+              
               <a
                 className="nav-link"
                 id="password-tab"
@@ -133,7 +134,7 @@ function EditProfile() {
                     <label>User Name</label>
                     <input type="text" className="form-control" name='userName'
                     value='22'
-                     onChange={(e)=>setName(e.target.value)}
+                    //  onChange={(e)=>setName(e.target.value)}
                      />
                   </div>
                 </div>
@@ -143,7 +144,7 @@ function EditProfile() {
                     <label>Password</label>
                     <input type="password" className="form-control" name='password'
                      value='cc'
-                      onChange={(e)=>setPassword(e.target.value)} 
+                      // onChange={(e)=>setPassword(e.target.value)} 
                      />
               </div>
                 </div> 
@@ -154,7 +155,7 @@ function EditProfile() {
                       type="phone"
                       className="form-control" name='phone'
                       value='ioji'
-                      onChange={(e)=>setPhone(e.target.value)}
+                      // onChange={(e)=>setPhone(e.target.value)}
                        />
                   </div>
                 </div>
@@ -165,14 +166,14 @@ function EditProfile() {
                       type="email" name='email'
                       className="form-control"
                       value='kk'
-                     onChange={(e)=>setEmail(e.target.value)}
+                    //  onChange={(e)=>setEmail(e.target.value)}
                        />
                   </div>
                 </div>
              
               </div>
               <div>
-                <button className="btn btn-primary" onClick={update}> Update</button>
+                <button className="btn btn-primary" > Update</button>
                 <button className="btn btn-light">Cancel</button>
               </div>
             </div>

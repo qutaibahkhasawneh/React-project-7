@@ -162,36 +162,7 @@ useEffect(()=>{
                         onChange={(e)=>setEmail(e.target.value)} />
                     </div>
                   </div>
-                  {/* <div className="col-md-6">
-                    <div className="form-group">
-                      <label>Company</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        value="Kiran Workspace" />
-                    </div>
-                  </div> */}
-                  {/* <div className="col-md-6">
-                    <div className="form-group">
-                      <label>Designation</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        value="UI Developer"  />
-                    </div>
-                  </div> */}
-                  {/* <div className="col-md-12">
-                    <div className="form-group">
-                      <label>Bio</label>
-                      <textarea className="form-control" rows="4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Labore vero enim error similique quia numquam ullam
-                        corporis officia odio repellendus aperiam consequatur
-                        laudantium porro voluptatibus, itaque laboriosam
-                        veritatis voluptatum distinctio!
-                      </textarea>
-                    </div>
-                  </div> */}
+              
                 </div>
                 <div>
                   <button className="btn btn-primary" > <Link to={{pathname:`/edit/${users.id}`}}>Update</Link></button>
@@ -233,82 +204,7 @@ useEffect(()=>{
                   <button className="btn btn-light">Cancel</button>
                 </div>
               </div>
-              {/* <div
-                className="tab-pane fade"
-                id="security"
-                role="tabpanel"
-                aria-labelledby="security-tab" >
-                <h3 className="mb-4">Security Settings</h3>
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <label>Login</label>
-                      <input type="text" className="form-control" />
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <label>Two-factor auth</label>
-                      <input type="text" className="form-control" />
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <div className="form-check">
-                        <input
-                          className="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="recovery" />
-                        <label className="form-check-label" >
-                          Recovery
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <button className="btn btn-primary">Update</button>
-                  <button className="btn btn-light">Cancel</button>
-                </div>
-              </div>
-              <div */}
-                {/* className="tab-pane fade"
-                id="application"
-                role="tabpanel"
-                aria-labelledby="application-tab" >
-                <h3 className="mb-4">Application Settings</h3>
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <div className="form-check">
-                        <input
-                          className="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="app-check" />
-                        <label className="form-check-label" >
-                          App check
-                        </label>
-                      </div>
-                      <div className="form-check">
-                        <input
-                          className="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="defaultCheck2"/>
-                        <label className="form-check-label" >
-                          Lorem ipsum dolor sit.
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <button className="btn btn-primary">Update</button>
-                  <button className="btn btn-light">Cancel</button>
-                </div>
-              </div> */}
+             
               <div
                 className="tab-pane fade"
                 id="notification"
