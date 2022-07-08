@@ -12,5 +12,11 @@ class ServiceController extends Controller
         $service = Service::all();
         return $service;
 
+    } public  function Show($id)
+    {
+        $service = Service::find($id);
+       
+
     }
+
 }
