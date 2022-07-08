@@ -52,7 +52,7 @@ function Navbar() {
         </div>
         <div id="navbar" className="navbar-area">
           <div className="main-nav">
-            <nav className="navbar navbar-expand-lg">
+            <nav className="navbar navbar-expand-lg ">
               <div className="container">
                 <Link className="navbar-brand" to="/"
                   ><img src="img/logo.png" alt="logo" height={"90px"} width={"150px"} /></Link>
