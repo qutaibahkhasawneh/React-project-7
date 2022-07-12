@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { Link, NavLink, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import useFetch from "../Hooks/useFetch";
 
@@ -63,9 +63,9 @@ export default function ServiceDetails() {
                       Friday<span>Closed</span>
                     </li>
                   </ul>
-                  <a class="default-btn mt-4" href="appointment.html">
-                    Request An Appointment
-                  </a>
+                  <Link class="default-btn mt-4" to="appointment.html">
+                    Leave a comment
+                  </Link>
                 </div>
                 <div class="client-area services-feedback"></div>
               </div>
@@ -140,7 +140,7 @@ export default function ServiceDetails() {
                       <div class="right-title">
                         <ul>
                           <li>
-                            <i class="bx bxs-hand-right"></i>25 years of
+                            <i class="bx bxs-hand-right"></i>25 years 
                             Experienced
                           </li>
                         </ul>
@@ -227,6 +227,7 @@ export default function ServiceDetails() {
       </div>
 
       {/* ----------------------comment-aria---------------------- */}
+      
     </div>
   );
 }

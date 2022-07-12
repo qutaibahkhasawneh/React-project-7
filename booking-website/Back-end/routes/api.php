@@ -28,3 +28,8 @@ Route::get('/users/{id}',[UserController::class,'edit']);
 Route::get('/categories',[CategoryController::class, 'index']);
 Route::get('/category/{id}',[CategoryController::class, 'show']);
 
+// routes for comment
+
+Route::get('apicomment/{id}',[CommentController::class , 'CommentAPI']);
+Route::post('addComment',[CommentController::class , 'addComment']);
+
