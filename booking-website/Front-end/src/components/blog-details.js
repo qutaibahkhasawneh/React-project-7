@@ -4,29 +4,68 @@ import { useParams } from "react-router-dom";
 export default function BlogDetails() {
 
   // const { id } = useParams()
-  // const [comm, setComm] = useState({});
+  const [comm, setComm] = useState([]);
   // console.log(comm)
   // console.log(id)
 
-  // const fetchData = async()=>{
-  //   const resp = await fetch(`http://127.0.0.1:8000/api/apicomment/${id}`)
-  //      const respdata = await resp.json()
-  //      setComm(respdata)
-  //  }
-  //  useEffect(() => {
-  //    fetchData()
-  //  }, []);
-  //  console.log(comm)
+  const fetchData = async()=>{
+    const resp = await fetch(`http://127.0.0.1:8000/api/apicomment`)
+       const respdata = await resp.json()
+       setComm(respdata)
+   }
+   useEffect(() => {
+     fetchData()
+   }, []);
+   console.log(comm)
 
   const [comment, setComment] = useState("");
-  const submit = (e) => {
+  const commentHandler = async (e) => {
     e.preventDefault();
-    fetch(`http://127.0.0.1:8000/api/addComment`, {
+    const response= await fetch(`http://127.0.0.1:8000/api/addcomm`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ subject:comment }),
+      body: JSON.stringify({ comment:comment , userid:1 }),
+    
     });
+    if (response.ok){
+      window.alert("comment add sucsseguly")
+    }
+    
   };
+  console.log(comment)
+ const getComment= comm.map((comment)=>{
+   return( <ol class="comment-list">
+    <li class="comment">
+      <div class="comment-body">
+        <footer class="comment-meta">
+          <div class="comment-author vcard">
+            <img
+              src="img/blog-details/comment-img-1.png"
+              class="avatar"
+              alt="image"
+            />
+            <b class="fn">{comment.userName}</b>
+            <span class="says">says:</span>
+          </div>
+        </footer>
+        <div class="comment-content">
+          <p>
+           {comment.comment}
+          </p>
+        </div>
+      </div>
+
+      <li class="comment">
+        <div class="comment-body">
+          <footer class="comment-meta">
+            <div class="comment-author vcard"></div>
+          </footer>
+        </div>
+      </li>
+    </li>
+  </ol>
+ )})
+
 
   return (
     <div>
@@ -66,7 +105,7 @@ export default function BlogDetails() {
                   </div>
                   <div class="comments-area">
                     <h3 class="comments-title"> Comments:</h3>
-                    <ol class="comment-list">
+                    {/* <ol class="comment-list">
                       <li class="comment">
                         <div class="comment-body">
                           <footer class="comment-meta">
@@ -76,7 +115,7 @@ export default function BlogDetails() {
                                 class="avatar"
                                 alt="image"
                               />
-                              <b class="fn">John Jones</b>
+                              <b class="fn"></b>
                               <span class="says">says:</span>
                             </div>
                           </footer>
@@ -98,7 +137,9 @@ export default function BlogDetails() {
                           </div>
                         </li>
                       </li>
-                    </ol>
+                    </ol> */}
+
+                    {getComment}
                     <div class="comment-respond">
                       <form class="comment-form">
                         <p class="comment-form-comment">
@@ -117,6 +158,8 @@ export default function BlogDetails() {
                           <input
                             type="submit"
                             name="submit"
+                            onClick={commentHandler}
+
                             // id="submit"
                             // class="submit"
                             // value="Post A Comment"
