@@ -14,6 +14,7 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import ServiceDetails from './components/service-details';
 // import EditProfile from './components/profile/EditProfile';
+import BlogDetails from './components/blog-details';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
       <Route path='/' element={<Index id={1} />}/>
 
         {/* Appointment us page */}
-        <Route path="/appointment" element={<Appointment />} />
+        <Route path="/appointment/:id" element={<Appointment />} />
 
         {/* Contact us page */}
         <Route path="/contact" element={<Contact />} />
@@ -38,13 +39,14 @@ function App() {
         {/* about us page */}
         <Route path="/about" element={<Aboutus />} />
         {/* profile  page */}
-        <Route path="/profile" element={<Profile id={1} />} />
+        <Route path="/profile" element={<Profile id={1}/>} />
         {/* Login  page */}
         <Route path="login" element={<Login />} />
         {/* Signup  page */}
         <Route path="Signup" element={<Signup />} />
         {/* service-datails  page */}
        <Route path='service/:id' element={<ServiceDetails/>} />
+       <Route path='blog' element={<BlogDetails/>} />
        {/* <Route path='service' element={<ServiceDetails/>} /> */}
        {/* Edit Profile */}
        {/* <Route path='/edit/:id' element={<EditProfile/>} /> */}

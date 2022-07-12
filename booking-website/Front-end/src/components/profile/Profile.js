@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import {useParams} from 'react-router';
+// import swal from "sweetalert";
 
 import axios from 'axios';
 function Profile() {
@@ -29,7 +30,22 @@ axios.put(`http://127.0.0.1:8000/api/users/1`, users)
 .then((res)=>setUsers(res.data))
 .then(()=>setUpdate(!update))
 console.log(users)
+if(!update){
+ window.alert('Your profile has been uploaded successfuly')
 
+  
+}
+// .then((res) => {
+//   if (res.data.status === 200){
+//     swal({
+//       title: "Good job!",
+//       text: "booking success!",
+//       icon: "success",
+//       button: "ok!",
+//     });
+    
+
+//   }})
 }
 
   //submit
@@ -163,18 +179,17 @@ console.log(users)
 
                     </div>
                   </div>
-                  <div className="col-md-6">
-                    </div>
+                  
                   <div className="col-md-6">
                     <div className="form-group">
-                      <label>Reset Password</label>
+                      <label>Password</label>
                       <input type="password" className="form-control" name='password'
                        value={users.password} 
                       onChange={(e)=>setUsers({...users,password:e.target.value})} />
                      
                 </div>
                   </div> 
-                  <div className="col-md-6">
+                  {/* <div className="col-md-6">
                     <div className="form-group">
                       <label>Confirm Password</label>
                       <input type="password" className="form-control" name='password'
@@ -182,7 +197,7 @@ console.log(users)
                       onChange={(e)=>setUsers({...users,password:e.target.value})} />
                      
                 </div>
-                  </div> 
+                  </div>  */}
                
                
                        

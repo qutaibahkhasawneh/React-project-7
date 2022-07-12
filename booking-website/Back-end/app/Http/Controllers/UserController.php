@@ -1,13 +1,70 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use App\Models\User;
+use Validator;
+use Illuminate\Http\Request;
 // use Illuminate\Routing\Controller;
 
 class UserController extends Controller
 {
+    public function index()
+    {
+        $users = User::all();
+        return response()->json($users);
+    }
+    public function show(){
+        
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $request->validate([
+        'userName',
+        'phone',
+        'email',
+        'password',
+
+        ]);
+        return User::create($request->all());
+    }
+
+
+    public function log( Request $request){
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+        if ($validator->fails()) {
+            return response()->json(['validation_errors'=>$validator->errors(),'status'=> 401]);
+        }
+
+        $user = User::where('email', $request->email)->first();
+        if ($user) {
+            if ($request->password == $user->password) {
+                $logged_user = [ "id" => $user->id ,'name' =>$user->name , 'email' => $user->email ,'phone'=> $user->phone ];
+                return response()->json([
+                    'logged_user'=>$logged_user,
+                     'status'=> 200,
+                     'message'=> 'Logged In successfully'
+                    ]);
+            } else {
+                return response()->json(['error'=>'Check email and password']);
+            }
+        } else {
+            return response()->json(['error'=>'email dose not exist']);
+        }
+
+
+    }
+
+
 //select users
 // public function show($id)
 //     {
@@ -21,7 +78,7 @@ class UserController extends Controller
   return User::find($id);
 //    return $user = $user->toJson();
 
-   } 
+   }
 
    public function update(Request $request,$id)
    {
