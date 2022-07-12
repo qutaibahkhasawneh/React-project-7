@@ -79,25 +79,24 @@ function Navbar() {
                         >Home </a>
                       
                     </li>
+                   
                     <li className="nav-item">
-                      <a className="nav-link" href="/about">About</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link" href="/"
-                        >Pages <i className="bx bx-chevron-down"></i
-                      ></a>
-                      <ul className="dropdown-menu">
-                        <li className="nav-item">
-                          <a className="nav-link" href="/Team">Team</a>
+                          <a className="nav-link" href="/appointment"
+                            >Appointment</a
+                          >
                         </li>
+                    <li className="nav-item">
+                      {/* <a className="nav-link" href="/"
+                        >Pages <i className="bx bx-chevron-down"></i
+                      ></a> */}
+                      <ul className="dropdown-menu">
+                        {/* <li className="nav-item">
+                          <a className="nav-link" href="/Team">Team</a>
+                        </li> */}
                         {/* <li className="nav-item">
                           <a className="nav-link" href="pricing.html">Pricing</a>
                         </li> */}
-                        <li className="nav-item">
-                          <a className="nav-link" href="/Testimonials"
-                            >Testimonials</a
-                          >
-                        </li>
+                       
                         {/* <li className="nav-item"> */}
                           {/* <a className="nav-link" href="index.html#"
                             >Projects <i className="bx bx-chevron-down"></i
@@ -115,11 +114,7 @@ function Navbar() {
                             </li>
                           </ul>
                         </li>  */}
-                        <li className="nav-item">
-                          <a className="nav-link" href="/appointment"
-                            >Appointment</a
-                          >
-                        </li>
+                       
                         {/* <li className="nav-item">
                           <a className="nav-link" href=""
                             >User <i className="bx bx-chevron-down"></i
@@ -164,12 +159,21 @@ function Navbar() {
                           <a className="nav-link" href="404.html">404 Error Page</a>
                         </li> */}
                       </ul>
+                     
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="/service/:id"
+                          <a className="nav-link" href="/Testimonials"
+                            >Testimonials</a
+                          >
+                        </li>
+                    <li className="nav-item">
+                          <a className="nav-link" href="/Team">Team</a>
+                        </li>
+                    <li className="nav-item">
+                      {/* <a className="nav-link" href="/service/:id"
                         >Services <i className="bx bx-chevron-down"></i
-                      ></a>
-                      {}
+                      ></a> */}
+                      
                       <ul className="dropdown-menu">
                        
                         <li className="nav-item">
@@ -179,58 +183,12 @@ function Navbar() {
                         </li>
                       </ul>
                     </li>
-                    {/* <li className="nav-item">
-                      <a className="nav-link" href="index.html#"
-                        >Shop <i className="bx bx-chevron-down"></i
-                      ></a>
-                      <ul className="dropdown-menu">
-                        <li className="nav-item">
-                          <a className="nav-link" href="shop.html">Shop</a>
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link" href="cart.html">Cart</a>
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link" href="checkout.html">Checkout</a>
-                        </li>
-                        <li className="nav-item">
-                          <a
-                            className="nav-link"
-                            href="product/5f0cc6063ab06e21b560184b.html"
-                            >Product Details</a
-                          >
-                        </li>
-                      </ul>
-                    </li> */}
-                    {/* <li className="nav-item">
-                      <a className="nav-link" href="index.html#"
-                        >Blog <i className="bx bx-chevron-down"></i
-                      ></a>
-                      <ul className="dropdown-menu">
-                        <li className="nav-item">
-                          <a className="nav-link" href="blog-grid.html"
-                            >Blog Grid</a
-                          >
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link" href="blog-left-sidebar.html"
-                            >Blog Left Sidebar</a
-                          >
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link" href="blog-right-sidebar.html"
-                            >Blog Right Sidebar</a
-                          >
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link" href="blog-details.html"
-                            >Blog Details</a
-                          >
-                        </li>
-                      </ul>
-                    </li> */}
                     <li className="nav-item">
-                      <a className="nav-link" href="/contact">Contact</a>
+                      <a className="nav-link" href="/about">About US</a>
+                    </li>
+            
+                    <li className="nav-item">
+                      <a className="nav-link" href="/contact">Contact US</a>
                     </li>
                   </ul>
                   <a className="nav-link" href="/profile" style={{color:"white"}}><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
