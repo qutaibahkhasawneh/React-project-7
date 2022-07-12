@@ -14,7 +14,7 @@ function Footer() {
                   /></a>
                 </div>
                 <p>
-                  goClean is a website that helps in providing all cleaning services we provide with perfect quality .
+                At ‘Go Clean’ Service, we give a spotless and sound workplace through a blend of profoundly prepared staff and extraordinary client benefit understanding.
                 </p>
                 <div className="social-area">
                   <ul>
@@ -52,33 +52,28 @@ function Footer() {
                 <h3>Our Services</h3>
                 <ul>
                   <li>
-                    <a href=""
-                      ><i className="bx bx-chevrons-right"></i>Main Service</a
+                    <a href="/categories"
+                      ><i class="bx bx-chevrons-right"></i>Window Cleaning</a
                     >
                   </li>
                   <li>
                     <a href="index.html#"
-                      ><i className="bx bx-chevrons-right"></i>Window Cleaning</a
+                      ><i class="bx bx-chevrons-right"></i>Carpet Cleaning</a
                     >
                   </li>
                   <li>
                     <a href="index.html#"
-                      ><i className="bx bx-chevrons-right"></i>Domestic Cleaning</a
+                      ><i class="bx bx-chevrons-right"></i>Sofa Cleaning</a
                     >
                   </li>
                   <li>
                     <a href="index.html#"
-                      ><i className="bx bx-chevrons-right"></i>Disinfection</a
+                      ><i class="bx bx-chevrons-right"></i>Garden Cleaning</a
                     >
                   </li>
                   <li>
                     <a href="index.html#"
-                      ><i className="bx bx-chevrons-right"></i>Office Cleaning</a
-                    >
-                  </li>
-                  <li>
-                    <a href="index.html#"
-                      ><i className="bx bx-chevrons-right"></i>House Cleaning</a
+                      ><i class="bx bx-chevrons-right"></i>Commercial Cleaning</a
                     >
                   </li>
                 </ul>
@@ -88,36 +83,28 @@ function Footer() {
               <div className="single-widget">
                 <h3>Quick Links</h3>
                 <ul>
+                <li>
+                    <a href="/"
+                      ><i class="bx bx-chevrons-right"></i>Home</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/profile"
+                      ><i class="bx bx-chevrons-right"></i>Profile</a
+                    >
+                  </li>
                   <li>
                     <a href="/about"
                       ><i className="bx bx-chevrons-right"></i>About</a
                     >
                   </li>
                   <li>
-                    <a href=""
-                      ><i className="bx bx-chevrons-right"></i>Services</a
+                    <a href="/contact"
+                      ><i class="bx bx-chevrons-right"></i>Contact</a
                     >
                   </li>
-                  <li>
-                    <a href="/Team"
-                      ><i className="bx bx-chevrons-right"></i>Team</a
-                    >
-                  </li>
-                  <li>
-                    <a href="/testimonials"
-                      ><i className="bx bx-chevrons-right"></i>Testimonials</a
-                    >
-                  </li>
-                  <li>
-                    <a href="/appointment"
-                      ><i className="bx bx-chevrons-right"></i>Appointment</a
-                    >
-                  </li>
-                  <li>
-                    <a href="/profile"
-                      ><i className="bx bx-chevrons-right"></i>Profile</a
-                    >
-                  </li>
+
+                  
                 </ul>
               </div>
             </div>
