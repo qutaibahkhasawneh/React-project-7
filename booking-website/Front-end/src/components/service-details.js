@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, useParams,Link } from "react-router-dom";
 import { useEffect } from "react";
 import useFetch from "../Hooks/useFetch";
 
@@ -20,9 +20,8 @@ export default function ServiceDetails() {
   console.log(data)
   return (
     <div>
-      
-        {/* <h1>{data.description}</h1> */}
-      
+      {/* <h1>{data.description}</h1> */}
+
       <div class="page-title-area bg-23">
         <div class="container">
           <div class="page-title-content">
@@ -43,7 +42,7 @@ export default function ServiceDetails() {
             <div class="col-lg-4">
               <div class="services-sidebar">
                 <div class="services-img">
-                  <img src={data.image}  />
+                  <img src={data.image} />
                 </div>
                 <div class="availability">
                   <h3>
@@ -66,6 +65,9 @@ export default function ServiceDetails() {
                   <a class="default-btn mt-4" href="/appointment">
                     Request An Appointment
                   </a>
+                  <Link class="default-btn mt-4" to={"/appointment/" + data.id}>
+                    Request An Appointment
+                  </Link>
                 </div>
                 <div class="client-area services-feedback"></div>
               </div>
@@ -78,9 +80,7 @@ export default function ServiceDetails() {
                   <p>{data.description}</p>
                   <div class="row borders">
                     <div class="col-lg-3 pl-0">
-                      <div class="left-title">
-                        {/* <h3>Category</h3> */}
-                      </div>
+                      <div class="left-title">{/* <h3>Category</h3> */}</div>
                     </div>
                     <div class="col-lg-9">
                       <div class="right-title">
@@ -108,11 +108,9 @@ export default function ServiceDetails() {
                       </div>
                     </div>
                   </div>
-                  <div >
+                  <div>
                     <div class="col-lg-3 pl-0">
-                      <div class="left-title">
-                        {/* <h3>Specialty</h3> */}
-                      </div>
+                      <div class="left-title">{/* <h3>Specialty</h3> */}</div>
                     </div>
                     <div class="col-lg-9">
                       <div class="right-title">
