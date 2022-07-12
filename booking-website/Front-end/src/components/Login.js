@@ -46,7 +46,7 @@ const Login = () => {
             console.log(res);
             if(loggeduser.status == '200' ){
                 localStorage.setItem('user',JSON.stringify(loggeduser.logged_user));
-                window.location.href = 'http://localhost:3002'
+                window.location.href = 'http://localhost:3000'
                 setSuccess(true);
             }
         })
@@ -80,7 +80,7 @@ const Login = () => {
                 <div class="page-title-content">
                     <h2>Sign In</h2>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li class="active">Sign In</li>
                     </ul>
                 </div>

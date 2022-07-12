@@ -22,7 +22,7 @@ function Signup() {
             
        
         })
-        window.location.href = 'http://localhost:3002/login'
+        window.location.href = 'http://localhost:3000/login'
         result = await result.json()
         console.warn("result", result)
         }
@@ -35,7 +35,7 @@ function Signup() {
                 <div className="page-title-content">
                     <h2>Sign Up</h2>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li className="active">Sign Up</li>
                     </ul>
                 </div>
