@@ -46,7 +46,7 @@ const Login = () => {
             console.log(res);
             if(loggeduser.status == '200' ){
                 localStorage.setItem('user',JSON.stringify(loggeduser.logged_user));
-                window.location.href = 'http://localhost:3002/'
+                window.location.href = 'http://localhost:3000'
                 setSuccess(true);
             }
         })
