@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Booking;
 class BookingController extends Controller
 {
-<<<<<<< HEAD
      public function store(Request $request,Booking $Booking)
     {
 
@@ -25,7 +24,5 @@ class BookingController extends Controller
         ], 200);
      }
 
-=======
     
->>>>>>> 6ffe7aca99bbb3247d23488843a4490bd249e8a3
 }

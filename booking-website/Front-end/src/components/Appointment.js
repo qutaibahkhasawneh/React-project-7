@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import {  useParams} from "react-router-dom";
 import axios from "axios";
 import swal from "sweetalert";
-
+import { useNavigate } from "react-router-dom";
 export function Appointment() {
     const { id } = useParams();
   const [d, setData] = useState({
@@ -18,11 +18,11 @@ export function Appointment() {
   });
   const [date, setDate] = useState([]);
   const [selectedId, setSelectedId] = useState(0);
-
-  // let isLoggedIn = JSON.parse(localStorage.getItem("user"));
-  // if (!isLoggedIn) {
-  //   navigate("/login");
-  // }
+  const navigate=useNavigate();
+  let isLoggedIn = JSON.parse(localStorage.getItem("user"));
+  if (!isLoggedIn) {
+    navigate("/login");
+  }
   const apiUrl = "http://127.0.0.1:8000/api/Booking";
   const booking = (e) => {
     e.preventDefault();

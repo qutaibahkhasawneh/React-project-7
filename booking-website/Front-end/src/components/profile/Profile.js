@@ -37,16 +37,15 @@ if(!update){
 }
 // .then((res) => {
 //   if (res.data.status === 200){
-//   swal.fire({
-//                   position: 'top-end',
-//                   icon: 'success',
-//                   title: 'your profile updated successfully!',
-//                   showConfirmButton: false,
-//                   timer: 1500
-//               })
+//     swal({
+//       title: "Good job!",
+//       text: "booking success!",
+//       icon: "success",
+//       button: "ok!",
+//     });
     
 
-  // }})
+//   }})
 }
 
   //submit

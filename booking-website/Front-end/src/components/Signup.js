@@ -21,7 +21,7 @@ function Signup() {
             
        
         })
-        window.location.href = 'http://localhost:3002/login'
+        window.location.href = 'http://localhost:3001/login'
         result = await result.json()
         console.warn("result", result)
         }

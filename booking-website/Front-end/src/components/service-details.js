@@ -62,9 +62,9 @@ export default function ServiceDetails() {
                       Friday<span>Closed</span>
                     </li>
                   </ul>
-                  <a class="default-btn mt-4" href="/appointment">
+                  {/* <a class="default-btn mt-4" href="/appointment">
                     Request An Appointment
-                  </a>
+                  </a> */}
                   <Link class="default-btn mt-4" to={"/appointment/" + data.id}>
                     Request An Appointment
                   </Link>

@@ -19,6 +19,7 @@ class CreateBookingsTable extends Migration
             $table->string('phone') ;
             $table->string('place') ;
             $table->string('room') ;
+            $table->string('date');
             // $table->bigInteger('serviceId')->nullable(false)->unsigned(); 
             // $table->bigInteger('userId')->nullable(false)->unsigned(); 
             // $table->foreign('serviceId')->references('id')->on('services')->onDelete('cascade')->onUpdate('cascade');
