@@ -45,8 +45,8 @@ const Login = () => {
             setLoggeduser(res.data);
             console.log(res);
             if(loggeduser.status == '200' ){
-                localStorage.setItem('user',JSON.stringify(loggeduser.logged_user));
-                window.location.href = 'http://localhost:3002/'
+                // localStorage.setItem('user',JSON.stringify(loggeduser.logged_user));
+                window.location.href = 'http://localhost:3001'
                 setSuccess(true);
             }
         })
@@ -105,7 +105,7 @@ const Login = () => {
                                     <div class="col-lg-4 col-md-4 col-sm-12"><button class="default-btn"
                                             type="submit">Twitter</button></div>
                                     <div class="col-12">
-                                        <div class="form-group"><input type="text" class="form-control" name="name"
+                                        <div class="form-group"><input type="text" class="form-control" name="email"
                                                 placeholder="Username or Email"  ref={userRef} value={email} onChange={e => setEmail(e.target.value)}/></div>
                                     </div>
                                     <div class="col-12">

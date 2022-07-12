@@ -12,6 +12,10 @@ function Navbar() {
   //   }
   //   data()
   // },[])
+  function logout(){
+    localStorage.clear();
+    window.location.href="/";
+   }
   return (
     <div>
       
@@ -44,7 +48,7 @@ function Navbar() {
               <div className="col-lg-6 col-sm-6">
                 <ul className="header-content-right">
                   <li>Opening Hour: 9:00 am - 9:00 pm</li>
-                  <li><a href="/Signup" style={{fontWeight:'bolder'}}>Sign In</a></li>
+                  {/* <li><a href="/Signup" style={{fontWeight:'bolder'}}>Sign In</a></li> */}
                 </ul>
               </div>
             </div>
@@ -85,35 +89,7 @@ function Navbar() {
                             >Appointment</a
                           >
                         </li>
-                    <li className="nav-item">
-                      {/* <a className="nav-link" href="/"
-                        >Pages <i className="bx bx-chevron-down"></i
-                      ></a> */}
-                      <ul className="dropdown-menu">
-                        {/* <li className="nav-item">
-                          <a className="nav-link" href="/Team">Team</a>
-                        </li> */}
-                        {/* <li className="nav-item">
-                          <a className="nav-link" href="pricing.html">Pricing</a>
-                        </li> */}
-                       
-                        {/* <li className="nav-item"> */}
-                          {/* <a className="nav-link" href="index.html#"
-                            >Projects <i className="bx bx-chevron-down"></i
-                          ></a> */}
-                         {/* <ul className="dropdown-menu">  */}
-                            {/* <li className="nav-item">
-                              <a className="nav-link" href="projects.html"
-                                >Projects</a
-                              >
-                            </li>
-                            <li className="nav-item">
-                              <a className="nav-link" href="project-details.html"
-                                >Project Details</a
-                              >
-                            </li>
-                          </ul>
-                        </li>  */}
+                  
                        
                         {/* <li className="nav-item">
                           <a className="nav-link" href=""
@@ -134,9 +110,9 @@ function Navbar() {
                               <a className="nav-link" href="recover-password.html"
                                 >Recover Password</a
                               >
-                            </li>
-                          </ul>
-                        </li> */}
+                            </li> */}
+                          {/* </ul> */}
+                        {/* </li> */}
                         {/* <li className="nav-item">
                           <a className="nav-link" href="faq.html">FAQ</a>
                         </li> */}
@@ -158,9 +134,9 @@ function Navbar() {
                         {/* <li className="nav-item">
                           <a className="nav-link" href="404.html">404 Error Page</a>
                         </li> */}
-                      </ul>
+                      {/* </ul>
                      
-                    </li>
+                    </li> */}
                     <li className="nav-item">
                           <a className="nav-link" href="/Testimonials"
                             >Testimonials</a
@@ -169,20 +145,7 @@ function Navbar() {
                     <li className="nav-item">
                           <a className="nav-link" href="/Team">Team</a>
                         </li>
-                    <li className="nav-item">
-                      {/* <a className="nav-link" href="/service/:id"
-                        >Services <i className="bx bx-chevron-down"></i
-                      ></a> */}
-                      
-                      <ul className="dropdown-menu">
-                       
-                        <li className="nav-item">
-                          <a className="nav-link" href="/"
-                            ></a
-                          >
-                        </li>
-                      </ul>
-                    </li>
+                    
                     <li className="nav-item">
                       <a className="nav-link" href="/about">About US</a>
                     </li>
@@ -190,11 +153,77 @@ function Navbar() {
                     <li className="nav-item">
                       <a className="nav-link" href="/contact">Contact US</a>
                     </li>
-                  </ul>
-                  <a className="nav-link" href="/profile" style={{color:"white"}}><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <li className="nav-item">
+                      {/* <a className="nav-link" href=""
+                        >User <i className="bx bx-chevron-down"></i
+                      ></a> */}
+                        <a className="nav-link" href="" style={{color:"white",marginLeft:"190px"}}><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+  
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
   <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
 </svg></a>
+                      <ul className="dropdown-menu">
+                       
+                        <li className="nav-item">
+                          <a className="nav-link" href="/login"
+                            >Log in</a
+                          >
+                        </li>
+                        <li className="nav-item">
+                          <a className="nav-link" href="/signup"
+                            >Sign up</a
+                          >
+                        </li>
+                        {/*  */}
+                        <li className="nav-item">
+                          <a className="nav-link" href="/profile"
+                            >Profile</a
+                          >
+                        </li>
+                  
+                        <li className="nav-item">
+                          <a className="nav-link" href="/" onClick={logout}
+                            >Log out</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  {/* user icon */}
+
+                  {/* <li className="nav-item">
+                      <a className="nav-link" href="/"
+                        >Pages <i className="bx bx-chevron-down"></i
+                      ></a>
+                      <ul className="dropdown-menu">
+                        <li className="nav-item">
+                          <a className="nav-link" href="/Team">Team</a>
+                        </li> 
+                        <li className="nav-item">
+                          <a className="nav-link" href="pricing.html">Pricing</a>
+                        </li> 
+                       
+                        <li className="nav-item"> 
+                          <a className="nav-link" href="index.html#"
+                            >Projects <i className="bx bx-chevron-down"></i
+                          ></a> 
+                        <ul className="dropdown-menu"> 
+                            <li className="nav-item">
+                              <a className="nav-link" href="projects.html"
+                                >Projects</a
+                              >
+                            </li>
+                            <li className="nav-item">
+                              <a className="nav-link" href="project-details.html"
+                                >Project Details</a
+                              >
+                            </li>
+                          </ul>
+                        </li> </ul> </li> */}
+
+                  {/* end of user icon */}
+                 
+               
                   {/* <div className="others-option">
                     <div className="cart-icon">
                       <a className="" href="cart.html"

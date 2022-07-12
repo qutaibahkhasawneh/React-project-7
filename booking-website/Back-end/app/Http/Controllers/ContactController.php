@@ -43,6 +43,12 @@ class ContactController extends Controller
             'subject'=>'required',
             'message'=>'required',
         ]);
+
+        $contact = new Contact();
+
+        $contact->contact= $request->contact;
+        $contact->userId= $request->userid;
+        $contact->save();
     }
 
     /**

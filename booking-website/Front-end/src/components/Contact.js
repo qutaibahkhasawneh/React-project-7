@@ -32,12 +32,12 @@ const handleSubmit=(e)=>{
   e.preventDefault();
   if (name && email && message)
 {
-  Swal.fire({
-    position:'top-centered',
-    icon:'success',
-    title:'Happy you contacted us',
-  })
-
+  // Swal.fire({
+  //   position:'top-centered',
+  //   icon:'success',
+  //   title:'Happy you contacted us',
+  // })
+window.alert('Happy you contacted us')
 
   const contact ={name:name , 
                   email:email,
@@ -50,7 +50,7 @@ const handleSubmit=(e)=>{
                   method:'post',
                   url:'http://127.0.0.1:8000/api/contacts',
                   headers:{Accept:'application/json'},
-                  data:Contact
+                  data:contact
                 })
                 .then((res)=>{
                   setResponse(res)
@@ -120,7 +120,7 @@ const handleSubmit=(e)=>{
                         <div class="form-group">
                           <input
                             type="text"
-                            name="phone_number"
+                            name="phone"
                             id="phone_number"
                             required=""
                             class="form-control"
@@ -134,7 +134,7 @@ const handleSubmit=(e)=>{
                         <div class="form-group">
                           <input
                             type="text"
-                            name="msg_subject"
+                            name="subject"
                             id="msg_subject"
                             class="form-control"
                             required=""

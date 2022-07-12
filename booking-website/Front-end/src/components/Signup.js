@@ -4,10 +4,11 @@ function Signup() {
     const [userName, setName]=useState("")
     const [email, setEmail]=useState("")
     const [password, setPassword]=useState("")
-
+    const [phone, setPhone]=useState("")
+    
     async function sign(e) {
         e.preventDefault()
-        let item = {userName,password,email}
+        let item = {userName,password,email,phone}
         console.warn(item)
 
 
@@ -61,6 +62,10 @@ function Signup() {
                                     <div  className="col-md-12 col-sm-12">
                                         <div className="form-group"><input required type="email" className="form-control" name="email"
                                                 placeholder="Email Address" value={email} onChange={(e)=>setEmail(e.target.value)}/></div>
+                                    </div>
+                                    <div  className="col-md-12 col-sm-12">
+                                        <div className="form-group"><input required type="text" className="form-control" name="phone"
+                                                placeholder="phone number" value={phone} onChange={(e)=>setPhone(e.target.value)}/></div>
                                     </div>
                                     <div  className="col-md-12 col-sm-12">
                                         <div className="form-group"><input required type="password" className="form-control" name="password"
