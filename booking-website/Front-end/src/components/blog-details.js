@@ -28,7 +28,7 @@ export default function BlogDetails() {
     
     });
     if (response.ok){
-      window.alert("comment add sucsseguly")
+      window.alert("comment added successfully")
     }
     
   };

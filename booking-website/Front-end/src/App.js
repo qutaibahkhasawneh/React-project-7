@@ -13,11 +13,11 @@ import Profile from "./components/profile/Profile";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import ServiceDetails from './components/service-details';
-// import EditProfile from './components/profile/EditProfile';
 import BlogDetails from './components/blog-details';
 
 
 function App() {
+  
   return (
     <BrowserRouter>
       <Navbar />
@@ -39,7 +39,7 @@ function App() {
         {/* about us page */}
         <Route path="/about" element={<Aboutus />} />
         {/* profile  page */}
-        <Route path="/profile" element={<Profile id={1}/>} />
+        <Route path="/profile/:id" element={<Profile />} />
         {/* Login  page */}
         <Route path="login" element={<Login />} />
         {/* Signup  page */}

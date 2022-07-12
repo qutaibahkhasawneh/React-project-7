@@ -1,21 +1,14 @@
 import React,{useEffect,useState} from 'react';
-import { Link } from 'react-router-dom';
-// import {Link}from 'react-router-dom';
+import { Link,useParams } from 'react-router-dom';
+
 function Navbar() {
-  // const[users,setUsers]=useState([]);
-  // useEffect(()=>{
-  //   const data=async()=>{
-  //        const response=await fetch(`http://localhost:8000/api/users/${id}`)
-  //        const dbData=await response.json() 
-  //        setUsers(dbData);
-  //        console.log(dbData);
-  //   }
-  //   data()
-  // },[])
+
   function logout(){
     localStorage.clear();
     window.location.href="/";
    }
+   let isLoggedIn = JSON.parse(localStorage.getItem("user"));
+  // console.log(isLoggedIn.id)
   return (
     <div>
       
@@ -147,45 +140,46 @@ function Navbar() {
                         </li>
                     
                     <li className="nav-item">
-                      <a className="nav-link" href="/about">About US</a>
+                      <a className="nav-link" href="/about">About us</a>
                     </li>
             
                     <li className="nav-item">
-                      <a className="nav-link" href="/contact">Contact US</a>
+                      <a className="nav-link" href="/contact">Contact us</a>
                     </li>
                     <li className="nav-item">
                       {/* <a className="nav-link" href=""
                         >User <i className="bx bx-chevron-down"></i
                       ></a> */}
-                        <a className="nav-link" href="" style={{color:"white",marginLeft:"190px"}}><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <a className="nav-link"  style={{color:"white",marginLeft:"190px"}}><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
   
   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
   <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
 </svg></a>
                       <ul className="dropdown-menu">
-                       
-                        <li className="nav-item">
+                       {!isLoggedIn ?     <li className="nav-item">
                           <a className="nav-link" href="/login"
                             >Log in</a
                           >
-                        </li>
+                        </li> :null}
+                        {!isLoggedIn ? 
                         <li className="nav-item">
                           <a className="nav-link" href="/signup"
                             >Sign up</a
                           >
-                        </li>
+                        </li> :null}
                         {/*  */}
+                        {isLoggedIn ?
                         <li className="nav-item">
-                          <a className="nav-link" href="/profile"
-                            >Profile</a
+                          <Link to={"/profile/"+isLoggedIn.id} className="nav-link" 
+                            >Profile</Link
                           >
-                        </li>
-                  
+                        </li> :null}
+                        {isLoggedIn ? 
                         <li className="nav-item">
-                          <a className="nav-link" href="/" onClick={logout}
+                          <a className="nav-link"  onClick={logout}
                             >Log out</a
                           >
-                        </li>
+                        </li> :null}
                       </ul>
                     </li>
                   </ul>

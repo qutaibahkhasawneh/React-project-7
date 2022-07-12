@@ -15,7 +15,7 @@ const {id}=useParams();
 console.log(id)
 useEffect(()=>{
   const data=async()=>{
-       const response=await fetch(`http://127.0.0.1:8000/api/users/1`)
+       const response=await fetch(`http://127.0.0.1:8000/api/users/${id}`)
        const dbData=await response.json();
        setUsers(dbData);
        console.log(dbData);
@@ -26,7 +26,7 @@ useEffect(()=>{
  
 const updateHandeler=(e)=>{
 e.preventDefault();
-axios.put(`http://127.0.0.1:8000/api/users/1`, users)
+axios.put(`http://127.0.0.1:8000/api/users/${id}`, users)
 .then((res)=>setUsers(res.data))
 .then(()=>setUpdate(!update))
 console.log(users)
@@ -74,7 +74,7 @@ if(!update){
                 {/* <div className="img-circle text-center mb-3">
                   <img src="img/profile/user2.jpg" alt="Image" className="shadow" />
                 </div> */}
-                <h4 className="text-center p-4">{users.userName}</h4>
+                <h4 className="text-center p-4">User Profile</h4>
               </div>
               <div
                 className="nav flex-column nav-pills"
