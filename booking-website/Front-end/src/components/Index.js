@@ -48,8 +48,8 @@ function Index() {
         <div className="container">
           <div className="response-wrap">
             <h3>
-              Fast Response Time - Local &amp; Professional-Open 24/7 Call Now
-              at +962778093278
+              Fast Response Time - Local &amp; Professional-Open 24/7 <span  style={{marginLeft:"0px"}}> Call Now
+              at +962778093278</span>
             </h3>
             <div className="shape">
               <img src="img/shape/shape1.png" alt="" />
@@ -106,7 +106,7 @@ function Index() {
 
             <div class="row">
             {
-              category.map((getcategory)=>(
+            category.map((getcategory)=>(
                 
                 <div class="col-lg-4 col-sm-6">
                   <div class="single-services" style={{minHeight:400}}>
