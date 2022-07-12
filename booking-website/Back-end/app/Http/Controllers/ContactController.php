@@ -41,13 +41,17 @@ class ContactController extends Controller
             'email'=>'required|email|unique:contacts',
             'phone'=>'required|regex:/^[0-9]',
             'subject'=>'required',
-            'message'=>'required',
+            'message' =>'required',
         ]);
 
         $contact = new Contact();
 
-        $contact->contact= $request->contact;
-        $contact->userId= $request->userid;
+        $contact->name= $request->name;
+        $contact->email= $request->email;
+        $contact->phone= $request->phone;
+        $contact->subject= $request->subject;
+        $contact->message= $request->message;
+
         $contact->save();
     }
 
