@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import {  useParams} from "react-router-dom";
 import axios from "axios";
 import swal from "sweetalert";
 
 export function Appointment() {
+    const { id } = useParams();
   const [d, setData] = useState({
     date: "",
     time: "",
@@ -17,7 +19,7 @@ export function Appointment() {
   const [date, setDate] = useState([]);
   const [selectedId, setSelectedId] = useState(0);
 
-  // let isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn"));
+  // let isLoggedIn = JSON.parse(localStorage.getItem("user"));
   // if (!isLoggedIn) {
   //   navigate("/login");
   // }
@@ -31,6 +33,7 @@ export function Appointment() {
       d: d.date,
       time: d.time,
       phone: d.phone,
+      date: d.name,
     };
     axios.post(apiUrl, data1).then((result) => {
       console.log(result.data.d);
@@ -68,6 +71,10 @@ export function Appointment() {
 
   const onChange = (e) => {
     setData({ ...d, [e.target.name]: e.target.value });
+      setselectedOptions({
+        ...selectedOptions,
+        [e.target.name]: e.target.value,
+      });
     const index = e.target.selectedIndex;
     const el = e.target.childNodes[index];
     const option = el.getAttribute("id");
@@ -109,11 +116,11 @@ export function Appointment() {
                       type="text"
                       class="form-control"
                       id="Name"
-                      placeholder="Enter Your Name"
+                      placeholder="Enter Your place"
                       onChange={onChange}
                       name="place"
                     />
-                    <i class="bx bx-user"></i>
+                    <i class="bx bxs-edit-location"></i>
                   </div>
                 </div>
                 <div class="col-lg-6 col-sm-6">
@@ -122,11 +129,11 @@ export function Appointment() {
                       type="text"
                       class="form-control"
                       id="Email"
-                      placeholder="Enter Your Email"
+                      placeholder="Enter Your Number Room"
                       onChange={onChange}
                       name="room"
                     />
-                    <i class="bx bx-envelope"></i>
+                    <i class="bx bx-building-house"></i>
                   </div>
                 </div>
                 <div class="col-lg-6 col-sm-6">
@@ -135,11 +142,11 @@ export function Appointment() {
                       type="text"
                       class="form-control"
                       id="Email"
-                      placeholder="Enter Your Email"
+                      placeholder="Enter Your free Time"
                       onChange={onChange}
                       name="time"
                     />
-                    <i class="bx bx-envelope"></i>
+                    <i class="bx bxs-time"></i>
                   </div>
                 </div>
                 <div class="col-lg-6 col-sm-6">
@@ -155,18 +162,7 @@ export function Appointment() {
                     <i class="bx bx-mobile-alt"></i>
                   </div>
                 </div>
-                <div class="col-lg-6 col-sm-6">
-                  <div class="form-group">
-                    <select class="form-control" id="SelectService">
-                      <option>Select Service</option>
-                      <option>House Cleaning</option>
-                      <option>Apartment Cleaning</option>
-                      <option>Industry Cleaning</option>
-                      <option>Hospital &amp; Health Care</option>
-                      <option>Bathroom Cleaning</option>
-                    </select>
-                  </div>
-                </div>
+              
                 <div class="col-lg-6 col-sm-6">
                   <div class="form-group">
                     <div class="react-datepicker-wrapper">

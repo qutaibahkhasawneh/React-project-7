@@ -26,7 +26,7 @@ function App() {
       <Route path='/' element={<Index id={1} />}/>
 
         {/* Appointment us page */}
-        <Route path="/appointment" element={<Appointment />} />
+        <Route path="/appointment/:id" element={<Appointment />} />
 
         {/* Contact us page */}
         <Route path="/contact" element={<Contact />} />
