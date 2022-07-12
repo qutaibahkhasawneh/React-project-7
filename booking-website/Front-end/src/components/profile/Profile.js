@@ -1,8 +1,9 @@
 import React,{useState,useEffect} from 'react'
 import {useParams} from 'react-router';
 // import swal from "sweetalert";
-
+import useFetch from '../../Hooks/useFetch';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 function Profile() {
 
 const[users,setUsers]=useState({
@@ -35,6 +36,12 @@ if(!update){
 
   
 }
+const[history,getHistory]=useFetch(`http://127.0.0.1:8000/api/Booking/${id}`);
+useEffect(()=>{
+getHistory()
+},[])
+
+
 // .then((res) => {
 //   if (res.data.status === 200){
 //     swal({
@@ -85,25 +92,25 @@ if(!update){
                   className="nav-link active"
                   id="account-tab"
                   data-toggle="pill"
-                  href="#account"
+                  href="/profile"
                   role="tab"
                   aria-controls="account"
                   aria-selected="true">
                   <i className="fa fa-home text-center mr-1"></i>
                   Account
                 </a>
-                {/* <a
+                <a
                   className="nav-link"
                   id="password-tab"
                   data-toggle="pill"
-                  href="#password"
+                  href="/reset"
                   role="tab"
                   aria-controls="password"
                   aria-selected="false" >
                   <i className="fa fa-key text-center mr-1"></i>
                   Password
-                </a> */}
-                <a
+                </a>
+                {/* <a
                   className="nav-link"
                   id="security-tab"
                   data-toggle="pill"
@@ -135,7 +142,7 @@ if(!update){
                   aria-selected="false" >
                   <i className="fa fa-bell text-center mr-1"></i>
                   Notification
-                </a>
+                </a> */}
               </div>
             </div>
             
@@ -174,7 +181,7 @@ if(!update){
                       <input
                         type="phone"
                         className="form-control" name='phone'
-                        value={users.phone} 
+                        value={"077 ### ####"} 
                         onChange={(e)=>setUsers({...users,phone:e.target.value})} />
 
                     </div>
@@ -185,7 +192,8 @@ if(!update){
                       <label>Password</label>
                       <input type="password" className="form-control" name='password'
                        value={users.password} 
-                      onChange={(e)=>setUsers({...users,password:e.target.value})} />
+                      onChange={(e)=>setPassword(e.target.value)} />
+                      <Link to={"/reset"} style={{color:"red"}}> reset password</Link>
                      
                 </div>
                   </div> 
@@ -212,7 +220,29 @@ if(!update){
                
                
               </div>
-              
+              {/* bookings */}
+              {/* <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">{users.id}</th>
+      <th scope="col">Bookings</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    {history.length>0 && history.map((booking)=>{
+    <tr>
+      
+      <td>{booking.date}</td>
+      <td>{booking.time}</td>
+      <td>{booking.place}</td>
+    </tr>
+  })}
+  </tbody>
+</table> */}
+
+
+              {/* bookings */}
               <div
                 className="tab-pane fade"
                 id="password"

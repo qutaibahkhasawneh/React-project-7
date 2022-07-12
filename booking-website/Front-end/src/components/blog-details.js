@@ -18,13 +18,16 @@ export default function BlogDetails() {
    }, []);
    console.log(comm)
 
+   let isLoggedIn = JSON.parse(localStorage.getItem("user"));
+
+
   const [comment, setComment] = useState("");
   const commentHandler = async (e) => {
     e.preventDefault();
     const response= await fetch(`http://127.0.0.1:8000/api/addcomm`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ comment:comment , userid:1 }),
+      body: JSON.stringify({ comment:comment , userid:isLoggedIn.id }),
     
     });
     if (response.ok){

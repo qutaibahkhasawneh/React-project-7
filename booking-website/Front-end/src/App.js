@@ -14,6 +14,7 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import ServiceDetails from './components/service-details';
 import BlogDetails from './components/blog-details';
+import Reset from './components/profile/Reset';
 
 
 function App() {
@@ -50,6 +51,8 @@ function App() {
        {/* <Route path='service' element={<ServiceDetails/>} /> */}
        {/* Edit Profile */}
        {/* <Route path='/edit/:id' element={<EditProfile/>} /> */}
+       {/* reset password */}
+       <Route path='/reset' element={<Reset/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>
