@@ -120,7 +120,7 @@ const handleSubmit=(e)=>{
                         <div class="form-group">
                           <input
                             type="text"
-                            name="phone_number"
+                            name="phone"
                             id="phone_number"
                             required=""
                             class="form-control"
@@ -134,7 +134,7 @@ const handleSubmit=(e)=>{
                         <div class="form-group">
                           <input
                             type="text"
-                            name="msg_subject"
+                            name="subject"
                             id="msg_subject"
                             class="form-control"
                             required=""

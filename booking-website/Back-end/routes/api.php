@@ -27,6 +27,6 @@ Route::get('/users/{id}',[UserController::class,'edit']);
 
 Route::get('/categories',[CategoryController::class, 'index']);
 Route::get('/category/{id}',[CategoryController::class, 'show']);
-Route::get('/contacts',[ContactController::class, 'store']);
+Route::post('/contacts',[ContactController::class, 'store']);
 
 
