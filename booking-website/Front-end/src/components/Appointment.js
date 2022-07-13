@@ -12,7 +12,7 @@ export function Appointment() {
     room: "",
     userId: "",
     serviceId: "",
-    street: ""
+    street: "",
   });
   const [selectedOptions, setselectedOptions] = useState({
     name: "",
@@ -113,7 +113,7 @@ export function Appointment() {
             </div>
             <form>
               <div class="row">
-                <div class="col-lg-6 col-sm-6">
+                {/* <div class="col-lg-6 col-sm-6">
                   <div class="form-group">
                     <input
                       type="text"
@@ -125,7 +125,7 @@ export function Appointment() {
                     />
                     <i class="bx bx-envelope"></i>
                   </div>
-                </div>
+                </div> */}
 
                 <div class="col-lg-6 col-sm-6">
                   <div class="form-group">
