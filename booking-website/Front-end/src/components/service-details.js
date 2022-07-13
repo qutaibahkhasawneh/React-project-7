@@ -6,6 +6,11 @@ import { useEffect } from "react";
 import useFetch from "../Hooks/useFetch";
 
 export default function ServiceDetails() {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
   const { id } = useParams();
   const [data, setData] = useState({});
   console.log(data);
