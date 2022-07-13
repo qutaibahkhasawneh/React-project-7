@@ -78,7 +78,7 @@ export default function BlogDetails() {
             <h2>Comment Section</h2>
             <ul>
               <li>
-                <a href="index.html">Home</a>
+                <a href="/">Home</a>
               </li>
               <li class="active">Comment</li>
             </ul>
