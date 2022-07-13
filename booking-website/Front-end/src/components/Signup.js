@@ -22,7 +22,7 @@ function Signup() {
             
        
         })
-        window.location.href = 'http://localhost:3002/login'
+        window.location.href = 'http://localhost:3000/login'
         result = await result.json()
         console.warn("result", result)
         }
@@ -35,7 +35,7 @@ function Signup() {
                 <div className="page-title-content">
                     <h2>Sign Up</h2>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li className="active">Sign Up</li>
                     </ul>
                 </div>
@@ -65,7 +65,7 @@ function Signup() {
                                     </div>
                                     <div  className="col-md-12 col-sm-12">
                                         <div className="form-group"><input required type="text" className="form-control" name="phone"
-                                                placeholder="phone number" value={"077 ### ####"} onChange={(e)=>setPhone(e.target.value)}/></div>
+                                                placeholder="phone number" value={phone} onChange={(e)=>setPhone(e.target.value)}/></div>
                                     </div>
                                     <div  className="col-md-12 col-sm-12">
                                         <div className="form-group"><input required type="password" className="form-control" name="password"

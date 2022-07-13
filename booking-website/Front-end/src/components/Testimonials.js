@@ -1,10 +1,23 @@
+import React, { useEffect, useState } from "react";
 export function Testimonials() {
+  const[data, setData] = useState([]);
+  useEffect(() => {
+    const getFeedback = async () => {
+      const res = await fetch("http://127.0.0.1:8000/api/feedbacks");
+      const getdata = await res.json();
+      setData(getdata);
+      console.log(getdata);
+    };
+    getFeedback();
+  }, []);
+  let isLoggedIn = JSON.parse(localStorage.getItem("user"));
+
   return (
     <div>
       <div class="page-title-area bg-3">
         <div class="container">
           <div class="page-title-content">
-            <h2>Testimonials</h2>
+            <h2>Feedback</h2>
             <ul>
               <li>
                 <a href="index.html">Home</a>
@@ -19,210 +32,47 @@ export function Testimonials() {
           <div class="section-title">
             <h2>What Our Client’s Say</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. A facilis
-              vel consequatur tempora atque blanditiis exercitationem incidunt,
-              alias corporis quam assumenda dicta, temporibus.
+              We pride ourselves on providing an exceptional service to our
+              clients, but you don’t just have to take our word for it. Read
+              what our clients have to say about working with us.
             </p>
           </div>
           <div class="row">
-            <div class="col-lg-6">
-              <div class="single-client">
-                <img src="img/client/client1.jpg" alt="img" />
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Lorem Ipsum is simply dummy text of the printing and Quis
-                  suspendisse typesetting
-                </p>
-                <ul>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                </ul>
-                <h3>Steven Jony</h3>
-                <span>CEO of Company</span>
-                <div class="quate">
-                  <i class="flaticon-right-quotes-symbol"></i>
+            {data.map((getFeedback) => (
+              <div class="col-lg-6">
+                <div class="single-client">
+                  <img
+                    src="https://cdn.onlinewebfonts.com/svg/img_415639.png"
+                    style={{ width: "70px" }}
+                    alt="img"
+                  />
+                  <p>feedback : {getFeedback.body}</p>
+                  <ul>
+                    <li>
+                      <i class="bx bxs-star"></i>
+                    </li>
+                    <li>
+                      <i class="bx bxs-star"></i>
+                    </li>
+                    <li>
+                      <i class="bx bxs-star"></i>
+                    </li>
+                    <li>
+                      <i class="bx bxs-star"></i>
+                    </li>
+                    <li>
+                      <i class="bx bxs-star"></i>
+                    </li>
+                  </ul>
+                  <h3>{isLoggedIn.userName}</h3>
+                  <h6>{getFeedback.title}</h6>
+                  <div class="quate">
+                    <i class="flaticon-right-quotes-symbol"></i>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="single-client">
-                <img src="img/client/client2.jpg" alt="img" />
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Lorem Ipsum is simply dummy text of the printing and Quis
-                  suspendisse typesetting
-                </p>
-                <ul>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                </ul>
-                <h3>Omit Jacson</h3>
-                <span>Company Founder</span>
-                <div class="quate">
-                  <i class="flaticon-right-quotes-symbol"></i>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="single-client">
-                <img src="img/client/client3.jpg" alt="img" />
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Lorem Ipsum is simply dummy text of the printing and Quis
-                  suspendisse typesetting
-                </p>
-                <ul>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                </ul>
-                <h3>Kilva Dew</h3>
-                <span>Marketing Manager</span>
-                <div class="quate">
-                  <i class="flaticon-right-quotes-symbol"></i>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="single-client">
-                <img src="img/client/client4.jpg" alt="img" />
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Lorem Ipsum is simply dummy text of the printing and Quis
-                  suspendisse typesetting
-                </p>
-                <ul>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                </ul>
-                <h3>Juhon Kilva</h3>
-                <span>Company CEO</span>
-                <div class="quate">
-                  <i class="flaticon-right-quotes-symbol"></i>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="single-client">
-                <img src="img/client/client5.jpg" alt="img" />
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Lorem Ipsum is simply dummy text of the printing and Quis
-                  suspendisse typesetting
-                </p>
-                <ul>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                </ul>
-                <h3>Anna Keatch</h3>
-                <span>Medical Founder</span>
-                <div class="quate">
-                  <i class="flaticon-right-quotes-symbol"></i>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="single-client">
-                <img src="img/client/client6.jpg" alt="img" />
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Lorem Ipsum is simply dummy text of the printing and Quis
-                  suspendisse typesetting
-                </p>
-                <ul>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i class="bx bxs-star"></i>
-                  </li>
-                </ul>
-                <h3>Lezkit Smith</h3>
-                <span>Medical Manager</span>
-                <div class="quate">
-                  <i class="flaticon-right-quotes-symbol"></i>
-                </div>
-              </div>
-            </div>
+            ))}
+
             <div class="col-lg-12">
               <div class="page-navigation-area text-center">
                 <ul class="pagination">

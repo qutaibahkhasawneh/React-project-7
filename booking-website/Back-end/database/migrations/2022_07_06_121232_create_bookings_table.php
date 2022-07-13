@@ -15,15 +15,15 @@ class CreateBookingsTable extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
-             $table->string('time') ;
-            $table->string('phone') ;
-            $table->string('place') ;
+            $table->string('time') ;
+            // $table->string('phone') ;
+            $table->string('city') ;
             $table->string('room') ;
             $table->string('date');
-            // $table->bigInteger('serviceId')->nullable(false)->unsigned(); 
-            // $table->bigInteger('userId')->nullable(false)->unsigned(); 
-            // $table->foreign('serviceId')->references('id')->on('services')->onDelete('cascade')->onUpdate('cascade');
-            // $table->foreign('userId')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+             $table->string('street');
+            $table->bigInteger('serviceId');
+            $table->bigInteger('userId');
+          
             $table->timestamps();
         });
     }
