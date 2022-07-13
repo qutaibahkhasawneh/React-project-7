@@ -10,7 +10,7 @@ export function Testimonials() {
     };
     getFeedback();
   }, []);
-
+  let isLoggedIn = JSON.parse(localStorage.getItem("user"));
 
   return (
     <div>
@@ -32,9 +32,9 @@ export function Testimonials() {
           <div class="section-title">
             <h2>What Our Client’s Say</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. A facilis
-              vel consequatur tempora atque blanditiis exercitationem incidunt,
-              alias corporis quam assumenda dicta, temporibus.
+              We pride ourselves on providing an exceptional service to our
+              clients, but you don’t just have to take our word for it. Read
+              what our clients have to say about working with us.
             </p>
           </div>
           <div class="row">
@@ -42,10 +42,11 @@ export function Testimonials() {
               <div class="col-lg-6">
                 <div class="single-client">
                   <img
-                    src="https://cdn.onlinewebfonts.com/svg/img_415639.png" style={{width:'70px'}}
+                    src="https://cdn.onlinewebfonts.com/svg/img_415639.png"
+                    style={{ width: "70px" }}
                     alt="img"
                   />
-                  <p>feedback :  {getFeedback.body}</p>
+                  <p>feedback : {getFeedback.body}</p>
                   <ul>
                     <li>
                       <i class="bx bxs-star"></i>
@@ -63,15 +64,15 @@ export function Testimonials() {
                       <i class="bx bxs-star"></i>
                     </li>
                   </ul>
-                  <h3></h3>
-                  <h3>{getFeedback.title}</h3>
+                  <h3>{isLoggedIn.userName}</h3>
+                  <h6>{getFeedback.title}</h6>
                   <div class="quate">
                     <i class="flaticon-right-quotes-symbol"></i>
                   </div>
                 </div>
               </div>
             ))}
-         
+
             <div class="col-lg-12">
               <div class="page-navigation-area text-center">
                 <ul class="pagination">

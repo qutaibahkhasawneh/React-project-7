@@ -118,8 +118,8 @@ export function Appointment() {
                     <input
                       type="text"
                       class="form-control"
-                      id="Email"
-                      value={isLoggedIn.email}
+                      id="userName"
+                      value={isLoggedIn.userName}
                       disabled
                     />
                     <i class="bx bx-envelope"></i>
@@ -132,7 +132,7 @@ export function Appointment() {
                       type="text"
                       class="form-control"
                       id="Name"
-                      placeholder="Enter Your city"
+                      placeholder="city"
                       onChange={onChange}
                       name="city"
                     />
@@ -148,7 +148,7 @@ export function Appointment() {
                       id="street"
                       onChange={onChange}
                       name="street"
-                      placeholder="Enter Your street"
+                      placeholder="street"
                     />
                     <i class="bx bx-street-view"></i>
                   </div>
@@ -159,7 +159,7 @@ export function Appointment() {
                       type="text"
                       class="form-control"
                       id="room"
-                      placeholder="Enter Number Room"
+                      placeholder=" Room"
                       onChange={onChange}
                       name="room"
                     />

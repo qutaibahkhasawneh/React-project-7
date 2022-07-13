@@ -31,10 +31,11 @@ function Index() {
         });
       else
         swal({
-          title: "Good job!",
-          text: "feedback success!",
+          title: "feedback success!",
+          text: "You need to accept it!",
           icon: "success",
           button: "ok!",
+          color: "red",
         });
     });
   }
@@ -243,15 +244,14 @@ function Index() {
 
         <div class="appointment-area jarallax ptb-100">
           <div class="container">
-            <div class="section-title white-title">
-              <span>Call To Action</span>
+            <div class=" white-title">
               <h2>Feedback about our services</h2>
             </div>
             <div class="appointment-here-form">
               <form>
-                <div class="row">
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="form-group">
+                <div class="row" style={{ display: 'flex',justifyContent:'center'}}>
+                  <div class="col-lg-7 col-sm-6">
+                    <div class="form-group"  >
                       <input
                         type="text"
                         class="form-control"
@@ -260,13 +260,13 @@ function Index() {
                         name="title"
                         onChange={onChange}
                       />
-                      <i class="bx bx-user"></i>
+                     
                     </div>
                   </div>
 
-                  <div class="col-lg-4 col-sm-6">
+                  <div class="col-lg-7 col-sm-6">
                     <div class="form-group">
-                      <input
+                      <textarea
                         type="text"
                         class="form-control"
                         id="body"

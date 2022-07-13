@@ -179,8 +179,9 @@ getHistory()
                     <div className="form-group">
                       <label>Phone number</label>
                       <input
-                        type="phone"
-                        className="form-control" name='phone'
+                        type="text"
+                          className="form-control"
+                          name='phone'
                         value={users.phone} 
                         onChange={(e)=>setUsers({...users,phone:e.target.value})} />
 

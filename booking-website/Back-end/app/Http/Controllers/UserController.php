@@ -54,7 +54,7 @@ class UserController extends Controller
         $user = User::where('email', $request->email)->first();
         if ($user) {
             if ($request->password == $user->password) {
-                $logged_user = [ "id" => $user->id ,'name' =>$user->name , 'email' => $user->email ,'phone'=> $user->phone ];
+                $logged_user = [ "id" => $user->id ,'userName' =>$user->userName , 'email' => $user->email ,'phone'=> $user->phone ];
                 return response()->json([
                     'logged_user'=>$logged_user,
                      'status'=> 200,
