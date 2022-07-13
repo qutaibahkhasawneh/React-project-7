@@ -181,7 +181,7 @@ getHistory()
                       <input
                         type="phone"
                         className="form-control" name='phone'
-                        value={"077 ### ####"} 
+                        value={users.phone} 
                         onChange={(e)=>setUsers({...users,phone:e.target.value})} />
 
                     </div>

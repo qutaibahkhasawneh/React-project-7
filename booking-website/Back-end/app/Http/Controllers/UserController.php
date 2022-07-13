@@ -23,7 +23,7 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request ,User $User)
     {
         $request->validate([
         'userName',
@@ -32,7 +32,13 @@ class UserController extends Controller
         'password',
 
         ]);
-        return User::create($request->all());
+        // return User::create($request->all());
+        $User->userName=$request->userName;
+         $User->phone=$request->phone;
+         $User->email=$request->email;
+         $User->password=$request->password;
+       
+        $User->save(); 
     }
 
 

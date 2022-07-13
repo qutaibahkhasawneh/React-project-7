@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
-import {  useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
 export function Appointment() {
-    const { id } = useParams();
+  const { id } = useParams();
   const [d, setData] = useState({
     date: "",
     time: "",
-    phone: "",
-    place: "",
+    city: "",
     room: "",
+    userId: "",
+    serviceId: "",
+    street: ""
   });
   const [selectedOptions, setselectedOptions] = useState({
     name: "",
@@ -18,7 +20,7 @@ export function Appointment() {
   });
   const [date, setDate] = useState([]);
   const [selectedId, setSelectedId] = useState(0);
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   let isLoggedIn = JSON.parse(localStorage.getItem("user"));
   if (!isLoggedIn) {
     navigate("/login");
@@ -28,12 +30,13 @@ export function Appointment() {
     e.preventDefault();
 
     const data1 = {
-      place: d.place,
+      city: d.city,
       room: d.room,
-      d: d.date,
+      street: d.street,
       time: d.time,
-      phone: d.phone,
       date: d.name,
+      userId: isLoggedIn.id,
+      serviceId: id,
     };
     axios.post(apiUrl, data1).then((result) => {
       console.log(result.data.d);
@@ -71,10 +74,10 @@ export function Appointment() {
 
   const onChange = (e) => {
     setData({ ...d, [e.target.name]: e.target.value });
-      setselectedOptions({
-        ...selectedOptions,
-        [e.target.name]: e.target.value,
-      });
+    setselectedOptions({
+      ...selectedOptions,
+      [e.target.name]: e.target.value,
+    });
     const index = e.target.selectedIndex;
     const el = e.target.childNodes[index];
     const option = el.getAttribute("id");
@@ -115,12 +118,39 @@ export function Appointment() {
                     <input
                       type="text"
                       class="form-control"
-                      id="Name"
-                      placeholder="Enter Your place"
-                      onChange={onChange}
-                      name="place"
+                      id="Email"
+                      value={isLoggedIn.email}
+                      disabled
                     />
-                    <i class="bx bxs-edit-location"></i>
+                    <i class="bx bx-envelope"></i>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-sm-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="Name"
+                      placeholder="Enter Your city"
+                      onChange={onChange}
+                      name="city"
+                    />
+                    <i class="bx bxs-city"></i>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-sm-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="street"
+                      onChange={onChange}
+                      name="street"
+                      placeholder="Enter Your street"
+                    />
+                    <i class="bx bx-street-view"></i>
                   </div>
                 </div>
                 <div class="col-lg-6 col-sm-6">
@@ -128,41 +158,15 @@ export function Appointment() {
                     <input
                       type="text"
                       class="form-control"
-                      id="Email"
-                      placeholder="Enter Your Number Room"
+                      id="room"
+                      placeholder="Enter Number Room"
                       onChange={onChange}
                       name="room"
                     />
                     <i class="bx bx-building-house"></i>
                   </div>
                 </div>
-                <div class="col-lg-6 col-sm-6">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="Email"
-                      placeholder="Enter Your free Time"
-                      onChange={onChange}
-                      name="time"
-                    />
-                    <i class="bx bxs-time"></i>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-sm-6">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="Phone"
-                      placeholder="Enter Your Phone"
-                      onChange={onChange}
-                      name="phone"
-                    />
-                    <i class="bx bx-mobile-alt"></i>
-                  </div>
-                </div>
-              
+
                 <div class="col-lg-6 col-sm-6">
                   <div class="form-group">
                     <div class="react-datepicker-wrapper">
@@ -170,7 +174,7 @@ export function Appointment() {
                         <input
                           type="date"
                           onChange={onChange}
-                          name="date"
+                          name="time"
                           class="form-control"
                         />
                       </div>

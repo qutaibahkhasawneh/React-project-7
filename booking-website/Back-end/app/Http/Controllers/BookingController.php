@@ -10,17 +10,18 @@ class BookingController extends Controller
     {
 
         $id=$request->id;
-        
+        $Booking->userId= $request->userId;
+        $Booking->serviceId= $request->serviceId;
          $Booking->date=$request->date;
-         $Booking->place=$request->place;
+         $Booking->city=$request->city;
           $Booking->room=$request->room;
-               $Booking->phone=$request->phone;
-                    $Booking->time=$request->time;
-       
-                      $Booking->save();
+
+          $Booking->time=$request->time;
+          $Booking->street=$request->street;
+          $Booking->save();
              return response()->json([
             'status' => true,
-            'message' => "Movie update successfully!",
+            'message' => "Booking update successfully!",
         ], 200);
      }
 

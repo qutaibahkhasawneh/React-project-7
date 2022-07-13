@@ -10,6 +10,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\DateController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\FeedbackController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -49,4 +50,6 @@ Route::post('/selectDate/{id}',[DateController::class, 'selectDate']);
 Route::get('apicomment',[CommentController::class , 'CommentAPI']);
 // Route::post('addComment',[CommentController::class , 'addComment']);
 Route::post('addcomm',[CommentController::class , 'addComm']);
-
+//routes for feedback
+Route::post('/feedback',[FeedbackController::class, 'store']);
+Route::get('/feedbacks',[FeedbackController::class, 'index']);

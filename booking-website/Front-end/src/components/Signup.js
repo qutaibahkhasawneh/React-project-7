@@ -65,7 +65,7 @@ function Signup() {
                                     </div>
                                     <div  className="col-md-12 col-sm-12">
                                         <div className="form-group"><input required type="text" className="form-control" name="phone"
-                                                placeholder="phone number" value={"077 ### ####"} onChange={(e)=>setPhone(e.target.value)}/></div>
+                                                placeholder="phone number" value={phone} onChange={(e)=>setPhone(e.target.value)}/></div>
                                     </div>
                                     <div  className="col-md-12 col-sm-12">
                                         <div className="form-group"><input required type="password" className="form-control" name="password"
