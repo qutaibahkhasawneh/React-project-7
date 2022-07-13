@@ -245,7 +245,7 @@ function Index() {
         <div class="appointment-area jarallax ptb-100">
           <div class="container">
             <div class=" white-title">
-              <h2>Feedback about our services</h2>
+              <h2 >Feedback about our services</h2>
             </div>
             <div class="appointment-here-form">
               <form>
