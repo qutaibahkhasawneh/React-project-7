@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -9,10 +10,9 @@ export function Appointment() {
     date: "",
     time: "",
     city: "",
-    room: "",
     userId: "",
     serviceId: "",
-    street: ""
+    street: "",
   });
   const [selectedOptions, setselectedOptions] = useState({
     name: "",
@@ -25,13 +25,13 @@ export function Appointment() {
   if (!isLoggedIn) {
     navigate("/login");
   }
+  
   const apiUrl = "http://127.0.0.1:8000/api/Booking";
   const booking = (e) => {
     e.preventDefault();
 
     const data1 = {
       city: d.city,
-      room: d.room,
       street: d.street,
       time: d.time,
       date: d.name,
@@ -89,6 +89,17 @@ export function Appointment() {
     setSelectedId(id);
     console.log(id);
   };
+     const disablePastDate = () => {
+       const today = new Date();
+       const dd = String(today.getDate() ).padStart(2, "0");
+       const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+       const yyyy = today.getFullYear();
+       return yyyy + "-" + mm + "-" + dd;
+     };
+
+    const onKeyPressed=(e)=>{
+    e.preventDefault()
+  }
   return (
     <div>
       <div class="page-title-area bg-5">
@@ -113,7 +124,7 @@ export function Appointment() {
             </div>
             <form>
               <div class="row">
-                <div class="col-lg-6 col-sm-6">
+                {/* <div class="col-lg-6 col-sm-6">
                   <div class="form-group">
                     <input
                       type="text"
@@ -124,7 +135,7 @@ export function Appointment() {
                     />
                     <i class="bx bx-envelope"></i>
                   </div>
-                </div>
+                </div> */}
 
                 <div class="col-lg-6 col-sm-6">
                   <div class="form-group">
@@ -153,19 +164,7 @@ export function Appointment() {
                     <i class="bx bx-street-view"></i>
                   </div>
                 </div>
-                <div class="col-lg-6 col-sm-6">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="room"
-                      placeholder=" Room"
-                      onChange={onChange}
-                      name="room"
-                    />
-                    <i class="bx bx-building-house"></i>
-                  </div>
-                </div>
+    
 
                 <div class="col-lg-6 col-sm-6">
                   <div class="form-group">
@@ -173,9 +172,11 @@ export function Appointment() {
                       <div class="react-datepicker__input-container">
                         <input
                           type="date"
+                          min={disablePastDate()}
                           onChange={onChange}
                           name="time"
                           class="form-control"
+                          onKeyDown={onKeyPressed}
                         />
                       </div>
                     </div>
