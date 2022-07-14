@@ -4,6 +4,7 @@ import {useParams} from 'react-router';
 import useFetch from '../../Hooks/useFetch';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+
 function Profile() {
 
 const[users,setUsers]=useState({
@@ -55,7 +56,6 @@ getHistory()
 //   }})
 }
 
-  //submit
 
   return (
     <>

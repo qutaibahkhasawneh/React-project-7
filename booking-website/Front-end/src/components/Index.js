@@ -153,13 +153,13 @@ function Index() {
               {category.map((getcategory) => (
                 <div class="col-lg-4 col-sm-6">
                   <div class="single-services" style={{ minHeight: 400 }}>
-                    <a href="service-details.html">
+                    <Link to={"service/" + getcategory.id}>
                       <img
                         src={getcategory.image}
                         alt=""
                         style={{ width: 350, height: 200 }}
                       />
-                    </a>
+                    </Link>
                     <div class="services-content">
                       <h3>{getcategory.categoryName}</h3>
                       <p>{getcategory.description}</p>
