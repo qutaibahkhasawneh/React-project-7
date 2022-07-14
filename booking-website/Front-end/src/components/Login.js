@@ -73,37 +73,14 @@ const Login = () => {
     <div>
         <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
 
-
-   
-      <div class="page-title-area bg-9">
-            <div class="container">
-                <div class="page-title-content">
-                    <h2>Sign In</h2>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li class="active">Sign In</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
         <div class="user-area-all-style log-in-area ptb-100">
             <div class="container">
-                <div class="section-title">
-                    <h2>Sign In to your account!</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium quas cumque iste veniam id
-                        dolorem deserunt ratione error voluptas rem ullam possimus placeat, ut, odio</p>
-                </div>
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="contact-form-action">
+                        <div class="contact-form-action">    <h4 style={{textAlign:"center"}}>Sign to your account</h4>
                             <form method="post">
                                 <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-12"><button class="default-btn"
-                                            type="submit">Google</button></div>
-                                    <div class="col-lg-4 col-md-4 col-sm-12"><button class="default-btn"
-                                            type="submit">Facebook</button></div>
-                                    <div class="col-lg-4 col-md-4 col-sm-12"><button class="default-btn"
-                                            type="submit">Twitter</button></div>
+                                    
                                     <div class="col-12">
                                         <div class="form-group"><input type="text" class="form-control" name="email"
                                                 placeholder="Username or Email"  ref={userRef} value={email} onChange={e => setEmail(e.target.value)}/></div>
@@ -121,7 +98,7 @@ const Login = () => {
                                     <div class="col-12"><button class="default-btn btn-two" type="submit" onClick={handleSubmit}>Sign
                                             In</button></div>
                                     <div class="col-12">
-                                        <p class="account-desc">Not a member? <a href="/signup">Sign Up</a></p>
+                                        <p class="account-desc">Not a member?<a href="/signup">Sign Up</a></p>
                                     </div>
                                 </div>
                             </form>

@@ -16637,6 +16637,7 @@ textarea.form-control {
 }
 .ptb-100 {
   padding-bottom: 100px;
+  margin-top: 70px;
 }
 .pt-100,
 .ptb-100 {
@@ -19058,6 +19059,7 @@ textarea.form-control {
 }
 .page-title-area.bg-9 {
   background-image: url(../../../img/page-banner-bg/page-banner9.jpg);
+  height:200px;
 }
 .page-title-area.bg-10 {
   background-image: url(../../../img/page-banner-bg/page-banner10.jpg);
@@ -19341,7 +19343,7 @@ textarea.form-control {
   font-weight: 600;
 }
 .user-area-all-style .log-in-img {
-  background-image: url(../../../img/log-in-img.jpg);
+  background-image: url('https://images.squarespace-cdn.com/content/v1/5c8a5218c2ff615400a47d8f/1553869075834-XUTCZF77FDVLVQP2J68I/alt-commercial-office-cleaning-services.png?format=2500w');
 }
 .user-area-all-style .log-in-img,
 .user-area-all-style .sign-up-img {
@@ -19351,7 +19353,7 @@ textarea.form-control {
   height: 100%;
 }
 .user-area-all-style .sign-up-img {
-  background-image: url(../../../img/sign-in-img.jpg);
+  background-image: url('https://focuscleaning.ca/wp-content/uploads/2021/01/OfficeCleaning-1.jpg');
 }
 .recover-password-area .contact-form-action {
   max-width: 570px;
