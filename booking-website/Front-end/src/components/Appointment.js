@@ -130,6 +130,7 @@ export function Appointment() {
                       type="text"
                       class="form-control"
                       id="userName"
+                      name="userName"
                       value={isLoggedIn.userName}
                       disabled
                     />

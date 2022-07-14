@@ -69,9 +69,7 @@ export default function ServiceDetails() {
                       Friday<span>Closed</span>
                     </li>
                   </ul>
-                  <a class="default-btn mt-4" href="/blog">
-                    leave a comment
-                  </a>
+                 
                   <Link class="default-btn mt-4" to={"/appointment/" + data.id}>
                     Request An Appointment
                   </Link>
@@ -224,6 +222,9 @@ export default function ServiceDetails() {
                       </div>
                     </div>
                   </div>
+                  <a class="default-btn mt-4" href="/blog">
+                    leave a comment
+                  </a>
                 </div>
               </div>
             </div>

@@ -16,7 +16,7 @@ function Footer() {
                 <p>
                 At ‘Go Clean’ Service, we give a spotless and sound workplace through a blend of profoundly prepared staff and extraordinary client benefit understanding.
                 </p>
-                <div className="social-area">
+                {/* <div className="social-area">
                   <ul>
                     <li>
                       <a href="www.facebook.com" target="_blank"
@@ -44,7 +44,7 @@ function Footer() {
                       ></a>
                     </li>
                   </ul>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
