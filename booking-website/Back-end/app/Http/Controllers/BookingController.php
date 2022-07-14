@@ -14,7 +14,7 @@ class BookingController extends Controller
         $Booking->serviceId= $request->serviceId;
          $Booking->date=$request->date;
          $Booking->city=$request->city;
-          $Booking->room=$request->room;
+         
 
           $Booking->time=$request->time;
           $Booking->street=$request->street;

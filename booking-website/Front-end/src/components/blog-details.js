@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams,useNavigate } from "react-router-dom";
 
 export default function BlogDetails() {
 
   // const { id } = useParams()
   const [comm, setComm] = useState([]);
+  const navigate = useNavigate();
   // console.log(comm)
   // console.log(id)
 
@@ -19,7 +20,9 @@ export default function BlogDetails() {
    console.log(comm)
 
    let isLoggedIn = JSON.parse(localStorage.getItem("user"));
-
+   if (!isLoggedIn) {
+    navigate("/login");
+  }
 
   const [comment, setComment] = useState("");
   const commentHandler = async (e) => {
@@ -78,7 +81,7 @@ export default function BlogDetails() {
             <h2>Comment Section</h2>
             <ul>
               <li>
-                <a href="index.html">Home</a>
+                <a href="/">Home</a>
               </li>
               <li class="active">Comment</li>
             </ul>

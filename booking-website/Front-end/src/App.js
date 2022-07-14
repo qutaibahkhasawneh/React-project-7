@@ -23,9 +23,8 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-
-      {/* this is Home */}
-      <Route path='/' element={<Index id={1} />}/>
+        {/* this is Home */}
+        <Route path="/" element={<Index id={1} />} />
 
         {/* Appointment us page */}
         <Route path="/appointment/:id" element={<Appointment />} />
@@ -46,13 +45,13 @@ function App() {
         {/* Signup  page */}
         <Route path="Signup" element={<Signup />} />
         {/* service-datails  page */}
-       <Route path='service/:id' element={<ServiceDetails/>} />
-       <Route path='blog' element={<BlogDetails/>} />
-       {/* <Route path='service' element={<ServiceDetails/>} /> */}
-       {/* Edit Profile */}
-       {/* <Route path='/edit/:id' element={<EditProfile/>} /> */}
-       {/* reset password */}
-       <Route path='/reset' element={<Reset/>}/>
+        <Route path="service/:id" element={<ServiceDetails />} />
+        <Route path="blog" element={<BlogDetails />} />
+        {/* <Route path='service' element={<ServiceDetails/>} /> */}
+        {/* Edit Profile */}
+        {/* <Route path='/edit/:id' element={<EditProfile/>} /> */}
+        {/* reset password */}
+        <Route path="/reset" element={<Reset />} />
       </Routes>
       <Footer />
     </BrowserRouter>
