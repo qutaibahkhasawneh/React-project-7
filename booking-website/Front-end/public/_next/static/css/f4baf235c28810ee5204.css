@@ -16640,7 +16640,7 @@ textarea.form-control {
 }
 .pt-100,
 .ptb-100 {
-  padding-top: 100px;
+  padding-top: 20px;
 }
 .pb-100 {
   padding-bottom: 100px;
@@ -16649,7 +16649,7 @@ textarea.form-control {
   padding-top: 70px;
 }
 .pb-70 {
-  padding-bottom: 70px;
+  /* padding-bottom: 20px; */
 }
 .mt-30 {
   margin-top: 30px;
@@ -17687,7 +17687,7 @@ textarea.form-control {
 .appointment-here-form .form-group .form-control {
   font-size: 15px;
   padding: 10px 20px;
-  border: 1px dashed #fff;
+  border: 1px solid #fff;
   color: #fff;
   border-radius: 50px;
   background-color: hsla(0, 0%, 100%, 0.2);
@@ -17834,10 +17834,10 @@ textarea.form-control {
   color: #04b8e5;
 }
 .footer-top-area {
-  background-image: url(../../../img/footer-bg.jpg);
+  /* background-image: url(../../../img/footer-bg.jpg);
   background-position: 50%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   height: 100%;
   position: relative;
   z-index: 1;
@@ -17845,7 +17845,7 @@ textarea.form-control {
 .footer-top-area:before {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -17854,7 +17854,7 @@ textarea.form-control {
   z-index: -1;
 }
 .single-widget {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 .single-widget .foot-logo {
   margin-bottom: 25px;

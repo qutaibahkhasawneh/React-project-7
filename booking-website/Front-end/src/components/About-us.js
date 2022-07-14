@@ -20,7 +20,7 @@ function Aboutus() {
           <div class="row align-items-center">
             <div class="col-lg-6">
               <div class="about-content">
-                <span>About Us</span>
+                {/* <span>About Us</span>
                 <h2>Clean Homes Clean Earth &amp; good health</h2>
                 <p>
                 As a cleaning organization, ‘Organization Name’ remains consistent with our name. We will probably make enlisting a cleaning administration as basic as workable for you as our client. We are genuinely devoted to giving you extraordinary administrations at sensible rates. We will probably streamline your life by taking the housekeeping off your schedule.
@@ -41,12 +41,12 @@ function Aboutus() {
                 </ul>
                 <p class="block-content">
                 Without a doubt, you might have the capacity to clean your easygoing wear at home, yet proficient cleaning is the best decision. Why? We accomplish something other than clean your garments.
-                </p>
+                </p> */}
               </div>
             </div>
             <div class="col-lg-6">
               <div class="about-img">
-                <img src="img/about-img.jpg" alt="Image" />
+                {/* <img src="img/about-img.jpg" alt="Image" /> */}
                 {/* <div class="about-child">
                   <img src="img/about-child.jpg" alt="Image" />
                 </div> */}
