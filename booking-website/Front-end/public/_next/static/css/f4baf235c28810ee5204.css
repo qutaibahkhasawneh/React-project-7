@@ -16637,7 +16637,7 @@ textarea.form-control {
 }
 .ptb-100 {
   padding-bottom: 100px;
-  margin-top: 70px;
+  margin-top: 170px;
 }
 .pt-100,
 .ptb-100 {
@@ -22767,6 +22767,7 @@ textarea.form-control {
 @media only screen and (max-width: 767px) {
   .ptb-100 {
     padding-bottom: 50px;
+    
   }
   .pt-100,
   .ptb-100 {
