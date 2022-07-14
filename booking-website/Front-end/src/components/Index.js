@@ -66,12 +66,12 @@ function Index() {
                       <h1>We Provide best cleaning Services</h1>
                       <p>Enjoy a better, healthier, and safer life with us</p>
                       <div className="banner-btn">
-                        <a className="default-btn" href="/contact">
-                          Contact Us
+                        <a className="default-btn" href="/about">
+                          More 
                         </a>
-                        <a className="default-btn active" href="/about">
+                        {/* <a className="default-btn active" href="/about">
                           About Us
-                        </a>
+                        </a> */}
                       </div>
                     </div>
                   </div>
@@ -85,7 +85,7 @@ function Index() {
           <div className="container">
             <div className="response-wrap">
               <h3>
-                Fast Response Time - Local &amp; Professional-Open 24/7{" "}
+                Fast Response Time - Local &amp; Professional{" "}
                 <span style={{ marginLeft: "0px" }}>
                   {" "}
                   Call Now at +962778093278
@@ -245,9 +245,10 @@ function Index() {
         <div class="appointment-area jarallax ptb-100">
           <div class="container">
             <div class=" white-title">
-              <h2 >Feedback about our services</h2>
+              {/* <h2 >Feedback about our services</h2> */}
             </div>
             <div class="appointment-here-form">
+            <br/><br/><br/><br/>
               <form>
                 <div class="row" style={{ display: 'flex',justifyContent:'center'}}>
                   <div class="col-lg-7 col-sm-6">
@@ -295,7 +296,7 @@ function Index() {
               <span class="top-title">News</span>
               <h2>Our Latest News</h2>
             </div>
-            <div class="row">
+            <div class="row mb-5">
               <div class="col-lg-4 col-md-6">
                 <div class="single-blog">
                   <a href="blog-details.html">
